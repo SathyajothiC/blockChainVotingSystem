@@ -1,0 +1,2584 @@
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		var threw = true;
+/******/ 		try {
+/******/ 			modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 			threw = false;
+/******/ 		} finally {
+/******/ 			if(threw) delete installedModules[moduleId];
+/******/ 		}
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./Ethereum/Build/Election.json":
+/*!**************************************!*\
+  !*** ./Ethereum/Build/Election.json ***!
+  \**************************************/
+/*! exports provided: contractName, abi, metadata, bytecode, deployedBytecode, immutableReferences, generatedSources, deployedGeneratedSources, sourceMap, deployedSourceMap, source, sourcePath, ast, compiler, networks, schemaVersion, updatedAt, networkType, devdoc, userdoc, default */
+/***/ (function(module) {
+
+module.exports = {"contractName":"Election","abi":[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint8","name":"candidateId","type":"uint8"}],"name":"CandidateAdded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"authority","type":"address"}],"name":"ElectionCreated","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"voter","type":"address"},{"indexed":false,"internalType":"uint8","name":"candidateId","type":"uint8"}],"name":"VoteCast","type":"event"},{"inputs":[{"internalType":"uint8","name":"","type":"uint8"}],"name":"candidates","outputs":[{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"description","type":"string"},{"internalType":"string","name":"imgHash","type":"string"},{"internalType":"uint8","name":"voteCount","type":"uint8"},{"internalType":"string","name":"email","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"election_authority","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"election_description","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"election_name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"numCandidates","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"numVoters","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"status","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"string","name":"","type":"string"}],"name":"voters","outputs":[{"internalType":"uint8","name":"candidateIdVoted","type":"uint8"},{"internalType":"bool","name":"voted","type":"bool"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"description","type":"string"},{"internalType":"string","name":"imgHash","type":"string"},{"internalType":"string","name":"email","type":"string"}],"name":"addCandidate","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint8","name":"candidateId","type":"uint8"},{"internalType":"string","name":"voterEmail","type":"string"}],"name":"vote","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint8","name":"candidateId","type":"uint8"}],"name":"getCandidate","outputs":[{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"description","type":"string"},{"internalType":"string","name":"imgHash","type":"string"},{"internalType":"uint8","name":"voteCount","type":"uint8"},{"internalType":"string","name":"email","type":"string"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"winnerCandidate","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function","constant":true},{"inputs":[],"name":"closeElection","outputs":[],"stateMutability":"nonpayable","type":"function"}],"metadata":"{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"candidateId\",\"type\":\"uint8\"}],\"name\":\"CandidateAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"authority\",\"type\":\"address\"}],\"name\":\"ElectionCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"candidateId\",\"type\":\"uint8\"}],\"name\":\"VoteCast\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"imgHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"name\":\"addCandidate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"name\":\"candidates\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"imgHash\",\"type\":\"string\"},{\"internalType\":\"uint8\",\"name\":\"voteCount\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"closeElection\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"election_authority\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"election_description\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"election_name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"candidateId\",\"type\":\"uint8\"}],\"name\":\"getCandidate\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"imgHash\",\"type\":\"string\"},{\"internalType\":\"uint8\",\"name\":\"voteCount\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"numCandidates\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"numVoters\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"status\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"candidateId\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"voterEmail\",\"type\":\"string\"}],\"name\":\"vote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"voters\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"candidateIdVoted\",\"type\":\"uint8\"},{\"internalType\":\"bool\",\"name\":\"voted\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"winnerCandidate\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Election.sol\":\"Election\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Election.sol\":{\"keccak256\":\"0xd5e81935a69a2e6cdded39fa66eeaa4353fcc022f0328317a76f39432a6e6d16\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://58f46acdae987f651f5c499ccefe8ffd0c25d0e215a1d1d6bd4cb98309bc7727\",\"dweb:/ipfs/QmaJFbPbqs2iSZacSav1YGbUwWYkcbdXLcosAjo4PSWcXG\"]}},\"version\":1}","bytecode":"0x5f80546001600160a01b03191673a579675518d32c99b6f1929afe8397d42d896f8417905560c0604052601a60809081527f3230323420507265736964656e7469616c20456c656374696f6e00000000000060a05260019062000063908262000444565b506040518060400160405280602081526020017f566f746520666f7220796f7572206661766f726974652063616e64696461746581525060029081620000aa919062000444565b506003805460ff191660011790556006805461ffff19169055348015620000cf575f80fd5b505f80546001600160a01b03191633908117825560405190917f3bf25a9dfa34d3f99eec4217177ec490f7a345ee390de1e739e9c816a37122f091a2620001156200011b565b6200050c565b6040805160e081018252600b60a082019081526a43616e646964617465204160a81b60c0830152815281518083018352600d81526c4465736372697074696f6e204160981b60208281019190915280830191909152825180840184526005815264686173683160d81b81830152828401525f606083018190528351808501909452600a8452696140746573742e636f6d60b01b848301526080830193909352918052600490915280517f17ef568e3e12ab5b9c7254a8d58478811de00f9e6eb34345acd53bf8fd09d3ec908190620001f4908262000444565b50602082015160018201906200020b908262000444565b506040820151600282019062000222908262000444565b50606082015160038201805460ff191660ff9092169190911790556080820151600482019062000253908262000444565b50506040805160e081018252600b60a082019081526a21b0b73234b230ba32902160a91b60c0830152815281518083018352600d81526c2232b9b1b934b83a34b7b7102160991b602082810191909152808301919091528251808401845260058152643430b9b41960d91b81830152828401525f606083018190528351808501909452600a8452696240746573742e636f6d60b01b8483015260808301939093526001909252600490915280519091507fabd6e7cb50984ff9c2f3e18a2660c3353dadf4e3291deeb275dae2cd1e44fe0590819062000333908262000444565b50602082015160018201906200034a908262000444565b506040820151600282019062000361908262000444565b50606082015160038201805460ff191660ff9092169190911790556080820151600482019062000392908262000444565b50506006805460ff1916600217905550565b634e487b7160e01b5f52604160045260245ffd5b600181811c90821680620003cd57607f821691505b602082108103620003ec57634e487b7160e01b5f52602260045260245ffd5b50919050565b601f8211156200043f575f81815260208120601f850160051c810160208610156200041a5750805b601f850160051c820191505b818110156200043b5782815560010162000426565b5050505b505050565b81516001600160401b03811115620004605762000460620003a4565b6200047881620004718454620003b8565b84620003f2565b602080601f831160018114620004ae575f8415620004965750858301515b5f19600386901b1c1916600185901b1785556200043b565b5f85815260208120601f198616915b82811015620004de57888601518255948401946001909101908401620004bd565b5085821015620004fc57878501515f19600388901b60f8161c191681555b5050505050600190811b01905550565b610ecc806200051a5f395ff3fe608060405234801561000f575f80fd5b50600436106100cb575f3560e01c80636c6c32d011610088578063a15148d111610063578063a15148d1146101fd578063b224c40a14610205578063cde9370f14610218578063ed35a5da1461022b575f80fd5b80636c6c32d0146101a05780636d6277f4146101af57806382e15fcd146101d3575f80fd5b8063044d5a97146100cf578063200d2ed2146100ed57806342b03cc91461010a5780634cbe32b81461011f5780635216509a1461014357806353fa2e6414610150575b5f80fd5b6100d7610233565b6040516100e49190610a9f565b60405180910390f35b6003546100fa9060ff1681565b60405190151581526020016100e4565b61011d610118366004610b55565b6102bf565b005b60065461013190610100900460ff1681565b60405160ff90911681526020016100e4565b6006546101319060ff1681565b61018761015e366004610bfb565b805160208183018101805160058252928201919093012091525460ff8082169161010090041682565b6040805160ff90931683529015156020830152016100e4565b61011d6003805460ff19169055565b6101c26101bd366004610c4a565b6103c7565b6040516100e4959493929190610c63565b5f546101e5906001600160a01b031681565b6040516001600160a01b0390911681526020016100e4565b610131610615565b61011d610213366004610cc4565b6106b2565b6101c2610226366004610c4a565b6107c7565b6100d7610a45565b6002805461024090610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461026c90610d0f565b80156102b75780601f1061028e576101008083540402835291602001916102b7565b820191905f5260205f20905b81548152906001019060200180831161029a57829003601f168201915b505050505081565b600680545f9160ff90911690826102d583610d47565b82546101009290920a60ff8181021990931691831602179091556040805160a08101825288815260208082018990528183018890525f606083018190526080830188905293851684526004905291208151929350909181906103379082610dbf565b506020820151600182019061034c9082610dbf565b50604082015160028201906103619082610dbf565b50606082015160038201805460ff191660ff909216919091179055608082015160048201906103909082610dbf565b505060405160ff831691507fcdd1fa9d4679a5e2302f1bc82c05bfaad863215e9a34a2cd3ca69389742add4d905f90a25050505050565b60046020525f90815260409020805481906103e190610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461040d90610d0f565b80156104585780601f1061042f57610100808354040283529160200191610458565b820191905f5260205f20905b81548152906001019060200180831161043b57829003601f168201915b50505050509080600101805461046d90610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461049990610d0f565b80156104e45780601f106104bb576101008083540402835291602001916104e4565b820191905f5260205f20905b8154815290600101906020018083116104c757829003601f168201915b5050505050908060020180546104f990610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461052590610d0f565b80156105705780601f1061054757610100808354040283529160200191610570565b820191905f5260205f20905b81548152906001019060200180831161055357829003601f168201915b5050506003840154600485018054949560ff90921694919350915061059490610d0f565b80601f01602080910402602001604051908101604052809291908181526020018280546105c090610d0f565b801561060b5780601f106105e25761010080835404028352916020019161060b565b820191905f5260205f20905b8154815290600101906020018083116105ee57829003601f168201915b5050505050905085565b5f80805260046020527f17ef568e3e12ab5b9c7254a8d58478811de00f9e6eb34345acd53bf8fd09d3ef54819060ff1660015b60065460ff90811690821610156106aa5760ff8181165f90815260046020526040902060030154818416911611156106985760ff8082165f90815260046020526040902060030154919350169050815b806106a281610d47565b915050610648565b509092915050565b60408051808201825260ff841681526001602082015290516005906106d8908490610e7b565b90815260408051918290036020908101909220835181549484015115156101000261ffff1990951660ff918216179490941790558483165f908152600490925281206003018054909216919061072d83610d47565b825460ff91821661010093840a908102908302199091161790925560068054919091049091169150600161076083610d47565b91906101000a81548160ff021916908360ff16021790555050336001600160a01b03167fefffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f836040516107bb919060ff91909116815260200190565b60405180910390a25050565b60608060605f60605f60045f8860ff1660ff1681526020019081526020015f209050805f018160010182600201836003015f9054906101000a900460ff168460040184805461081590610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461084190610d0f565b801561088c5780601f106108635761010080835404028352916020019161088c565b820191905f5260205f20905b81548152906001019060200180831161086f57829003601f168201915b5050505050945083805461089f90610d0f565b80601f01602080910402602001604051908101604052809291908181526020018280546108cb90610d0f565b80156109165780601f106108ed57610100808354040283529160200191610916565b820191905f5260205f20905b8154815290600101906020018083116108f957829003601f168201915b5050505050935082805461092990610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461095590610d0f565b80156109a05780601f10610977576101008083540402835291602001916109a0565b820191905f5260205f20905b81548152906001019060200180831161098357829003601f168201915b505050505092508080546109b390610d0f565b80601f01602080910402602001604051908101604052809291908181526020018280546109df90610d0f565b8015610a2a5780601f10610a0157610100808354040283529160200191610a2a565b820191905f5260205f20905b815481529060010190602001808311610a0d57829003601f168201915b50505050509050955095509550955095505091939590929450565b6001805461024090610d0f565b5f5b83811015610a6c578181015183820152602001610a54565b50505f910152565b5f8151808452610a8b816020860160208601610a52565b601f01601f19169290920160200192915050565b602081525f610ab16020830184610a74565b9392505050565b634e487b7160e01b5f52604160045260245ffd5b5f82601f830112610adb575f80fd5b813567ffffffffffffffff80821115610af657610af6610ab8565b604051601f8301601f19908116603f01168101908282118183101715610b1e57610b1e610ab8565b81604052838152866020858801011115610b36575f80fd5b836020870160208301375f602085830101528094505050505092915050565b5f805f8060808587031215610b68575f80fd5b843567ffffffffffffffff80821115610b7f575f80fd5b610b8b88838901610acc565b95506020870135915080821115610ba0575f80fd5b610bac88838901610acc565b94506040870135915080821115610bc1575f80fd5b610bcd88838901610acc565b93506060870135915080821115610be2575f80fd5b50610bef87828801610acc565b91505092959194509250565b5f60208284031215610c0b575f80fd5b813567ffffffffffffffff811115610c21575f80fd5b610c2d84828501610acc565b949350505050565b803560ff81168114610c45575f80fd5b919050565b5f60208284031215610c5a575f80fd5b610ab182610c35565b60a081525f610c7560a0830188610a74565b8281036020840152610c878188610a74565b90508281036040840152610c9b8187610a74565b905060ff851660608401528281036080840152610cb88185610a74565b98975050505050505050565b5f8060408385031215610cd5575f80fd5b610cde83610c35565b9150602083013567ffffffffffffffff811115610cf9575f80fd5b610d0585828601610acc565b9150509250929050565b600181811c90821680610d2357607f821691505b602082108103610d4157634e487b7160e01b5f52602260045260245ffd5b50919050565b5f60ff821660ff8103610d6857634e487b7160e01b5f52601160045260245ffd5b60010192915050565b601f821115610dba575f81815260208120601f850160051c81016020861015610d975750805b601f850160051c820191505b81811015610db657828155600101610da3565b5050505b505050565b815167ffffffffffffffff811115610dd957610dd9610ab8565b610ded81610de78454610d0f565b84610d71565b602080601f831160018114610e20575f8415610e095750858301515b5f19600386901b1c1916600185901b178555610db6565b5f85815260208120601f198616915b82811015610e4e57888601518255948401946001909101908401610e2f565b5085821015610e6b57878501515f19600388901b60f8161c191681555b5050505050600190811b01905550565b5f8251610e8c818460208701610a52565b919091019291505056fea2646970667358221220a13121d50e3d08512fdd1a9f37479638a8cf2abbdfcf69070db5d2060bcfacb264736f6c63430008150033","deployedBytecode":"0x608060405234801561000f575f80fd5b50600436106100cb575f3560e01c80636c6c32d011610088578063a15148d111610063578063a15148d1146101fd578063b224c40a14610205578063cde9370f14610218578063ed35a5da1461022b575f80fd5b80636c6c32d0146101a05780636d6277f4146101af57806382e15fcd146101d3575f80fd5b8063044d5a97146100cf578063200d2ed2146100ed57806342b03cc91461010a5780634cbe32b81461011f5780635216509a1461014357806353fa2e6414610150575b5f80fd5b6100d7610233565b6040516100e49190610a9f565b60405180910390f35b6003546100fa9060ff1681565b60405190151581526020016100e4565b61011d610118366004610b55565b6102bf565b005b60065461013190610100900460ff1681565b60405160ff90911681526020016100e4565b6006546101319060ff1681565b61018761015e366004610bfb565b805160208183018101805160058252928201919093012091525460ff8082169161010090041682565b6040805160ff90931683529015156020830152016100e4565b61011d6003805460ff19169055565b6101c26101bd366004610c4a565b6103c7565b6040516100e4959493929190610c63565b5f546101e5906001600160a01b031681565b6040516001600160a01b0390911681526020016100e4565b610131610615565b61011d610213366004610cc4565b6106b2565b6101c2610226366004610c4a565b6107c7565b6100d7610a45565b6002805461024090610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461026c90610d0f565b80156102b75780601f1061028e576101008083540402835291602001916102b7565b820191905f5260205f20905b81548152906001019060200180831161029a57829003601f168201915b505050505081565b600680545f9160ff90911690826102d583610d47565b82546101009290920a60ff8181021990931691831602179091556040805160a08101825288815260208082018990528183018890525f606083018190526080830188905293851684526004905291208151929350909181906103379082610dbf565b506020820151600182019061034c9082610dbf565b50604082015160028201906103619082610dbf565b50606082015160038201805460ff191660ff909216919091179055608082015160048201906103909082610dbf565b505060405160ff831691507fcdd1fa9d4679a5e2302f1bc82c05bfaad863215e9a34a2cd3ca69389742add4d905f90a25050505050565b60046020525f90815260409020805481906103e190610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461040d90610d0f565b80156104585780601f1061042f57610100808354040283529160200191610458565b820191905f5260205f20905b81548152906001019060200180831161043b57829003601f168201915b50505050509080600101805461046d90610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461049990610d0f565b80156104e45780601f106104bb576101008083540402835291602001916104e4565b820191905f5260205f20905b8154815290600101906020018083116104c757829003601f168201915b5050505050908060020180546104f990610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461052590610d0f565b80156105705780601f1061054757610100808354040283529160200191610570565b820191905f5260205f20905b81548152906001019060200180831161055357829003601f168201915b5050506003840154600485018054949560ff90921694919350915061059490610d0f565b80601f01602080910402602001604051908101604052809291908181526020018280546105c090610d0f565b801561060b5780601f106105e25761010080835404028352916020019161060b565b820191905f5260205f20905b8154815290600101906020018083116105ee57829003601f168201915b5050505050905085565b5f80805260046020527f17ef568e3e12ab5b9c7254a8d58478811de00f9e6eb34345acd53bf8fd09d3ef54819060ff1660015b60065460ff90811690821610156106aa5760ff8181165f90815260046020526040902060030154818416911611156106985760ff8082165f90815260046020526040902060030154919350169050815b806106a281610d47565b915050610648565b509092915050565b60408051808201825260ff841681526001602082015290516005906106d8908490610e7b565b90815260408051918290036020908101909220835181549484015115156101000261ffff1990951660ff918216179490941790558483165f908152600490925281206003018054909216919061072d83610d47565b825460ff91821661010093840a908102908302199091161790925560068054919091049091169150600161076083610d47565b91906101000a81548160ff021916908360ff16021790555050336001600160a01b03167fefffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f836040516107bb919060ff91909116815260200190565b60405180910390a25050565b60608060605f60605f60045f8860ff1660ff1681526020019081526020015f209050805f018160010182600201836003015f9054906101000a900460ff168460040184805461081590610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461084190610d0f565b801561088c5780601f106108635761010080835404028352916020019161088c565b820191905f5260205f20905b81548152906001019060200180831161086f57829003601f168201915b5050505050945083805461089f90610d0f565b80601f01602080910402602001604051908101604052809291908181526020018280546108cb90610d0f565b80156109165780601f106108ed57610100808354040283529160200191610916565b820191905f5260205f20905b8154815290600101906020018083116108f957829003601f168201915b5050505050935082805461092990610d0f565b80601f016020809104026020016040519081016040528092919081815260200182805461095590610d0f565b80156109a05780601f10610977576101008083540402835291602001916109a0565b820191905f5260205f20905b81548152906001019060200180831161098357829003601f168201915b505050505092508080546109b390610d0f565b80601f01602080910402602001604051908101604052809291908181526020018280546109df90610d0f565b8015610a2a5780601f10610a0157610100808354040283529160200191610a2a565b820191905f5260205f20905b815481529060010190602001808311610a0d57829003601f168201915b50505050509050955095509550955095505091939590929450565b6001805461024090610d0f565b5f5b83811015610a6c578181015183820152602001610a54565b50505f910152565b5f8151808452610a8b816020860160208601610a52565b601f01601f19169290920160200192915050565b602081525f610ab16020830184610a74565b9392505050565b634e487b7160e01b5f52604160045260245ffd5b5f82601f830112610adb575f80fd5b813567ffffffffffffffff80821115610af657610af6610ab8565b604051601f8301601f19908116603f01168101908282118183101715610b1e57610b1e610ab8565b81604052838152866020858801011115610b36575f80fd5b836020870160208301375f602085830101528094505050505092915050565b5f805f8060808587031215610b68575f80fd5b843567ffffffffffffffff80821115610b7f575f80fd5b610b8b88838901610acc565b95506020870135915080821115610ba0575f80fd5b610bac88838901610acc565b94506040870135915080821115610bc1575f80fd5b610bcd88838901610acc565b93506060870135915080821115610be2575f80fd5b50610bef87828801610acc565b91505092959194509250565b5f60208284031215610c0b575f80fd5b813567ffffffffffffffff811115610c21575f80fd5b610c2d84828501610acc565b949350505050565b803560ff81168114610c45575f80fd5b919050565b5f60208284031215610c5a575f80fd5b610ab182610c35565b60a081525f610c7560a0830188610a74565b8281036020840152610c878188610a74565b90508281036040840152610c9b8187610a74565b905060ff851660608401528281036080840152610cb88185610a74565b98975050505050505050565b5f8060408385031215610cd5575f80fd5b610cde83610c35565b9150602083013567ffffffffffffffff811115610cf9575f80fd5b610d0585828601610acc565b9150509250929050565b600181811c90821680610d2357607f821691505b602082108103610d4157634e487b7160e01b5f52602260045260245ffd5b50919050565b5f60ff821660ff8103610d6857634e487b7160e01b5f52601160045260245ffd5b60010192915050565b601f821115610dba575f81815260208120601f850160051c81016020861015610d975750805b601f850160051c820191505b81811015610db657828155600101610da3565b5050505b505050565b815167ffffffffffffffff811115610dd957610dd9610ab8565b610ded81610de78454610d0f565b84610d71565b602080601f831160018114610e20575f8415610e095750858301515b5f19600386901b1c1916600185901b178555610db6565b5f85815260208120601f198616915b82811015610e4e57888601518255948401946001909101908401610e2f565b5085821015610e6b57878501515f19600388901b60f8161c191681555b5050505050600190811b01905550565b5f8251610e8c818460208701610a52565b919091019291505056fea2646970667358221220a13121d50e3d08512fdd1a9f37479638a8cf2abbdfcf69070db5d2060bcfacb264736f6c63430008150033","immutableReferences":{},"generatedSources":[{"ast":{"nativeSrc":"0:2732:2","nodeType":"YulBlock","src":"0:2732:2","statements":[{"nativeSrc":"6:3:2","nodeType":"YulBlock","src":"6:3:2","statements":[]},{"body":{"nativeSrc":"46:95:2","nodeType":"YulBlock","src":"46:95:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"63:1:2","nodeType":"YulLiteral","src":"63:1:2","type":"","value":"0"},{"arguments":[{"kind":"number","nativeSrc":"70:3:2","nodeType":"YulLiteral","src":"70:3:2","type":"","value":"224"},{"kind":"number","nativeSrc":"75:10:2","nodeType":"YulLiteral","src":"75:10:2","type":"","value":"0x4e487b71"}],"functionName":{"name":"shl","nativeSrc":"66:3:2","nodeType":"YulIdentifier","src":"66:3:2"},"nativeSrc":"66:20:2","nodeType":"YulFunctionCall","src":"66:20:2"}],"functionName":{"name":"mstore","nativeSrc":"56:6:2","nodeType":"YulIdentifier","src":"56:6:2"},"nativeSrc":"56:31:2","nodeType":"YulFunctionCall","src":"56:31:2"},"nativeSrc":"56:31:2","nodeType":"YulExpressionStatement","src":"56:31:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"103:1:2","nodeType":"YulLiteral","src":"103:1:2","type":"","value":"4"},{"kind":"number","nativeSrc":"106:4:2","nodeType":"YulLiteral","src":"106:4:2","type":"","value":"0x41"}],"functionName":{"name":"mstore","nativeSrc":"96:6:2","nodeType":"YulIdentifier","src":"96:6:2"},"nativeSrc":"96:15:2","nodeType":"YulFunctionCall","src":"96:15:2"},"nativeSrc":"96:15:2","nodeType":"YulExpressionStatement","src":"96:15:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"127:1:2","nodeType":"YulLiteral","src":"127:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"130:4:2","nodeType":"YulLiteral","src":"130:4:2","type":"","value":"0x24"}],"functionName":{"name":"revert","nativeSrc":"120:6:2","nodeType":"YulIdentifier","src":"120:6:2"},"nativeSrc":"120:15:2","nodeType":"YulFunctionCall","src":"120:15:2"},"nativeSrc":"120:15:2","nodeType":"YulExpressionStatement","src":"120:15:2"}]},"name":"panic_error_0x41","nativeSrc":"14:127:2","nodeType":"YulFunctionDefinition","src":"14:127:2"},{"body":{"nativeSrc":"201:325:2","nodeType":"YulBlock","src":"201:325:2","statements":[{"nativeSrc":"211:22:2","nodeType":"YulAssignment","src":"211:22:2","value":{"arguments":[{"kind":"number","nativeSrc":"225:1:2","nodeType":"YulLiteral","src":"225:1:2","type":"","value":"1"},{"name":"data","nativeSrc":"228:4:2","nodeType":"YulIdentifier","src":"228:4:2"}],"functionName":{"name":"shr","nativeSrc":"221:3:2","nodeType":"YulIdentifier","src":"221:3:2"},"nativeSrc":"221:12:2","nodeType":"YulFunctionCall","src":"221:12:2"},"variableNames":[{"name":"length","nativeSrc":"211:6:2","nodeType":"YulIdentifier","src":"211:6:2"}]},{"nativeSrc":"242:38:2","nodeType":"YulVariableDeclaration","src":"242:38:2","value":{"arguments":[{"name":"data","nativeSrc":"272:4:2","nodeType":"YulIdentifier","src":"272:4:2"},{"kind":"number","nativeSrc":"278:1:2","nodeType":"YulLiteral","src":"278:1:2","type":"","value":"1"}],"functionName":{"name":"and","nativeSrc":"268:3:2","nodeType":"YulIdentifier","src":"268:3:2"},"nativeSrc":"268:12:2","nodeType":"YulFunctionCall","src":"268:12:2"},"variables":[{"name":"outOfPlaceEncoding","nativeSrc":"246:18:2","nodeType":"YulTypedName","src":"246:18:2","type":""}]},{"body":{"nativeSrc":"319:31:2","nodeType":"YulBlock","src":"319:31:2","statements":[{"nativeSrc":"321:27:2","nodeType":"YulAssignment","src":"321:27:2","value":{"arguments":[{"name":"length","nativeSrc":"335:6:2","nodeType":"YulIdentifier","src":"335:6:2"},{"kind":"number","nativeSrc":"343:4:2","nodeType":"YulLiteral","src":"343:4:2","type":"","value":"0x7f"}],"functionName":{"name":"and","nativeSrc":"331:3:2","nodeType":"YulIdentifier","src":"331:3:2"},"nativeSrc":"331:17:2","nodeType":"YulFunctionCall","src":"331:17:2"},"variableNames":[{"name":"length","nativeSrc":"321:6:2","nodeType":"YulIdentifier","src":"321:6:2"}]}]},"condition":{"arguments":[{"name":"outOfPlaceEncoding","nativeSrc":"299:18:2","nodeType":"YulIdentifier","src":"299:18:2"}],"functionName":{"name":"iszero","nativeSrc":"292:6:2","nodeType":"YulIdentifier","src":"292:6:2"},"nativeSrc":"292:26:2","nodeType":"YulFunctionCall","src":"292:26:2"},"nativeSrc":"289:61:2","nodeType":"YulIf","src":"289:61:2"},{"body":{"nativeSrc":"409:111:2","nodeType":"YulBlock","src":"409:111:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"430:1:2","nodeType":"YulLiteral","src":"430:1:2","type":"","value":"0"},{"arguments":[{"kind":"number","nativeSrc":"437:3:2","nodeType":"YulLiteral","src":"437:3:2","type":"","value":"224"},{"kind":"number","nativeSrc":"442:10:2","nodeType":"YulLiteral","src":"442:10:2","type":"","value":"0x4e487b71"}],"functionName":{"name":"shl","nativeSrc":"433:3:2","nodeType":"YulIdentifier","src":"433:3:2"},"nativeSrc":"433:20:2","nodeType":"YulFunctionCall","src":"433:20:2"}],"functionName":{"name":"mstore","nativeSrc":"423:6:2","nodeType":"YulIdentifier","src":"423:6:2"},"nativeSrc":"423:31:2","nodeType":"YulFunctionCall","src":"423:31:2"},"nativeSrc":"423:31:2","nodeType":"YulExpressionStatement","src":"423:31:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"474:1:2","nodeType":"YulLiteral","src":"474:1:2","type":"","value":"4"},{"kind":"number","nativeSrc":"477:4:2","nodeType":"YulLiteral","src":"477:4:2","type":"","value":"0x22"}],"functionName":{"name":"mstore","nativeSrc":"467:6:2","nodeType":"YulIdentifier","src":"467:6:2"},"nativeSrc":"467:15:2","nodeType":"YulFunctionCall","src":"467:15:2"},"nativeSrc":"467:15:2","nodeType":"YulExpressionStatement","src":"467:15:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"502:1:2","nodeType":"YulLiteral","src":"502:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"505:4:2","nodeType":"YulLiteral","src":"505:4:2","type":"","value":"0x24"}],"functionName":{"name":"revert","nativeSrc":"495:6:2","nodeType":"YulIdentifier","src":"495:6:2"},"nativeSrc":"495:15:2","nodeType":"YulFunctionCall","src":"495:15:2"},"nativeSrc":"495:15:2","nodeType":"YulExpressionStatement","src":"495:15:2"}]},"condition":{"arguments":[{"name":"outOfPlaceEncoding","nativeSrc":"365:18:2","nodeType":"YulIdentifier","src":"365:18:2"},{"arguments":[{"name":"length","nativeSrc":"388:6:2","nodeType":"YulIdentifier","src":"388:6:2"},{"kind":"number","nativeSrc":"396:2:2","nodeType":"YulLiteral","src":"396:2:2","type":"","value":"32"}],"functionName":{"name":"lt","nativeSrc":"385:2:2","nodeType":"YulIdentifier","src":"385:2:2"},"nativeSrc":"385:14:2","nodeType":"YulFunctionCall","src":"385:14:2"}],"functionName":{"name":"eq","nativeSrc":"362:2:2","nodeType":"YulIdentifier","src":"362:2:2"},"nativeSrc":"362:38:2","nodeType":"YulFunctionCall","src":"362:38:2"},"nativeSrc":"359:161:2","nodeType":"YulIf","src":"359:161:2"}]},"name":"extract_byte_array_length","nativeSrc":"146:380:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"data","nativeSrc":"181:4:2","nodeType":"YulTypedName","src":"181:4:2","type":""}],"returnVariables":[{"name":"length","nativeSrc":"190:6:2","nodeType":"YulTypedName","src":"190:6:2","type":""}],"src":"146:380:2"},{"body":{"nativeSrc":"587:65:2","nodeType":"YulBlock","src":"587:65:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"604:1:2","nodeType":"YulLiteral","src":"604:1:2","type":"","value":"0"},{"name":"ptr","nativeSrc":"607:3:2","nodeType":"YulIdentifier","src":"607:3:2"}],"functionName":{"name":"mstore","nativeSrc":"597:6:2","nodeType":"YulIdentifier","src":"597:6:2"},"nativeSrc":"597:14:2","nodeType":"YulFunctionCall","src":"597:14:2"},"nativeSrc":"597:14:2","nodeType":"YulExpressionStatement","src":"597:14:2"},{"nativeSrc":"620:26:2","nodeType":"YulAssignment","src":"620:26:2","value":{"arguments":[{"kind":"number","nativeSrc":"638:1:2","nodeType":"YulLiteral","src":"638:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"641:4:2","nodeType":"YulLiteral","src":"641:4:2","type":"","value":"0x20"}],"functionName":{"name":"keccak256","nativeSrc":"628:9:2","nodeType":"YulIdentifier","src":"628:9:2"},"nativeSrc":"628:18:2","nodeType":"YulFunctionCall","src":"628:18:2"},"variableNames":[{"name":"data","nativeSrc":"620:4:2","nodeType":"YulIdentifier","src":"620:4:2"}]}]},"name":"array_dataslot_string_storage","nativeSrc":"531:121:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"ptr","nativeSrc":"570:3:2","nodeType":"YulTypedName","src":"570:3:2","type":""}],"returnVariables":[{"name":"data","nativeSrc":"578:4:2","nodeType":"YulTypedName","src":"578:4:2","type":""}],"src":"531:121:2"},{"body":{"nativeSrc":"738:464:2","nodeType":"YulBlock","src":"738:464:2","statements":[{"body":{"nativeSrc":"771:425:2","nodeType":"YulBlock","src":"771:425:2","statements":[{"nativeSrc":"785:11:2","nodeType":"YulVariableDeclaration","src":"785:11:2","value":{"kind":"number","nativeSrc":"795:1:2","nodeType":"YulLiteral","src":"795:1:2","type":"","value":"0"},"variables":[{"name":"_1","nativeSrc":"789:2:2","nodeType":"YulTypedName","src":"789:2:2","type":""}]},{"expression":{"arguments":[{"name":"_1","nativeSrc":"816:2:2","nodeType":"YulIdentifier","src":"816:2:2"},{"name":"array","nativeSrc":"820:5:2","nodeType":"YulIdentifier","src":"820:5:2"}],"functionName":{"name":"mstore","nativeSrc":"809:6:2","nodeType":"YulIdentifier","src":"809:6:2"},"nativeSrc":"809:17:2","nodeType":"YulFunctionCall","src":"809:17:2"},"nativeSrc":"809:17:2","nodeType":"YulExpressionStatement","src":"809:17:2"},{"nativeSrc":"839:31:2","nodeType":"YulVariableDeclaration","src":"839:31:2","value":{"arguments":[{"name":"_1","nativeSrc":"861:2:2","nodeType":"YulIdentifier","src":"861:2:2"},{"kind":"number","nativeSrc":"865:4:2","nodeType":"YulLiteral","src":"865:4:2","type":"","value":"0x20"}],"functionName":{"name":"keccak256","nativeSrc":"851:9:2","nodeType":"YulIdentifier","src":"851:9:2"},"nativeSrc":"851:19:2","nodeType":"YulFunctionCall","src":"851:19:2"},"variables":[{"name":"data","nativeSrc":"843:4:2","nodeType":"YulTypedName","src":"843:4:2","type":""}]},{"nativeSrc":"883:57:2","nodeType":"YulVariableDeclaration","src":"883:57:2","value":{"arguments":[{"name":"data","nativeSrc":"906:4:2","nodeType":"YulIdentifier","src":"906:4:2"},{"arguments":[{"kind":"number","nativeSrc":"916:1:2","nodeType":"YulLiteral","src":"916:1:2","type":"","value":"5"},{"arguments":[{"name":"startIndex","nativeSrc":"923:10:2","nodeType":"YulIdentifier","src":"923:10:2"},{"kind":"number","nativeSrc":"935:2:2","nodeType":"YulLiteral","src":"935:2:2","type":"","value":"31"}],"functionName":{"name":"add","nativeSrc":"919:3:2","nodeType":"YulIdentifier","src":"919:3:2"},"nativeSrc":"919:19:2","nodeType":"YulFunctionCall","src":"919:19:2"}],"functionName":{"name":"shr","nativeSrc":"912:3:2","nodeType":"YulIdentifier","src":"912:3:2"},"nativeSrc":"912:27:2","nodeType":"YulFunctionCall","src":"912:27:2"}],"functionName":{"name":"add","nativeSrc":"902:3:2","nodeType":"YulIdentifier","src":"902:3:2"},"nativeSrc":"902:38:2","nodeType":"YulFunctionCall","src":"902:38:2"},"variables":[{"name":"deleteStart","nativeSrc":"887:11:2","nodeType":"YulTypedName","src":"887:11:2","type":""}]},{"body":{"nativeSrc":"977:23:2","nodeType":"YulBlock","src":"977:23:2","statements":[{"nativeSrc":"979:19:2","nodeType":"YulAssignment","src":"979:19:2","value":{"name":"data","nativeSrc":"994:4:2","nodeType":"YulIdentifier","src":"994:4:2"},"variableNames":[{"name":"deleteStart","nativeSrc":"979:11:2","nodeType":"YulIdentifier","src":"979:11:2"}]}]},"condition":{"arguments":[{"name":"startIndex","nativeSrc":"959:10:2","nodeType":"YulIdentifier","src":"959:10:2"},{"kind":"number","nativeSrc":"971:4:2","nodeType":"YulLiteral","src":"971:4:2","type":"","value":"0x20"}],"functionName":{"name":"lt","nativeSrc":"956:2:2","nodeType":"YulIdentifier","src":"956:2:2"},"nativeSrc":"956:20:2","nodeType":"YulFunctionCall","src":"956:20:2"},"nativeSrc":"953:47:2","nodeType":"YulIf","src":"953:47:2"},{"nativeSrc":"1013:41:2","nodeType":"YulVariableDeclaration","src":"1013:41:2","value":{"arguments":[{"name":"data","nativeSrc":"1027:4:2","nodeType":"YulIdentifier","src":"1027:4:2"},{"arguments":[{"kind":"number","nativeSrc":"1037:1:2","nodeType":"YulLiteral","src":"1037:1:2","type":"","value":"5"},{"arguments":[{"name":"len","nativeSrc":"1044:3:2","nodeType":"YulIdentifier","src":"1044:3:2"},{"kind":"number","nativeSrc":"1049:2:2","nodeType":"YulLiteral","src":"1049:2:2","type":"","value":"31"}],"functionName":{"name":"add","nativeSrc":"1040:3:2","nodeType":"YulIdentifier","src":"1040:3:2"},"nativeSrc":"1040:12:2","nodeType":"YulFunctionCall","src":"1040:12:2"}],"functionName":{"name":"shr","nativeSrc":"1033:3:2","nodeType":"YulIdentifier","src":"1033:3:2"},"nativeSrc":"1033:20:2","nodeType":"YulFunctionCall","src":"1033:20:2"}],"functionName":{"name":"add","nativeSrc":"1023:3:2","nodeType":"YulIdentifier","src":"1023:3:2"},"nativeSrc":"1023:31:2","nodeType":"YulFunctionCall","src":"1023:31:2"},"variables":[{"name":"_2","nativeSrc":"1017:2:2","nodeType":"YulTypedName","src":"1017:2:2","type":""}]},{"nativeSrc":"1067:24:2","nodeType":"YulVariableDeclaration","src":"1067:24:2","value":{"name":"deleteStart","nativeSrc":"1080:11:2","nodeType":"YulIdentifier","src":"1080:11:2"},"variables":[{"name":"start","nativeSrc":"1071:5:2","nodeType":"YulTypedName","src":"1071:5:2","type":""}]},{"body":{"nativeSrc":"1165:21:2","nodeType":"YulBlock","src":"1165:21:2","statements":[{"expression":{"arguments":[{"name":"start","nativeSrc":"1174:5:2","nodeType":"YulIdentifier","src":"1174:5:2"},{"name":"_1","nativeSrc":"1181:2:2","nodeType":"YulIdentifier","src":"1181:2:2"}],"functionName":{"name":"sstore","nativeSrc":"1167:6:2","nodeType":"YulIdentifier","src":"1167:6:2"},"nativeSrc":"1167:17:2","nodeType":"YulFunctionCall","src":"1167:17:2"},"nativeSrc":"1167:17:2","nodeType":"YulExpressionStatement","src":"1167:17:2"}]},"condition":{"arguments":[{"name":"start","nativeSrc":"1115:5:2","nodeType":"YulIdentifier","src":"1115:5:2"},{"name":"_2","nativeSrc":"1122:2:2","nodeType":"YulIdentifier","src":"1122:2:2"}],"functionName":{"name":"lt","nativeSrc":"1112:2:2","nodeType":"YulIdentifier","src":"1112:2:2"},"nativeSrc":"1112:13:2","nodeType":"YulFunctionCall","src":"1112:13:2"},"nativeSrc":"1104:82:2","nodeType":"YulForLoop","post":{"nativeSrc":"1126:26:2","nodeType":"YulBlock","src":"1126:26:2","statements":[{"nativeSrc":"1128:22:2","nodeType":"YulAssignment","src":"1128:22:2","value":{"arguments":[{"name":"start","nativeSrc":"1141:5:2","nodeType":"YulIdentifier","src":"1141:5:2"},{"kind":"number","nativeSrc":"1148:1:2","nodeType":"YulLiteral","src":"1148:1:2","type":"","value":"1"}],"functionName":{"name":"add","nativeSrc":"1137:3:2","nodeType":"YulIdentifier","src":"1137:3:2"},"nativeSrc":"1137:13:2","nodeType":"YulFunctionCall","src":"1137:13:2"},"variableNames":[{"name":"start","nativeSrc":"1128:5:2","nodeType":"YulIdentifier","src":"1128:5:2"}]}]},"pre":{"nativeSrc":"1108:3:2","nodeType":"YulBlock","src":"1108:3:2","statements":[]},"src":"1104:82:2"}]},"condition":{"arguments":[{"name":"len","nativeSrc":"754:3:2","nodeType":"YulIdentifier","src":"754:3:2"},{"kind":"number","nativeSrc":"759:2:2","nodeType":"YulLiteral","src":"759:2:2","type":"","value":"31"}],"functionName":{"name":"gt","nativeSrc":"751:2:2","nodeType":"YulIdentifier","src":"751:2:2"},"nativeSrc":"751:11:2","nodeType":"YulFunctionCall","src":"751:11:2"},"nativeSrc":"748:448:2","nodeType":"YulIf","src":"748:448:2"}]},"name":"clean_up_bytearray_end_slots_string_storage","nativeSrc":"657:545:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"array","nativeSrc":"710:5:2","nodeType":"YulTypedName","src":"710:5:2","type":""},{"name":"len","nativeSrc":"717:3:2","nodeType":"YulTypedName","src":"717:3:2","type":""},{"name":"startIndex","nativeSrc":"722:10:2","nodeType":"YulTypedName","src":"722:10:2","type":""}],"src":"657:545:2"},{"body":{"nativeSrc":"1292:81:2","nodeType":"YulBlock","src":"1292:81:2","statements":[{"nativeSrc":"1302:65:2","nodeType":"YulAssignment","src":"1302:65:2","value":{"arguments":[{"arguments":[{"name":"data","nativeSrc":"1317:4:2","nodeType":"YulIdentifier","src":"1317:4:2"},{"arguments":[{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"1335:1:2","nodeType":"YulLiteral","src":"1335:1:2","type":"","value":"3"},{"name":"len","nativeSrc":"1338:3:2","nodeType":"YulIdentifier","src":"1338:3:2"}],"functionName":{"name":"shl","nativeSrc":"1331:3:2","nodeType":"YulIdentifier","src":"1331:3:2"},"nativeSrc":"1331:11:2","nodeType":"YulFunctionCall","src":"1331:11:2"},{"arguments":[{"kind":"number","nativeSrc":"1348:1:2","nodeType":"YulLiteral","src":"1348:1:2","type":"","value":"0"}],"functionName":{"name":"not","nativeSrc":"1344:3:2","nodeType":"YulIdentifier","src":"1344:3:2"},"nativeSrc":"1344:6:2","nodeType":"YulFunctionCall","src":"1344:6:2"}],"functionName":{"name":"shr","nativeSrc":"1327:3:2","nodeType":"YulIdentifier","src":"1327:3:2"},"nativeSrc":"1327:24:2","nodeType":"YulFunctionCall","src":"1327:24:2"}],"functionName":{"name":"not","nativeSrc":"1323:3:2","nodeType":"YulIdentifier","src":"1323:3:2"},"nativeSrc":"1323:29:2","nodeType":"YulFunctionCall","src":"1323:29:2"}],"functionName":{"name":"and","nativeSrc":"1313:3:2","nodeType":"YulIdentifier","src":"1313:3:2"},"nativeSrc":"1313:40:2","nodeType":"YulFunctionCall","src":"1313:40:2"},{"arguments":[{"kind":"number","nativeSrc":"1359:1:2","nodeType":"YulLiteral","src":"1359:1:2","type":"","value":"1"},{"name":"len","nativeSrc":"1362:3:2","nodeType":"YulIdentifier","src":"1362:3:2"}],"functionName":{"name":"shl","nativeSrc":"1355:3:2","nodeType":"YulIdentifier","src":"1355:3:2"},"nativeSrc":"1355:11:2","nodeType":"YulFunctionCall","src":"1355:11:2"}],"functionName":{"name":"or","nativeSrc":"1310:2:2","nodeType":"YulIdentifier","src":"1310:2:2"},"nativeSrc":"1310:57:2","nodeType":"YulFunctionCall","src":"1310:57:2"},"variableNames":[{"name":"used","nativeSrc":"1302:4:2","nodeType":"YulIdentifier","src":"1302:4:2"}]}]},"name":"extract_used_part_and_set_length_of_short_byte_array","nativeSrc":"1207:166:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"data","nativeSrc":"1269:4:2","nodeType":"YulTypedName","src":"1269:4:2","type":""},{"name":"len","nativeSrc":"1275:3:2","nodeType":"YulTypedName","src":"1275:3:2","type":""}],"returnVariables":[{"name":"used","nativeSrc":"1283:4:2","nodeType":"YulTypedName","src":"1283:4:2","type":""}],"src":"1207:166:2"},{"body":{"nativeSrc":"1474:1256:2","nodeType":"YulBlock","src":"1474:1256:2","statements":[{"nativeSrc":"1484:24:2","nodeType":"YulVariableDeclaration","src":"1484:24:2","value":{"arguments":[{"name":"src","nativeSrc":"1504:3:2","nodeType":"YulIdentifier","src":"1504:3:2"}],"functionName":{"name":"mload","nativeSrc":"1498:5:2","nodeType":"YulIdentifier","src":"1498:5:2"},"nativeSrc":"1498:10:2","nodeType":"YulFunctionCall","src":"1498:10:2"},"variables":[{"name":"newLen","nativeSrc":"1488:6:2","nodeType":"YulTypedName","src":"1488:6:2","type":""}]},{"body":{"nativeSrc":"1551:22:2","nodeType":"YulBlock","src":"1551:22:2","statements":[{"expression":{"arguments":[],"functionName":{"name":"panic_error_0x41","nativeSrc":"1553:16:2","nodeType":"YulIdentifier","src":"1553:16:2"},"nativeSrc":"1553:18:2","nodeType":"YulFunctionCall","src":"1553:18:2"},"nativeSrc":"1553:18:2","nodeType":"YulExpressionStatement","src":"1553:18:2"}]},"condition":{"arguments":[{"name":"newLen","nativeSrc":"1523:6:2","nodeType":"YulIdentifier","src":"1523:6:2"},{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"1539:2:2","nodeType":"YulLiteral","src":"1539:2:2","type":"","value":"64"},{"kind":"number","nativeSrc":"1543:1:2","nodeType":"YulLiteral","src":"1543:1:2","type":"","value":"1"}],"functionName":{"name":"shl","nativeSrc":"1535:3:2","nodeType":"YulIdentifier","src":"1535:3:2"},"nativeSrc":"1535:10:2","nodeType":"YulFunctionCall","src":"1535:10:2"},{"kind":"number","nativeSrc":"1547:1:2","nodeType":"YulLiteral","src":"1547:1:2","type":"","value":"1"}],"functionName":{"name":"sub","nativeSrc":"1531:3:2","nodeType":"YulIdentifier","src":"1531:3:2"},"nativeSrc":"1531:18:2","nodeType":"YulFunctionCall","src":"1531:18:2"}],"functionName":{"name":"gt","nativeSrc":"1520:2:2","nodeType":"YulIdentifier","src":"1520:2:2"},"nativeSrc":"1520:30:2","nodeType":"YulFunctionCall","src":"1520:30:2"},"nativeSrc":"1517:56:2","nodeType":"YulIf","src":"1517:56:2"},{"expression":{"arguments":[{"name":"slot","nativeSrc":"1626:4:2","nodeType":"YulIdentifier","src":"1626:4:2"},{"arguments":[{"arguments":[{"name":"slot","nativeSrc":"1664:4:2","nodeType":"YulIdentifier","src":"1664:4:2"}],"functionName":{"name":"sload","nativeSrc":"1658:5:2","nodeType":"YulIdentifier","src":"1658:5:2"},"nativeSrc":"1658:11:2","nodeType":"YulFunctionCall","src":"1658:11:2"}],"functionName":{"name":"extract_byte_array_length","nativeSrc":"1632:25:2","nodeType":"YulIdentifier","src":"1632:25:2"},"nativeSrc":"1632:38:2","nodeType":"YulFunctionCall","src":"1632:38:2"},{"name":"newLen","nativeSrc":"1672:6:2","nodeType":"YulIdentifier","src":"1672:6:2"}],"functionName":{"name":"clean_up_bytearray_end_slots_string_storage","nativeSrc":"1582:43:2","nodeType":"YulIdentifier","src":"1582:43:2"},"nativeSrc":"1582:97:2","nodeType":"YulFunctionCall","src":"1582:97:2"},"nativeSrc":"1582:97:2","nodeType":"YulExpressionStatement","src":"1582:97:2"},{"nativeSrc":"1688:18:2","nodeType":"YulVariableDeclaration","src":"1688:18:2","value":{"kind":"number","nativeSrc":"1705:1:2","nodeType":"YulLiteral","src":"1705:1:2","type":"","value":"0"},"variables":[{"name":"srcOffset","nativeSrc":"1692:9:2","nodeType":"YulTypedName","src":"1692:9:2","type":""}]},{"nativeSrc":"1715:23:2","nodeType":"YulVariableDeclaration","src":"1715:23:2","value":{"kind":"number","nativeSrc":"1734:4:2","nodeType":"YulLiteral","src":"1734:4:2","type":"","value":"0x20"},"variables":[{"name":"srcOffset_1","nativeSrc":"1719:11:2","nodeType":"YulTypedName","src":"1719:11:2","type":""}]},{"nativeSrc":"1747:24:2","nodeType":"YulAssignment","src":"1747:24:2","value":{"name":"srcOffset_1","nativeSrc":"1760:11:2","nodeType":"YulIdentifier","src":"1760:11:2"},"variableNames":[{"name":"srcOffset","nativeSrc":"1747:9:2","nodeType":"YulIdentifier","src":"1747:9:2"}]},{"cases":[{"body":{"nativeSrc":"1817:656:2","nodeType":"YulBlock","src":"1817:656:2","statements":[{"nativeSrc":"1831:35:2","nodeType":"YulVariableDeclaration","src":"1831:35:2","value":{"arguments":[{"name":"newLen","nativeSrc":"1850:6:2","nodeType":"YulIdentifier","src":"1850:6:2"},{"arguments":[{"kind":"number","nativeSrc":"1862:2:2","nodeType":"YulLiteral","src":"1862:2:2","type":"","value":"31"}],"functionName":{"name":"not","nativeSrc":"1858:3:2","nodeType":"YulIdentifier","src":"1858:3:2"},"nativeSrc":"1858:7:2","nodeType":"YulFunctionCall","src":"1858:7:2"}],"functionName":{"name":"and","nativeSrc":"1846:3:2","nodeType":"YulIdentifier","src":"1846:3:2"},"nativeSrc":"1846:20:2","nodeType":"YulFunctionCall","src":"1846:20:2"},"variables":[{"name":"loopEnd","nativeSrc":"1835:7:2","nodeType":"YulTypedName","src":"1835:7:2","type":""}]},{"nativeSrc":"1879:49:2","nodeType":"YulVariableDeclaration","src":"1879:49:2","value":{"arguments":[{"name":"slot","nativeSrc":"1923:4:2","nodeType":"YulIdentifier","src":"1923:4:2"}],"functionName":{"name":"array_dataslot_string_storage","nativeSrc":"1893:29:2","nodeType":"YulIdentifier","src":"1893:29:2"},"nativeSrc":"1893:35:2","nodeType":"YulFunctionCall","src":"1893:35:2"},"variables":[{"name":"dstPtr","nativeSrc":"1883:6:2","nodeType":"YulTypedName","src":"1883:6:2","type":""}]},{"nativeSrc":"1941:10:2","nodeType":"YulVariableDeclaration","src":"1941:10:2","value":{"kind":"number","nativeSrc":"1950:1:2","nodeType":"YulLiteral","src":"1950:1:2","type":"","value":"0"},"variables":[{"name":"i","nativeSrc":"1945:1:2","nodeType":"YulTypedName","src":"1945:1:2","type":""}]},{"body":{"nativeSrc":"2028:172:2","nodeType":"YulBlock","src":"2028:172:2","statements":[{"expression":{"arguments":[{"name":"dstPtr","nativeSrc":"2053:6:2","nodeType":"YulIdentifier","src":"2053:6:2"},{"arguments":[{"arguments":[{"name":"src","nativeSrc":"2071:3:2","nodeType":"YulIdentifier","src":"2071:3:2"},{"name":"srcOffset","nativeSrc":"2076:9:2","nodeType":"YulIdentifier","src":"2076:9:2"}],"functionName":{"name":"add","nativeSrc":"2067:3:2","nodeType":"YulIdentifier","src":"2067:3:2"},"nativeSrc":"2067:19:2","nodeType":"YulFunctionCall","src":"2067:19:2"}],"functionName":{"name":"mload","nativeSrc":"2061:5:2","nodeType":"YulIdentifier","src":"2061:5:2"},"nativeSrc":"2061:26:2","nodeType":"YulFunctionCall","src":"2061:26:2"}],"functionName":{"name":"sstore","nativeSrc":"2046:6:2","nodeType":"YulIdentifier","src":"2046:6:2"},"nativeSrc":"2046:42:2","nodeType":"YulFunctionCall","src":"2046:42:2"},"nativeSrc":"2046:42:2","nodeType":"YulExpressionStatement","src":"2046:42:2"},{"nativeSrc":"2105:24:2","nodeType":"YulAssignment","src":"2105:24:2","value":{"arguments":[{"name":"dstPtr","nativeSrc":"2119:6:2","nodeType":"YulIdentifier","src":"2119:6:2"},{"kind":"number","nativeSrc":"2127:1:2","nodeType":"YulLiteral","src":"2127:1:2","type":"","value":"1"}],"functionName":{"name":"add","nativeSrc":"2115:3:2","nodeType":"YulIdentifier","src":"2115:3:2"},"nativeSrc":"2115:14:2","nodeType":"YulFunctionCall","src":"2115:14:2"},"variableNames":[{"name":"dstPtr","nativeSrc":"2105:6:2","nodeType":"YulIdentifier","src":"2105:6:2"}]},{"nativeSrc":"2146:40:2","nodeType":"YulAssignment","src":"2146:40:2","value":{"arguments":[{"name":"srcOffset","nativeSrc":"2163:9:2","nodeType":"YulIdentifier","src":"2163:9:2"},{"name":"srcOffset_1","nativeSrc":"2174:11:2","nodeType":"YulIdentifier","src":"2174:11:2"}],"functionName":{"name":"add","nativeSrc":"2159:3:2","nodeType":"YulIdentifier","src":"2159:3:2"},"nativeSrc":"2159:27:2","nodeType":"YulFunctionCall","src":"2159:27:2"},"variableNames":[{"name":"srcOffset","nativeSrc":"2146:9:2","nodeType":"YulIdentifier","src":"2146:9:2"}]}]},"condition":{"arguments":[{"name":"i","nativeSrc":"1975:1:2","nodeType":"YulIdentifier","src":"1975:1:2"},{"name":"loopEnd","nativeSrc":"1978:7:2","nodeType":"YulIdentifier","src":"1978:7:2"}],"functionName":{"name":"lt","nativeSrc":"1972:2:2","nodeType":"YulIdentifier","src":"1972:2:2"},"nativeSrc":"1972:14:2","nodeType":"YulFunctionCall","src":"1972:14:2"},"nativeSrc":"1964:236:2","nodeType":"YulForLoop","post":{"nativeSrc":"1987:28:2","nodeType":"YulBlock","src":"1987:28:2","statements":[{"nativeSrc":"1989:24:2","nodeType":"YulAssignment","src":"1989:24:2","value":{"arguments":[{"name":"i","nativeSrc":"1998:1:2","nodeType":"YulIdentifier","src":"1998:1:2"},{"name":"srcOffset_1","nativeSrc":"2001:11:2","nodeType":"YulIdentifier","src":"2001:11:2"}],"functionName":{"name":"add","nativeSrc":"1994:3:2","nodeType":"YulIdentifier","src":"1994:3:2"},"nativeSrc":"1994:19:2","nodeType":"YulFunctionCall","src":"1994:19:2"},"variableNames":[{"name":"i","nativeSrc":"1989:1:2","nodeType":"YulIdentifier","src":"1989:1:2"}]}]},"pre":{"nativeSrc":"1968:3:2","nodeType":"YulBlock","src":"1968:3:2","statements":[]},"src":"1964:236:2"},{"body":{"nativeSrc":"2248:166:2","nodeType":"YulBlock","src":"2248:166:2","statements":[{"nativeSrc":"2266:43:2","nodeType":"YulVariableDeclaration","src":"2266:43:2","value":{"arguments":[{"arguments":[{"name":"src","nativeSrc":"2293:3:2","nodeType":"YulIdentifier","src":"2293:3:2"},{"name":"srcOffset","nativeSrc":"2298:9:2","nodeType":"YulIdentifier","src":"2298:9:2"}],"functionName":{"name":"add","nativeSrc":"2289:3:2","nodeType":"YulIdentifier","src":"2289:3:2"},"nativeSrc":"2289:19:2","nodeType":"YulFunctionCall","src":"2289:19:2"}],"functionName":{"name":"mload","nativeSrc":"2283:5:2","nodeType":"YulIdentifier","src":"2283:5:2"},"nativeSrc":"2283:26:2","nodeType":"YulFunctionCall","src":"2283:26:2"},"variables":[{"name":"lastValue","nativeSrc":"2270:9:2","nodeType":"YulTypedName","src":"2270:9:2","type":""}]},{"expression":{"arguments":[{"name":"dstPtr","nativeSrc":"2333:6:2","nodeType":"YulIdentifier","src":"2333:6:2"},{"arguments":[{"name":"lastValue","nativeSrc":"2345:9:2","nodeType":"YulIdentifier","src":"2345:9:2"},{"arguments":[{"arguments":[{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"2372:1:2","nodeType":"YulLiteral","src":"2372:1:2","type":"","value":"3"},{"name":"newLen","nativeSrc":"2375:6:2","nodeType":"YulIdentifier","src":"2375:6:2"}],"functionName":{"name":"shl","nativeSrc":"2368:3:2","nodeType":"YulIdentifier","src":"2368:3:2"},"nativeSrc":"2368:14:2","nodeType":"YulFunctionCall","src":"2368:14:2"},{"kind":"number","nativeSrc":"2384:3:2","nodeType":"YulLiteral","src":"2384:3:2","type":"","value":"248"}],"functionName":{"name":"and","nativeSrc":"2364:3:2","nodeType":"YulIdentifier","src":"2364:3:2"},"nativeSrc":"2364:24:2","nodeType":"YulFunctionCall","src":"2364:24:2"},{"arguments":[{"kind":"number","nativeSrc":"2394:1:2","nodeType":"YulLiteral","src":"2394:1:2","type":"","value":"0"}],"functionName":{"name":"not","nativeSrc":"2390:3:2","nodeType":"YulIdentifier","src":"2390:3:2"},"nativeSrc":"2390:6:2","nodeType":"YulFunctionCall","src":"2390:6:2"}],"functionName":{"name":"shr","nativeSrc":"2360:3:2","nodeType":"YulIdentifier","src":"2360:3:2"},"nativeSrc":"2360:37:2","nodeType":"YulFunctionCall","src":"2360:37:2"}],"functionName":{"name":"not","nativeSrc":"2356:3:2","nodeType":"YulIdentifier","src":"2356:3:2"},"nativeSrc":"2356:42:2","nodeType":"YulFunctionCall","src":"2356:42:2"}],"functionName":{"name":"and","nativeSrc":"2341:3:2","nodeType":"YulIdentifier","src":"2341:3:2"},"nativeSrc":"2341:58:2","nodeType":"YulFunctionCall","src":"2341:58:2"}],"functionName":{"name":"sstore","nativeSrc":"2326:6:2","nodeType":"YulIdentifier","src":"2326:6:2"},"nativeSrc":"2326:74:2","nodeType":"YulFunctionCall","src":"2326:74:2"},"nativeSrc":"2326:74:2","nodeType":"YulExpressionStatement","src":"2326:74:2"}]},"condition":{"arguments":[{"name":"loopEnd","nativeSrc":"2219:7:2","nodeType":"YulIdentifier","src":"2219:7:2"},{"name":"newLen","nativeSrc":"2228:6:2","nodeType":"YulIdentifier","src":"2228:6:2"}],"functionName":{"name":"lt","nativeSrc":"2216:2:2","nodeType":"YulIdentifier","src":"2216:2:2"},"nativeSrc":"2216:19:2","nodeType":"YulFunctionCall","src":"2216:19:2"},"nativeSrc":"2213:201:2","nodeType":"YulIf","src":"2213:201:2"},{"expression":{"arguments":[{"name":"slot","nativeSrc":"2434:4:2","nodeType":"YulIdentifier","src":"2434:4:2"},{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"2448:1:2","nodeType":"YulLiteral","src":"2448:1:2","type":"","value":"1"},{"name":"newLen","nativeSrc":"2451:6:2","nodeType":"YulIdentifier","src":"2451:6:2"}],"functionName":{"name":"shl","nativeSrc":"2444:3:2","nodeType":"YulIdentifier","src":"2444:3:2"},"nativeSrc":"2444:14:2","nodeType":"YulFunctionCall","src":"2444:14:2"},{"kind":"number","nativeSrc":"2460:1:2","nodeType":"YulLiteral","src":"2460:1:2","type":"","value":"1"}],"functionName":{"name":"add","nativeSrc":"2440:3:2","nodeType":"YulIdentifier","src":"2440:3:2"},"nativeSrc":"2440:22:2","nodeType":"YulFunctionCall","src":"2440:22:2"}],"functionName":{"name":"sstore","nativeSrc":"2427:6:2","nodeType":"YulIdentifier","src":"2427:6:2"},"nativeSrc":"2427:36:2","nodeType":"YulFunctionCall","src":"2427:36:2"},"nativeSrc":"2427:36:2","nodeType":"YulExpressionStatement","src":"2427:36:2"}]},"nativeSrc":"1810:663:2","nodeType":"YulCase","src":"1810:663:2","value":{"kind":"number","nativeSrc":"1815:1:2","nodeType":"YulLiteral","src":"1815:1:2","type":"","value":"1"}},{"body":{"nativeSrc":"2490:234:2","nodeType":"YulBlock","src":"2490:234:2","statements":[{"nativeSrc":"2504:14:2","nodeType":"YulVariableDeclaration","src":"2504:14:2","value":{"kind":"number","nativeSrc":"2517:1:2","nodeType":"YulLiteral","src":"2517:1:2","type":"","value":"0"},"variables":[{"name":"value","nativeSrc":"2508:5:2","nodeType":"YulTypedName","src":"2508:5:2","type":""}]},{"body":{"nativeSrc":"2553:67:2","nodeType":"YulBlock","src":"2553:67:2","statements":[{"nativeSrc":"2571:35:2","nodeType":"YulAssignment","src":"2571:35:2","value":{"arguments":[{"arguments":[{"name":"src","nativeSrc":"2590:3:2","nodeType":"YulIdentifier","src":"2590:3:2"},{"name":"srcOffset","nativeSrc":"2595:9:2","nodeType":"YulIdentifier","src":"2595:9:2"}],"functionName":{"name":"add","nativeSrc":"2586:3:2","nodeType":"YulIdentifier","src":"2586:3:2"},"nativeSrc":"2586:19:2","nodeType":"YulFunctionCall","src":"2586:19:2"}],"functionName":{"name":"mload","nativeSrc":"2580:5:2","nodeType":"YulIdentifier","src":"2580:5:2"},"nativeSrc":"2580:26:2","nodeType":"YulFunctionCall","src":"2580:26:2"},"variableNames":[{"name":"value","nativeSrc":"2571:5:2","nodeType":"YulIdentifier","src":"2571:5:2"}]}]},"condition":{"name":"newLen","nativeSrc":"2534:6:2","nodeType":"YulIdentifier","src":"2534:6:2"},"nativeSrc":"2531:89:2","nodeType":"YulIf","src":"2531:89:2"},{"expression":{"arguments":[{"name":"slot","nativeSrc":"2640:4:2","nodeType":"YulIdentifier","src":"2640:4:2"},{"arguments":[{"name":"value","nativeSrc":"2699:5:2","nodeType":"YulIdentifier","src":"2699:5:2"},{"name":"newLen","nativeSrc":"2706:6:2","nodeType":"YulIdentifier","src":"2706:6:2"}],"functionName":{"name":"extract_used_part_and_set_length_of_short_byte_array","nativeSrc":"2646:52:2","nodeType":"YulIdentifier","src":"2646:52:2"},"nativeSrc":"2646:67:2","nodeType":"YulFunctionCall","src":"2646:67:2"}],"functionName":{"name":"sstore","nativeSrc":"2633:6:2","nodeType":"YulIdentifier","src":"2633:6:2"},"nativeSrc":"2633:81:2","nodeType":"YulFunctionCall","src":"2633:81:2"},"nativeSrc":"2633:81:2","nodeType":"YulExpressionStatement","src":"2633:81:2"}]},"nativeSrc":"2482:242:2","nodeType":"YulCase","src":"2482:242:2","value":"default"}],"expression":{"arguments":[{"name":"newLen","nativeSrc":"1790:6:2","nodeType":"YulIdentifier","src":"1790:6:2"},{"kind":"number","nativeSrc":"1798:2:2","nodeType":"YulLiteral","src":"1798:2:2","type":"","value":"31"}],"functionName":{"name":"gt","nativeSrc":"1787:2:2","nodeType":"YulIdentifier","src":"1787:2:2"},"nativeSrc":"1787:14:2","nodeType":"YulFunctionCall","src":"1787:14:2"},"nativeSrc":"1780:944:2","nodeType":"YulSwitch","src":"1780:944:2"}]},"name":"copy_byte_array_to_storage_from_t_string_memory_ptr_to_t_string_storage","nativeSrc":"1378:1352:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"slot","nativeSrc":"1459:4:2","nodeType":"YulTypedName","src":"1459:4:2","type":""},{"name":"src","nativeSrc":"1465:3:2","nodeType":"YulTypedName","src":"1465:3:2","type":""}],"src":"1378:1352:2"}]},"contents":"{\n    { }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n    function extract_byte_array_length(data) -> length\n    {\n        length := shr(1, data)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) { length := and(length, 0x7f) }\n        if eq(outOfPlaceEncoding, lt(length, 32))\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x22)\n            revert(0, 0x24)\n        }\n    }\n    function array_dataslot_string_storage(ptr) -> data\n    {\n        mstore(0, ptr)\n        data := keccak256(0, 0x20)\n    }\n    function clean_up_bytearray_end_slots_string_storage(array, len, startIndex)\n    {\n        if gt(len, 31)\n        {\n            let _1 := 0\n            mstore(_1, array)\n            let data := keccak256(_1, 0x20)\n            let deleteStart := add(data, shr(5, add(startIndex, 31)))\n            if lt(startIndex, 0x20) { deleteStart := data }\n            let _2 := add(data, shr(5, add(len, 31)))\n            let start := deleteStart\n            for { } lt(start, _2) { start := add(start, 1) }\n            { sstore(start, _1) }\n        }\n    }\n    function extract_used_part_and_set_length_of_short_byte_array(data, len) -> used\n    {\n        used := or(and(data, not(shr(shl(3, len), not(0)))), shl(1, len))\n    }\n    function copy_byte_array_to_storage_from_t_string_memory_ptr_to_t_string_storage(slot, src)\n    {\n        let newLen := mload(src)\n        if gt(newLen, sub(shl(64, 1), 1)) { panic_error_0x41() }\n        clean_up_bytearray_end_slots_string_storage(slot, extract_byte_array_length(sload(slot)), newLen)\n        let srcOffset := 0\n        let srcOffset_1 := 0x20\n        srcOffset := srcOffset_1\n        switch gt(newLen, 31)\n        case 1 {\n            let loopEnd := and(newLen, not(31))\n            let dstPtr := array_dataslot_string_storage(slot)\n            let i := 0\n            for { } lt(i, loopEnd) { i := add(i, srcOffset_1) }\n            {\n                sstore(dstPtr, mload(add(src, srcOffset)))\n                dstPtr := add(dstPtr, 1)\n                srcOffset := add(srcOffset, srcOffset_1)\n            }\n            if lt(loopEnd, newLen)\n            {\n                let lastValue := mload(add(src, srcOffset))\n                sstore(dstPtr, and(lastValue, not(shr(and(shl(3, newLen), 248), not(0)))))\n            }\n            sstore(slot, add(shl(1, newLen), 1))\n        }\n        default {\n            let value := 0\n            if newLen\n            {\n                value := mload(add(src, srcOffset))\n            }\n            sstore(slot, extract_used_part_and_set_length_of_short_byte_array(value, newLen))\n        }\n    }\n}","id":2,"language":"Yul","name":"#utility.yul"}],"deployedGeneratedSources":[{"ast":{"nativeSrc":"0:8458:2","nodeType":"YulBlock","src":"0:8458:2","statements":[{"nativeSrc":"6:3:2","nodeType":"YulBlock","src":"6:3:2","statements":[]},{"body":{"nativeSrc":"80:184:2","nodeType":"YulBlock","src":"80:184:2","statements":[{"nativeSrc":"90:10:2","nodeType":"YulVariableDeclaration","src":"90:10:2","value":{"kind":"number","nativeSrc":"99:1:2","nodeType":"YulLiteral","src":"99:1:2","type":"","value":"0"},"variables":[{"name":"i","nativeSrc":"94:1:2","nodeType":"YulTypedName","src":"94:1:2","type":""}]},{"body":{"nativeSrc":"159:63:2","nodeType":"YulBlock","src":"159:63:2","statements":[{"expression":{"arguments":[{"arguments":[{"name":"dst","nativeSrc":"184:3:2","nodeType":"YulIdentifier","src":"184:3:2"},{"name":"i","nativeSrc":"189:1:2","nodeType":"YulIdentifier","src":"189:1:2"}],"functionName":{"name":"add","nativeSrc":"180:3:2","nodeType":"YulIdentifier","src":"180:3:2"},"nativeSrc":"180:11:2","nodeType":"YulFunctionCall","src":"180:11:2"},{"arguments":[{"arguments":[{"name":"src","nativeSrc":"203:3:2","nodeType":"YulIdentifier","src":"203:3:2"},{"name":"i","nativeSrc":"208:1:2","nodeType":"YulIdentifier","src":"208:1:2"}],"functionName":{"name":"add","nativeSrc":"199:3:2","nodeType":"YulIdentifier","src":"199:3:2"},"nativeSrc":"199:11:2","nodeType":"YulFunctionCall","src":"199:11:2"}],"functionName":{"name":"mload","nativeSrc":"193:5:2","nodeType":"YulIdentifier","src":"193:5:2"},"nativeSrc":"193:18:2","nodeType":"YulFunctionCall","src":"193:18:2"}],"functionName":{"name":"mstore","nativeSrc":"173:6:2","nodeType":"YulIdentifier","src":"173:6:2"},"nativeSrc":"173:39:2","nodeType":"YulFunctionCall","src":"173:39:2"},"nativeSrc":"173:39:2","nodeType":"YulExpressionStatement","src":"173:39:2"}]},"condition":{"arguments":[{"name":"i","nativeSrc":"120:1:2","nodeType":"YulIdentifier","src":"120:1:2"},{"name":"length","nativeSrc":"123:6:2","nodeType":"YulIdentifier","src":"123:6:2"}],"functionName":{"name":"lt","nativeSrc":"117:2:2","nodeType":"YulIdentifier","src":"117:2:2"},"nativeSrc":"117:13:2","nodeType":"YulFunctionCall","src":"117:13:2"},"nativeSrc":"109:113:2","nodeType":"YulForLoop","post":{"nativeSrc":"131:19:2","nodeType":"YulBlock","src":"131:19:2","statements":[{"nativeSrc":"133:15:2","nodeType":"YulAssignment","src":"133:15:2","value":{"arguments":[{"name":"i","nativeSrc":"142:1:2","nodeType":"YulIdentifier","src":"142:1:2"},{"kind":"number","nativeSrc":"145:2:2","nodeType":"YulLiteral","src":"145:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"138:3:2","nodeType":"YulIdentifier","src":"138:3:2"},"nativeSrc":"138:10:2","nodeType":"YulFunctionCall","src":"138:10:2"},"variableNames":[{"name":"i","nativeSrc":"133:1:2","nodeType":"YulIdentifier","src":"133:1:2"}]}]},"pre":{"nativeSrc":"113:3:2","nodeType":"YulBlock","src":"113:3:2","statements":[]},"src":"109:113:2"},{"expression":{"arguments":[{"arguments":[{"name":"dst","nativeSrc":"242:3:2","nodeType":"YulIdentifier","src":"242:3:2"},{"name":"length","nativeSrc":"247:6:2","nodeType":"YulIdentifier","src":"247:6:2"}],"functionName":{"name":"add","nativeSrc":"238:3:2","nodeType":"YulIdentifier","src":"238:3:2"},"nativeSrc":"238:16:2","nodeType":"YulFunctionCall","src":"238:16:2"},{"kind":"number","nativeSrc":"256:1:2","nodeType":"YulLiteral","src":"256:1:2","type":"","value":"0"}],"functionName":{"name":"mstore","nativeSrc":"231:6:2","nodeType":"YulIdentifier","src":"231:6:2"},"nativeSrc":"231:27:2","nodeType":"YulFunctionCall","src":"231:27:2"},"nativeSrc":"231:27:2","nodeType":"YulExpressionStatement","src":"231:27:2"}]},"name":"copy_memory_to_memory_with_cleanup","nativeSrc":"14:250:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"src","nativeSrc":"58:3:2","nodeType":"YulTypedName","src":"58:3:2","type":""},{"name":"dst","nativeSrc":"63:3:2","nodeType":"YulTypedName","src":"63:3:2","type":""},{"name":"length","nativeSrc":"68:6:2","nodeType":"YulTypedName","src":"68:6:2","type":""}],"src":"14:250:2"},{"body":{"nativeSrc":"319:221:2","nodeType":"YulBlock","src":"319:221:2","statements":[{"nativeSrc":"329:26:2","nodeType":"YulVariableDeclaration","src":"329:26:2","value":{"arguments":[{"name":"value","nativeSrc":"349:5:2","nodeType":"YulIdentifier","src":"349:5:2"}],"functionName":{"name":"mload","nativeSrc":"343:5:2","nodeType":"YulIdentifier","src":"343:5:2"},"nativeSrc":"343:12:2","nodeType":"YulFunctionCall","src":"343:12:2"},"variables":[{"name":"length","nativeSrc":"333:6:2","nodeType":"YulTypedName","src":"333:6:2","type":""}]},{"expression":{"arguments":[{"name":"pos","nativeSrc":"371:3:2","nodeType":"YulIdentifier","src":"371:3:2"},{"name":"length","nativeSrc":"376:6:2","nodeType":"YulIdentifier","src":"376:6:2"}],"functionName":{"name":"mstore","nativeSrc":"364:6:2","nodeType":"YulIdentifier","src":"364:6:2"},"nativeSrc":"364:19:2","nodeType":"YulFunctionCall","src":"364:19:2"},"nativeSrc":"364:19:2","nodeType":"YulExpressionStatement","src":"364:19:2"},{"expression":{"arguments":[{"arguments":[{"name":"value","nativeSrc":"431:5:2","nodeType":"YulIdentifier","src":"431:5:2"},{"kind":"number","nativeSrc":"438:4:2","nodeType":"YulLiteral","src":"438:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"427:3:2","nodeType":"YulIdentifier","src":"427:3:2"},"nativeSrc":"427:16:2","nodeType":"YulFunctionCall","src":"427:16:2"},{"arguments":[{"name":"pos","nativeSrc":"449:3:2","nodeType":"YulIdentifier","src":"449:3:2"},{"kind":"number","nativeSrc":"454:4:2","nodeType":"YulLiteral","src":"454:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"445:3:2","nodeType":"YulIdentifier","src":"445:3:2"},"nativeSrc":"445:14:2","nodeType":"YulFunctionCall","src":"445:14:2"},{"name":"length","nativeSrc":"461:6:2","nodeType":"YulIdentifier","src":"461:6:2"}],"functionName":{"name":"copy_memory_to_memory_with_cleanup","nativeSrc":"392:34:2","nodeType":"YulIdentifier","src":"392:34:2"},"nativeSrc":"392:76:2","nodeType":"YulFunctionCall","src":"392:76:2"},"nativeSrc":"392:76:2","nodeType":"YulExpressionStatement","src":"392:76:2"},{"nativeSrc":"477:57:2","nodeType":"YulAssignment","src":"477:57:2","value":{"arguments":[{"arguments":[{"name":"pos","nativeSrc":"492:3:2","nodeType":"YulIdentifier","src":"492:3:2"},{"arguments":[{"arguments":[{"name":"length","nativeSrc":"505:6:2","nodeType":"YulIdentifier","src":"505:6:2"},{"kind":"number","nativeSrc":"513:2:2","nodeType":"YulLiteral","src":"513:2:2","type":"","value":"31"}],"functionName":{"name":"add","nativeSrc":"501:3:2","nodeType":"YulIdentifier","src":"501:3:2"},"nativeSrc":"501:15:2","nodeType":"YulFunctionCall","src":"501:15:2"},{"arguments":[{"kind":"number","nativeSrc":"522:2:2","nodeType":"YulLiteral","src":"522:2:2","type":"","value":"31"}],"functionName":{"name":"not","nativeSrc":"518:3:2","nodeType":"YulIdentifier","src":"518:3:2"},"nativeSrc":"518:7:2","nodeType":"YulFunctionCall","src":"518:7:2"}],"functionName":{"name":"and","nativeSrc":"497:3:2","nodeType":"YulIdentifier","src":"497:3:2"},"nativeSrc":"497:29:2","nodeType":"YulFunctionCall","src":"497:29:2"}],"functionName":{"name":"add","nativeSrc":"488:3:2","nodeType":"YulIdentifier","src":"488:3:2"},"nativeSrc":"488:39:2","nodeType":"YulFunctionCall","src":"488:39:2"},{"kind":"number","nativeSrc":"529:4:2","nodeType":"YulLiteral","src":"529:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"484:3:2","nodeType":"YulIdentifier","src":"484:3:2"},"nativeSrc":"484:50:2","nodeType":"YulFunctionCall","src":"484:50:2"},"variableNames":[{"name":"end","nativeSrc":"477:3:2","nodeType":"YulIdentifier","src":"477:3:2"}]}]},"name":"abi_encode_string","nativeSrc":"269:271:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"value","nativeSrc":"296:5:2","nodeType":"YulTypedName","src":"296:5:2","type":""},{"name":"pos","nativeSrc":"303:3:2","nodeType":"YulTypedName","src":"303:3:2","type":""}],"returnVariables":[{"name":"end","nativeSrc":"311:3:2","nodeType":"YulTypedName","src":"311:3:2","type":""}],"src":"269:271:2"},{"body":{"nativeSrc":"666:99:2","nodeType":"YulBlock","src":"666:99:2","statements":[{"expression":{"arguments":[{"name":"headStart","nativeSrc":"683:9:2","nodeType":"YulIdentifier","src":"683:9:2"},{"kind":"number","nativeSrc":"694:2:2","nodeType":"YulLiteral","src":"694:2:2","type":"","value":"32"}],"functionName":{"name":"mstore","nativeSrc":"676:6:2","nodeType":"YulIdentifier","src":"676:6:2"},"nativeSrc":"676:21:2","nodeType":"YulFunctionCall","src":"676:21:2"},"nativeSrc":"676:21:2","nodeType":"YulExpressionStatement","src":"676:21:2"},{"nativeSrc":"706:53:2","nodeType":"YulAssignment","src":"706:53:2","value":{"arguments":[{"name":"value0","nativeSrc":"732:6:2","nodeType":"YulIdentifier","src":"732:6:2"},{"arguments":[{"name":"headStart","nativeSrc":"744:9:2","nodeType":"YulIdentifier","src":"744:9:2"},{"kind":"number","nativeSrc":"755:2:2","nodeType":"YulLiteral","src":"755:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"740:3:2","nodeType":"YulIdentifier","src":"740:3:2"},"nativeSrc":"740:18:2","nodeType":"YulFunctionCall","src":"740:18:2"}],"functionName":{"name":"abi_encode_string","nativeSrc":"714:17:2","nodeType":"YulIdentifier","src":"714:17:2"},"nativeSrc":"714:45:2","nodeType":"YulFunctionCall","src":"714:45:2"},"variableNames":[{"name":"tail","nativeSrc":"706:4:2","nodeType":"YulIdentifier","src":"706:4:2"}]}]},"name":"abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed","nativeSrc":"545:220:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"635:9:2","nodeType":"YulTypedName","src":"635:9:2","type":""},{"name":"value0","nativeSrc":"646:6:2","nodeType":"YulTypedName","src":"646:6:2","type":""}],"returnVariables":[{"name":"tail","nativeSrc":"657:4:2","nodeType":"YulTypedName","src":"657:4:2","type":""}],"src":"545:220:2"},{"body":{"nativeSrc":"865:92:2","nodeType":"YulBlock","src":"865:92:2","statements":[{"nativeSrc":"875:26:2","nodeType":"YulAssignment","src":"875:26:2","value":{"arguments":[{"name":"headStart","nativeSrc":"887:9:2","nodeType":"YulIdentifier","src":"887:9:2"},{"kind":"number","nativeSrc":"898:2:2","nodeType":"YulLiteral","src":"898:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"883:3:2","nodeType":"YulIdentifier","src":"883:3:2"},"nativeSrc":"883:18:2","nodeType":"YulFunctionCall","src":"883:18:2"},"variableNames":[{"name":"tail","nativeSrc":"875:4:2","nodeType":"YulIdentifier","src":"875:4:2"}]},{"expression":{"arguments":[{"name":"headStart","nativeSrc":"917:9:2","nodeType":"YulIdentifier","src":"917:9:2"},{"arguments":[{"arguments":[{"name":"value0","nativeSrc":"942:6:2","nodeType":"YulIdentifier","src":"942:6:2"}],"functionName":{"name":"iszero","nativeSrc":"935:6:2","nodeType":"YulIdentifier","src":"935:6:2"},"nativeSrc":"935:14:2","nodeType":"YulFunctionCall","src":"935:14:2"}],"functionName":{"name":"iszero","nativeSrc":"928:6:2","nodeType":"YulIdentifier","src":"928:6:2"},"nativeSrc":"928:22:2","nodeType":"YulFunctionCall","src":"928:22:2"}],"functionName":{"name":"mstore","nativeSrc":"910:6:2","nodeType":"YulIdentifier","src":"910:6:2"},"nativeSrc":"910:41:2","nodeType":"YulFunctionCall","src":"910:41:2"},"nativeSrc":"910:41:2","nodeType":"YulExpressionStatement","src":"910:41:2"}]},"name":"abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed","nativeSrc":"770:187:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"834:9:2","nodeType":"YulTypedName","src":"834:9:2","type":""},{"name":"value0","nativeSrc":"845:6:2","nodeType":"YulTypedName","src":"845:6:2","type":""}],"returnVariables":[{"name":"tail","nativeSrc":"856:4:2","nodeType":"YulTypedName","src":"856:4:2","type":""}],"src":"770:187:2"},{"body":{"nativeSrc":"994:95:2","nodeType":"YulBlock","src":"994:95:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"1011:1:2","nodeType":"YulLiteral","src":"1011:1:2","type":"","value":"0"},{"arguments":[{"kind":"number","nativeSrc":"1018:3:2","nodeType":"YulLiteral","src":"1018:3:2","type":"","value":"224"},{"kind":"number","nativeSrc":"1023:10:2","nodeType":"YulLiteral","src":"1023:10:2","type":"","value":"0x4e487b71"}],"functionName":{"name":"shl","nativeSrc":"1014:3:2","nodeType":"YulIdentifier","src":"1014:3:2"},"nativeSrc":"1014:20:2","nodeType":"YulFunctionCall","src":"1014:20:2"}],"functionName":{"name":"mstore","nativeSrc":"1004:6:2","nodeType":"YulIdentifier","src":"1004:6:2"},"nativeSrc":"1004:31:2","nodeType":"YulFunctionCall","src":"1004:31:2"},"nativeSrc":"1004:31:2","nodeType":"YulExpressionStatement","src":"1004:31:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"1051:1:2","nodeType":"YulLiteral","src":"1051:1:2","type":"","value":"4"},{"kind":"number","nativeSrc":"1054:4:2","nodeType":"YulLiteral","src":"1054:4:2","type":"","value":"0x41"}],"functionName":{"name":"mstore","nativeSrc":"1044:6:2","nodeType":"YulIdentifier","src":"1044:6:2"},"nativeSrc":"1044:15:2","nodeType":"YulFunctionCall","src":"1044:15:2"},"nativeSrc":"1044:15:2","nodeType":"YulExpressionStatement","src":"1044:15:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"1075:1:2","nodeType":"YulLiteral","src":"1075:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"1078:4:2","nodeType":"YulLiteral","src":"1078:4:2","type":"","value":"0x24"}],"functionName":{"name":"revert","nativeSrc":"1068:6:2","nodeType":"YulIdentifier","src":"1068:6:2"},"nativeSrc":"1068:15:2","nodeType":"YulFunctionCall","src":"1068:15:2"},"nativeSrc":"1068:15:2","nodeType":"YulExpressionStatement","src":"1068:15:2"}]},"name":"panic_error_0x41","nativeSrc":"962:127:2","nodeType":"YulFunctionDefinition","src":"962:127:2"},{"body":{"nativeSrc":"1147:666:2","nodeType":"YulBlock","src":"1147:666:2","statements":[{"body":{"nativeSrc":"1196:16:2","nodeType":"YulBlock","src":"1196:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"1205:1:2","nodeType":"YulLiteral","src":"1205:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"1208:1:2","nodeType":"YulLiteral","src":"1208:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"1198:6:2","nodeType":"YulIdentifier","src":"1198:6:2"},"nativeSrc":"1198:12:2","nodeType":"YulFunctionCall","src":"1198:12:2"},"nativeSrc":"1198:12:2","nodeType":"YulExpressionStatement","src":"1198:12:2"}]},"condition":{"arguments":[{"arguments":[{"arguments":[{"name":"offset","nativeSrc":"1175:6:2","nodeType":"YulIdentifier","src":"1175:6:2"},{"kind":"number","nativeSrc":"1183:4:2","nodeType":"YulLiteral","src":"1183:4:2","type":"","value":"0x1f"}],"functionName":{"name":"add","nativeSrc":"1171:3:2","nodeType":"YulIdentifier","src":"1171:3:2"},"nativeSrc":"1171:17:2","nodeType":"YulFunctionCall","src":"1171:17:2"},{"name":"end","nativeSrc":"1190:3:2","nodeType":"YulIdentifier","src":"1190:3:2"}],"functionName":{"name":"slt","nativeSrc":"1167:3:2","nodeType":"YulIdentifier","src":"1167:3:2"},"nativeSrc":"1167:27:2","nodeType":"YulFunctionCall","src":"1167:27:2"}],"functionName":{"name":"iszero","nativeSrc":"1160:6:2","nodeType":"YulIdentifier","src":"1160:6:2"},"nativeSrc":"1160:35:2","nodeType":"YulFunctionCall","src":"1160:35:2"},"nativeSrc":"1157:55:2","nodeType":"YulIf","src":"1157:55:2"},{"nativeSrc":"1221:30:2","nodeType":"YulVariableDeclaration","src":"1221:30:2","value":{"arguments":[{"name":"offset","nativeSrc":"1244:6:2","nodeType":"YulIdentifier","src":"1244:6:2"}],"functionName":{"name":"calldataload","nativeSrc":"1231:12:2","nodeType":"YulIdentifier","src":"1231:12:2"},"nativeSrc":"1231:20:2","nodeType":"YulFunctionCall","src":"1231:20:2"},"variables":[{"name":"_1","nativeSrc":"1225:2:2","nodeType":"YulTypedName","src":"1225:2:2","type":""}]},{"nativeSrc":"1260:28:2","nodeType":"YulVariableDeclaration","src":"1260:28:2","value":{"kind":"number","nativeSrc":"1270:18:2","nodeType":"YulLiteral","src":"1270:18:2","type":"","value":"0xffffffffffffffff"},"variables":[{"name":"_2","nativeSrc":"1264:2:2","nodeType":"YulTypedName","src":"1264:2:2","type":""}]},{"body":{"nativeSrc":"1311:22:2","nodeType":"YulBlock","src":"1311:22:2","statements":[{"expression":{"arguments":[],"functionName":{"name":"panic_error_0x41","nativeSrc":"1313:16:2","nodeType":"YulIdentifier","src":"1313:16:2"},"nativeSrc":"1313:18:2","nodeType":"YulFunctionCall","src":"1313:18:2"},"nativeSrc":"1313:18:2","nodeType":"YulExpressionStatement","src":"1313:18:2"}]},"condition":{"arguments":[{"name":"_1","nativeSrc":"1303:2:2","nodeType":"YulIdentifier","src":"1303:2:2"},{"name":"_2","nativeSrc":"1307:2:2","nodeType":"YulIdentifier","src":"1307:2:2"}],"functionName":{"name":"gt","nativeSrc":"1300:2:2","nodeType":"YulIdentifier","src":"1300:2:2"},"nativeSrc":"1300:10:2","nodeType":"YulFunctionCall","src":"1300:10:2"},"nativeSrc":"1297:36:2","nodeType":"YulIf","src":"1297:36:2"},{"nativeSrc":"1342:17:2","nodeType":"YulVariableDeclaration","src":"1342:17:2","value":{"arguments":[{"kind":"number","nativeSrc":"1356:2:2","nodeType":"YulLiteral","src":"1356:2:2","type":"","value":"31"}],"functionName":{"name":"not","nativeSrc":"1352:3:2","nodeType":"YulIdentifier","src":"1352:3:2"},"nativeSrc":"1352:7:2","nodeType":"YulFunctionCall","src":"1352:7:2"},"variables":[{"name":"_3","nativeSrc":"1346:2:2","nodeType":"YulTypedName","src":"1346:2:2","type":""}]},{"nativeSrc":"1368:23:2","nodeType":"YulVariableDeclaration","src":"1368:23:2","value":{"arguments":[{"kind":"number","nativeSrc":"1388:2:2","nodeType":"YulLiteral","src":"1388:2:2","type":"","value":"64"}],"functionName":{"name":"mload","nativeSrc":"1382:5:2","nodeType":"YulIdentifier","src":"1382:5:2"},"nativeSrc":"1382:9:2","nodeType":"YulFunctionCall","src":"1382:9:2"},"variables":[{"name":"memPtr","nativeSrc":"1372:6:2","nodeType":"YulTypedName","src":"1372:6:2","type":""}]},{"nativeSrc":"1400:71:2","nodeType":"YulVariableDeclaration","src":"1400:71:2","value":{"arguments":[{"name":"memPtr","nativeSrc":"1422:6:2","nodeType":"YulIdentifier","src":"1422:6:2"},{"arguments":[{"arguments":[{"arguments":[{"arguments":[{"name":"_1","nativeSrc":"1446:2:2","nodeType":"YulIdentifier","src":"1446:2:2"},{"kind":"number","nativeSrc":"1450:4:2","nodeType":"YulLiteral","src":"1450:4:2","type":"","value":"0x1f"}],"functionName":{"name":"add","nativeSrc":"1442:3:2","nodeType":"YulIdentifier","src":"1442:3:2"},"nativeSrc":"1442:13:2","nodeType":"YulFunctionCall","src":"1442:13:2"},{"name":"_3","nativeSrc":"1457:2:2","nodeType":"YulIdentifier","src":"1457:2:2"}],"functionName":{"name":"and","nativeSrc":"1438:3:2","nodeType":"YulIdentifier","src":"1438:3:2"},"nativeSrc":"1438:22:2","nodeType":"YulFunctionCall","src":"1438:22:2"},{"kind":"number","nativeSrc":"1462:2:2","nodeType":"YulLiteral","src":"1462:2:2","type":"","value":"63"}],"functionName":{"name":"add","nativeSrc":"1434:3:2","nodeType":"YulIdentifier","src":"1434:3:2"},"nativeSrc":"1434:31:2","nodeType":"YulFunctionCall","src":"1434:31:2"},{"name":"_3","nativeSrc":"1467:2:2","nodeType":"YulIdentifier","src":"1467:2:2"}],"functionName":{"name":"and","nativeSrc":"1430:3:2","nodeType":"YulIdentifier","src":"1430:3:2"},"nativeSrc":"1430:40:2","nodeType":"YulFunctionCall","src":"1430:40:2"}],"functionName":{"name":"add","nativeSrc":"1418:3:2","nodeType":"YulIdentifier","src":"1418:3:2"},"nativeSrc":"1418:53:2","nodeType":"YulFunctionCall","src":"1418:53:2"},"variables":[{"name":"newFreePtr","nativeSrc":"1404:10:2","nodeType":"YulTypedName","src":"1404:10:2","type":""}]},{"body":{"nativeSrc":"1530:22:2","nodeType":"YulBlock","src":"1530:22:2","statements":[{"expression":{"arguments":[],"functionName":{"name":"panic_error_0x41","nativeSrc":"1532:16:2","nodeType":"YulIdentifier","src":"1532:16:2"},"nativeSrc":"1532:18:2","nodeType":"YulFunctionCall","src":"1532:18:2"},"nativeSrc":"1532:18:2","nodeType":"YulExpressionStatement","src":"1532:18:2"}]},"condition":{"arguments":[{"arguments":[{"name":"newFreePtr","nativeSrc":"1489:10:2","nodeType":"YulIdentifier","src":"1489:10:2"},{"name":"_2","nativeSrc":"1501:2:2","nodeType":"YulIdentifier","src":"1501:2:2"}],"functionName":{"name":"gt","nativeSrc":"1486:2:2","nodeType":"YulIdentifier","src":"1486:2:2"},"nativeSrc":"1486:18:2","nodeType":"YulFunctionCall","src":"1486:18:2"},{"arguments":[{"name":"newFreePtr","nativeSrc":"1509:10:2","nodeType":"YulIdentifier","src":"1509:10:2"},{"name":"memPtr","nativeSrc":"1521:6:2","nodeType":"YulIdentifier","src":"1521:6:2"}],"functionName":{"name":"lt","nativeSrc":"1506:2:2","nodeType":"YulIdentifier","src":"1506:2:2"},"nativeSrc":"1506:22:2","nodeType":"YulFunctionCall","src":"1506:22:2"}],"functionName":{"name":"or","nativeSrc":"1483:2:2","nodeType":"YulIdentifier","src":"1483:2:2"},"nativeSrc":"1483:46:2","nodeType":"YulFunctionCall","src":"1483:46:2"},"nativeSrc":"1480:72:2","nodeType":"YulIf","src":"1480:72:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"1568:2:2","nodeType":"YulLiteral","src":"1568:2:2","type":"","value":"64"},{"name":"newFreePtr","nativeSrc":"1572:10:2","nodeType":"YulIdentifier","src":"1572:10:2"}],"functionName":{"name":"mstore","nativeSrc":"1561:6:2","nodeType":"YulIdentifier","src":"1561:6:2"},"nativeSrc":"1561:22:2","nodeType":"YulFunctionCall","src":"1561:22:2"},"nativeSrc":"1561:22:2","nodeType":"YulExpressionStatement","src":"1561:22:2"},{"expression":{"arguments":[{"name":"memPtr","nativeSrc":"1599:6:2","nodeType":"YulIdentifier","src":"1599:6:2"},{"name":"_1","nativeSrc":"1607:2:2","nodeType":"YulIdentifier","src":"1607:2:2"}],"functionName":{"name":"mstore","nativeSrc":"1592:6:2","nodeType":"YulIdentifier","src":"1592:6:2"},"nativeSrc":"1592:18:2","nodeType":"YulFunctionCall","src":"1592:18:2"},"nativeSrc":"1592:18:2","nodeType":"YulExpressionStatement","src":"1592:18:2"},{"body":{"nativeSrc":"1658:16:2","nodeType":"YulBlock","src":"1658:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"1667:1:2","nodeType":"YulLiteral","src":"1667:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"1670:1:2","nodeType":"YulLiteral","src":"1670:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"1660:6:2","nodeType":"YulIdentifier","src":"1660:6:2"},"nativeSrc":"1660:12:2","nodeType":"YulFunctionCall","src":"1660:12:2"},"nativeSrc":"1660:12:2","nodeType":"YulExpressionStatement","src":"1660:12:2"}]},"condition":{"arguments":[{"arguments":[{"arguments":[{"name":"offset","nativeSrc":"1633:6:2","nodeType":"YulIdentifier","src":"1633:6:2"},{"name":"_1","nativeSrc":"1641:2:2","nodeType":"YulIdentifier","src":"1641:2:2"}],"functionName":{"name":"add","nativeSrc":"1629:3:2","nodeType":"YulIdentifier","src":"1629:3:2"},"nativeSrc":"1629:15:2","nodeType":"YulFunctionCall","src":"1629:15:2"},{"kind":"number","nativeSrc":"1646:4:2","nodeType":"YulLiteral","src":"1646:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"1625:3:2","nodeType":"YulIdentifier","src":"1625:3:2"},"nativeSrc":"1625:26:2","nodeType":"YulFunctionCall","src":"1625:26:2"},{"name":"end","nativeSrc":"1653:3:2","nodeType":"YulIdentifier","src":"1653:3:2"}],"functionName":{"name":"gt","nativeSrc":"1622:2:2","nodeType":"YulIdentifier","src":"1622:2:2"},"nativeSrc":"1622:35:2","nodeType":"YulFunctionCall","src":"1622:35:2"},"nativeSrc":"1619:55:2","nodeType":"YulIf","src":"1619:55:2"},{"expression":{"arguments":[{"arguments":[{"name":"memPtr","nativeSrc":"1700:6:2","nodeType":"YulIdentifier","src":"1700:6:2"},{"kind":"number","nativeSrc":"1708:4:2","nodeType":"YulLiteral","src":"1708:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"1696:3:2","nodeType":"YulIdentifier","src":"1696:3:2"},"nativeSrc":"1696:17:2","nodeType":"YulFunctionCall","src":"1696:17:2"},{"arguments":[{"name":"offset","nativeSrc":"1719:6:2","nodeType":"YulIdentifier","src":"1719:6:2"},{"kind":"number","nativeSrc":"1727:4:2","nodeType":"YulLiteral","src":"1727:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"1715:3:2","nodeType":"YulIdentifier","src":"1715:3:2"},"nativeSrc":"1715:17:2","nodeType":"YulFunctionCall","src":"1715:17:2"},{"name":"_1","nativeSrc":"1734:2:2","nodeType":"YulIdentifier","src":"1734:2:2"}],"functionName":{"name":"calldatacopy","nativeSrc":"1683:12:2","nodeType":"YulIdentifier","src":"1683:12:2"},"nativeSrc":"1683:54:2","nodeType":"YulFunctionCall","src":"1683:54:2"},"nativeSrc":"1683:54:2","nodeType":"YulExpressionStatement","src":"1683:54:2"},{"expression":{"arguments":[{"arguments":[{"arguments":[{"name":"memPtr","nativeSrc":"1761:6:2","nodeType":"YulIdentifier","src":"1761:6:2"},{"name":"_1","nativeSrc":"1769:2:2","nodeType":"YulIdentifier","src":"1769:2:2"}],"functionName":{"name":"add","nativeSrc":"1757:3:2","nodeType":"YulIdentifier","src":"1757:3:2"},"nativeSrc":"1757:15:2","nodeType":"YulFunctionCall","src":"1757:15:2"},{"kind":"number","nativeSrc":"1774:4:2","nodeType":"YulLiteral","src":"1774:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"1753:3:2","nodeType":"YulIdentifier","src":"1753:3:2"},"nativeSrc":"1753:26:2","nodeType":"YulFunctionCall","src":"1753:26:2"},{"kind":"number","nativeSrc":"1781:1:2","nodeType":"YulLiteral","src":"1781:1:2","type":"","value":"0"}],"functionName":{"name":"mstore","nativeSrc":"1746:6:2","nodeType":"YulIdentifier","src":"1746:6:2"},"nativeSrc":"1746:37:2","nodeType":"YulFunctionCall","src":"1746:37:2"},"nativeSrc":"1746:37:2","nodeType":"YulExpressionStatement","src":"1746:37:2"},{"nativeSrc":"1792:15:2","nodeType":"YulAssignment","src":"1792:15:2","value":{"name":"memPtr","nativeSrc":"1801:6:2","nodeType":"YulIdentifier","src":"1801:6:2"},"variableNames":[{"name":"array","nativeSrc":"1792:5:2","nodeType":"YulIdentifier","src":"1792:5:2"}]}]},"name":"abi_decode_string","nativeSrc":"1094:719:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"offset","nativeSrc":"1121:6:2","nodeType":"YulTypedName","src":"1121:6:2","type":""},{"name":"end","nativeSrc":"1129:3:2","nodeType":"YulTypedName","src":"1129:3:2","type":""}],"returnVariables":[{"name":"array","nativeSrc":"1137:5:2","nodeType":"YulTypedName","src":"1137:5:2","type":""}],"src":"1094:719:2"},{"body":{"nativeSrc":"1979:783:2","nodeType":"YulBlock","src":"1979:783:2","statements":[{"body":{"nativeSrc":"2026:16:2","nodeType":"YulBlock","src":"2026:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"2035:1:2","nodeType":"YulLiteral","src":"2035:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"2038:1:2","nodeType":"YulLiteral","src":"2038:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"2028:6:2","nodeType":"YulIdentifier","src":"2028:6:2"},"nativeSrc":"2028:12:2","nodeType":"YulFunctionCall","src":"2028:12:2"},"nativeSrc":"2028:12:2","nodeType":"YulExpressionStatement","src":"2028:12:2"}]},"condition":{"arguments":[{"arguments":[{"name":"dataEnd","nativeSrc":"2000:7:2","nodeType":"YulIdentifier","src":"2000:7:2"},{"name":"headStart","nativeSrc":"2009:9:2","nodeType":"YulIdentifier","src":"2009:9:2"}],"functionName":{"name":"sub","nativeSrc":"1996:3:2","nodeType":"YulIdentifier","src":"1996:3:2"},"nativeSrc":"1996:23:2","nodeType":"YulFunctionCall","src":"1996:23:2"},{"kind":"number","nativeSrc":"2021:3:2","nodeType":"YulLiteral","src":"2021:3:2","type":"","value":"128"}],"functionName":{"name":"slt","nativeSrc":"1992:3:2","nodeType":"YulIdentifier","src":"1992:3:2"},"nativeSrc":"1992:33:2","nodeType":"YulFunctionCall","src":"1992:33:2"},"nativeSrc":"1989:53:2","nodeType":"YulIf","src":"1989:53:2"},{"nativeSrc":"2051:37:2","nodeType":"YulVariableDeclaration","src":"2051:37:2","value":{"arguments":[{"name":"headStart","nativeSrc":"2078:9:2","nodeType":"YulIdentifier","src":"2078:9:2"}],"functionName":{"name":"calldataload","nativeSrc":"2065:12:2","nodeType":"YulIdentifier","src":"2065:12:2"},"nativeSrc":"2065:23:2","nodeType":"YulFunctionCall","src":"2065:23:2"},"variables":[{"name":"offset","nativeSrc":"2055:6:2","nodeType":"YulTypedName","src":"2055:6:2","type":""}]},{"nativeSrc":"2097:28:2","nodeType":"YulVariableDeclaration","src":"2097:28:2","value":{"kind":"number","nativeSrc":"2107:18:2","nodeType":"YulLiteral","src":"2107:18:2","type":"","value":"0xffffffffffffffff"},"variables":[{"name":"_1","nativeSrc":"2101:2:2","nodeType":"YulTypedName","src":"2101:2:2","type":""}]},{"body":{"nativeSrc":"2152:16:2","nodeType":"YulBlock","src":"2152:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"2161:1:2","nodeType":"YulLiteral","src":"2161:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"2164:1:2","nodeType":"YulLiteral","src":"2164:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"2154:6:2","nodeType":"YulIdentifier","src":"2154:6:2"},"nativeSrc":"2154:12:2","nodeType":"YulFunctionCall","src":"2154:12:2"},"nativeSrc":"2154:12:2","nodeType":"YulExpressionStatement","src":"2154:12:2"}]},"condition":{"arguments":[{"name":"offset","nativeSrc":"2140:6:2","nodeType":"YulIdentifier","src":"2140:6:2"},{"name":"_1","nativeSrc":"2148:2:2","nodeType":"YulIdentifier","src":"2148:2:2"}],"functionName":{"name":"gt","nativeSrc":"2137:2:2","nodeType":"YulIdentifier","src":"2137:2:2"},"nativeSrc":"2137:14:2","nodeType":"YulFunctionCall","src":"2137:14:2"},"nativeSrc":"2134:34:2","nodeType":"YulIf","src":"2134:34:2"},{"nativeSrc":"2177:60:2","nodeType":"YulAssignment","src":"2177:60:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"2209:9:2","nodeType":"YulIdentifier","src":"2209:9:2"},{"name":"offset","nativeSrc":"2220:6:2","nodeType":"YulIdentifier","src":"2220:6:2"}],"functionName":{"name":"add","nativeSrc":"2205:3:2","nodeType":"YulIdentifier","src":"2205:3:2"},"nativeSrc":"2205:22:2","nodeType":"YulFunctionCall","src":"2205:22:2"},{"name":"dataEnd","nativeSrc":"2229:7:2","nodeType":"YulIdentifier","src":"2229:7:2"}],"functionName":{"name":"abi_decode_string","nativeSrc":"2187:17:2","nodeType":"YulIdentifier","src":"2187:17:2"},"nativeSrc":"2187:50:2","nodeType":"YulFunctionCall","src":"2187:50:2"},"variableNames":[{"name":"value0","nativeSrc":"2177:6:2","nodeType":"YulIdentifier","src":"2177:6:2"}]},{"nativeSrc":"2246:48:2","nodeType":"YulVariableDeclaration","src":"2246:48:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"2279:9:2","nodeType":"YulIdentifier","src":"2279:9:2"},{"kind":"number","nativeSrc":"2290:2:2","nodeType":"YulLiteral","src":"2290:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"2275:3:2","nodeType":"YulIdentifier","src":"2275:3:2"},"nativeSrc":"2275:18:2","nodeType":"YulFunctionCall","src":"2275:18:2"}],"functionName":{"name":"calldataload","nativeSrc":"2262:12:2","nodeType":"YulIdentifier","src":"2262:12:2"},"nativeSrc":"2262:32:2","nodeType":"YulFunctionCall","src":"2262:32:2"},"variables":[{"name":"offset_1","nativeSrc":"2250:8:2","nodeType":"YulTypedName","src":"2250:8:2","type":""}]},{"body":{"nativeSrc":"2323:16:2","nodeType":"YulBlock","src":"2323:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"2332:1:2","nodeType":"YulLiteral","src":"2332:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"2335:1:2","nodeType":"YulLiteral","src":"2335:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"2325:6:2","nodeType":"YulIdentifier","src":"2325:6:2"},"nativeSrc":"2325:12:2","nodeType":"YulFunctionCall","src":"2325:12:2"},"nativeSrc":"2325:12:2","nodeType":"YulExpressionStatement","src":"2325:12:2"}]},"condition":{"arguments":[{"name":"offset_1","nativeSrc":"2309:8:2","nodeType":"YulIdentifier","src":"2309:8:2"},{"name":"_1","nativeSrc":"2319:2:2","nodeType":"YulIdentifier","src":"2319:2:2"}],"functionName":{"name":"gt","nativeSrc":"2306:2:2","nodeType":"YulIdentifier","src":"2306:2:2"},"nativeSrc":"2306:16:2","nodeType":"YulFunctionCall","src":"2306:16:2"},"nativeSrc":"2303:36:2","nodeType":"YulIf","src":"2303:36:2"},{"nativeSrc":"2348:62:2","nodeType":"YulAssignment","src":"2348:62:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"2380:9:2","nodeType":"YulIdentifier","src":"2380:9:2"},{"name":"offset_1","nativeSrc":"2391:8:2","nodeType":"YulIdentifier","src":"2391:8:2"}],"functionName":{"name":"add","nativeSrc":"2376:3:2","nodeType":"YulIdentifier","src":"2376:3:2"},"nativeSrc":"2376:24:2","nodeType":"YulFunctionCall","src":"2376:24:2"},{"name":"dataEnd","nativeSrc":"2402:7:2","nodeType":"YulIdentifier","src":"2402:7:2"}],"functionName":{"name":"abi_decode_string","nativeSrc":"2358:17:2","nodeType":"YulIdentifier","src":"2358:17:2"},"nativeSrc":"2358:52:2","nodeType":"YulFunctionCall","src":"2358:52:2"},"variableNames":[{"name":"value1","nativeSrc":"2348:6:2","nodeType":"YulIdentifier","src":"2348:6:2"}]},{"nativeSrc":"2419:48:2","nodeType":"YulVariableDeclaration","src":"2419:48:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"2452:9:2","nodeType":"YulIdentifier","src":"2452:9:2"},{"kind":"number","nativeSrc":"2463:2:2","nodeType":"YulLiteral","src":"2463:2:2","type":"","value":"64"}],"functionName":{"name":"add","nativeSrc":"2448:3:2","nodeType":"YulIdentifier","src":"2448:3:2"},"nativeSrc":"2448:18:2","nodeType":"YulFunctionCall","src":"2448:18:2"}],"functionName":{"name":"calldataload","nativeSrc":"2435:12:2","nodeType":"YulIdentifier","src":"2435:12:2"},"nativeSrc":"2435:32:2","nodeType":"YulFunctionCall","src":"2435:32:2"},"variables":[{"name":"offset_2","nativeSrc":"2423:8:2","nodeType":"YulTypedName","src":"2423:8:2","type":""}]},{"body":{"nativeSrc":"2496:16:2","nodeType":"YulBlock","src":"2496:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"2505:1:2","nodeType":"YulLiteral","src":"2505:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"2508:1:2","nodeType":"YulLiteral","src":"2508:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"2498:6:2","nodeType":"YulIdentifier","src":"2498:6:2"},"nativeSrc":"2498:12:2","nodeType":"YulFunctionCall","src":"2498:12:2"},"nativeSrc":"2498:12:2","nodeType":"YulExpressionStatement","src":"2498:12:2"}]},"condition":{"arguments":[{"name":"offset_2","nativeSrc":"2482:8:2","nodeType":"YulIdentifier","src":"2482:8:2"},{"name":"_1","nativeSrc":"2492:2:2","nodeType":"YulIdentifier","src":"2492:2:2"}],"functionName":{"name":"gt","nativeSrc":"2479:2:2","nodeType":"YulIdentifier","src":"2479:2:2"},"nativeSrc":"2479:16:2","nodeType":"YulFunctionCall","src":"2479:16:2"},"nativeSrc":"2476:36:2","nodeType":"YulIf","src":"2476:36:2"},{"nativeSrc":"2521:62:2","nodeType":"YulAssignment","src":"2521:62:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"2553:9:2","nodeType":"YulIdentifier","src":"2553:9:2"},{"name":"offset_2","nativeSrc":"2564:8:2","nodeType":"YulIdentifier","src":"2564:8:2"}],"functionName":{"name":"add","nativeSrc":"2549:3:2","nodeType":"YulIdentifier","src":"2549:3:2"},"nativeSrc":"2549:24:2","nodeType":"YulFunctionCall","src":"2549:24:2"},{"name":"dataEnd","nativeSrc":"2575:7:2","nodeType":"YulIdentifier","src":"2575:7:2"}],"functionName":{"name":"abi_decode_string","nativeSrc":"2531:17:2","nodeType":"YulIdentifier","src":"2531:17:2"},"nativeSrc":"2531:52:2","nodeType":"YulFunctionCall","src":"2531:52:2"},"variableNames":[{"name":"value2","nativeSrc":"2521:6:2","nodeType":"YulIdentifier","src":"2521:6:2"}]},{"nativeSrc":"2592:48:2","nodeType":"YulVariableDeclaration","src":"2592:48:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"2625:9:2","nodeType":"YulIdentifier","src":"2625:9:2"},{"kind":"number","nativeSrc":"2636:2:2","nodeType":"YulLiteral","src":"2636:2:2","type":"","value":"96"}],"functionName":{"name":"add","nativeSrc":"2621:3:2","nodeType":"YulIdentifier","src":"2621:3:2"},"nativeSrc":"2621:18:2","nodeType":"YulFunctionCall","src":"2621:18:2"}],"functionName":{"name":"calldataload","nativeSrc":"2608:12:2","nodeType":"YulIdentifier","src":"2608:12:2"},"nativeSrc":"2608:32:2","nodeType":"YulFunctionCall","src":"2608:32:2"},"variables":[{"name":"offset_3","nativeSrc":"2596:8:2","nodeType":"YulTypedName","src":"2596:8:2","type":""}]},{"body":{"nativeSrc":"2669:16:2","nodeType":"YulBlock","src":"2669:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"2678:1:2","nodeType":"YulLiteral","src":"2678:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"2681:1:2","nodeType":"YulLiteral","src":"2681:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"2671:6:2","nodeType":"YulIdentifier","src":"2671:6:2"},"nativeSrc":"2671:12:2","nodeType":"YulFunctionCall","src":"2671:12:2"},"nativeSrc":"2671:12:2","nodeType":"YulExpressionStatement","src":"2671:12:2"}]},"condition":{"arguments":[{"name":"offset_3","nativeSrc":"2655:8:2","nodeType":"YulIdentifier","src":"2655:8:2"},{"name":"_1","nativeSrc":"2665:2:2","nodeType":"YulIdentifier","src":"2665:2:2"}],"functionName":{"name":"gt","nativeSrc":"2652:2:2","nodeType":"YulIdentifier","src":"2652:2:2"},"nativeSrc":"2652:16:2","nodeType":"YulFunctionCall","src":"2652:16:2"},"nativeSrc":"2649:36:2","nodeType":"YulIf","src":"2649:36:2"},{"nativeSrc":"2694:62:2","nodeType":"YulAssignment","src":"2694:62:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"2726:9:2","nodeType":"YulIdentifier","src":"2726:9:2"},{"name":"offset_3","nativeSrc":"2737:8:2","nodeType":"YulIdentifier","src":"2737:8:2"}],"functionName":{"name":"add","nativeSrc":"2722:3:2","nodeType":"YulIdentifier","src":"2722:3:2"},"nativeSrc":"2722:24:2","nodeType":"YulFunctionCall","src":"2722:24:2"},{"name":"dataEnd","nativeSrc":"2748:7:2","nodeType":"YulIdentifier","src":"2748:7:2"}],"functionName":{"name":"abi_decode_string","nativeSrc":"2704:17:2","nodeType":"YulIdentifier","src":"2704:17:2"},"nativeSrc":"2704:52:2","nodeType":"YulFunctionCall","src":"2704:52:2"},"variableNames":[{"name":"value3","nativeSrc":"2694:6:2","nodeType":"YulIdentifier","src":"2694:6:2"}]}]},"name":"abi_decode_tuple_t_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_string_memory_ptr","nativeSrc":"1818:944:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"1921:9:2","nodeType":"YulTypedName","src":"1921:9:2","type":""},{"name":"dataEnd","nativeSrc":"1932:7:2","nodeType":"YulTypedName","src":"1932:7:2","type":""}],"returnVariables":[{"name":"value0","nativeSrc":"1944:6:2","nodeType":"YulTypedName","src":"1944:6:2","type":""},{"name":"value1","nativeSrc":"1952:6:2","nodeType":"YulTypedName","src":"1952:6:2","type":""},{"name":"value2","nativeSrc":"1960:6:2","nodeType":"YulTypedName","src":"1960:6:2","type":""},{"name":"value3","nativeSrc":"1968:6:2","nodeType":"YulTypedName","src":"1968:6:2","type":""}],"src":"1818:944:2"},{"body":{"nativeSrc":"2864:87:2","nodeType":"YulBlock","src":"2864:87:2","statements":[{"nativeSrc":"2874:26:2","nodeType":"YulAssignment","src":"2874:26:2","value":{"arguments":[{"name":"headStart","nativeSrc":"2886:9:2","nodeType":"YulIdentifier","src":"2886:9:2"},{"kind":"number","nativeSrc":"2897:2:2","nodeType":"YulLiteral","src":"2897:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"2882:3:2","nodeType":"YulIdentifier","src":"2882:3:2"},"nativeSrc":"2882:18:2","nodeType":"YulFunctionCall","src":"2882:18:2"},"variableNames":[{"name":"tail","nativeSrc":"2874:4:2","nodeType":"YulIdentifier","src":"2874:4:2"}]},{"expression":{"arguments":[{"name":"headStart","nativeSrc":"2916:9:2","nodeType":"YulIdentifier","src":"2916:9:2"},{"arguments":[{"name":"value0","nativeSrc":"2931:6:2","nodeType":"YulIdentifier","src":"2931:6:2"},{"kind":"number","nativeSrc":"2939:4:2","nodeType":"YulLiteral","src":"2939:4:2","type":"","value":"0xff"}],"functionName":{"name":"and","nativeSrc":"2927:3:2","nodeType":"YulIdentifier","src":"2927:3:2"},"nativeSrc":"2927:17:2","nodeType":"YulFunctionCall","src":"2927:17:2"}],"functionName":{"name":"mstore","nativeSrc":"2909:6:2","nodeType":"YulIdentifier","src":"2909:6:2"},"nativeSrc":"2909:36:2","nodeType":"YulFunctionCall","src":"2909:36:2"},"nativeSrc":"2909:36:2","nodeType":"YulExpressionStatement","src":"2909:36:2"}]},"name":"abi_encode_tuple_t_uint8__to_t_uint8__fromStack_reversed","nativeSrc":"2767:184:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"2833:9:2","nodeType":"YulTypedName","src":"2833:9:2","type":""},{"name":"value0","nativeSrc":"2844:6:2","nodeType":"YulTypedName","src":"2844:6:2","type":""}],"returnVariables":[{"name":"tail","nativeSrc":"2855:4:2","nodeType":"YulTypedName","src":"2855:4:2","type":""}],"src":"2767:184:2"},{"body":{"nativeSrc":"3036:242:2","nodeType":"YulBlock","src":"3036:242:2","statements":[{"body":{"nativeSrc":"3082:16:2","nodeType":"YulBlock","src":"3082:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"3091:1:2","nodeType":"YulLiteral","src":"3091:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"3094:1:2","nodeType":"YulLiteral","src":"3094:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"3084:6:2","nodeType":"YulIdentifier","src":"3084:6:2"},"nativeSrc":"3084:12:2","nodeType":"YulFunctionCall","src":"3084:12:2"},"nativeSrc":"3084:12:2","nodeType":"YulExpressionStatement","src":"3084:12:2"}]},"condition":{"arguments":[{"arguments":[{"name":"dataEnd","nativeSrc":"3057:7:2","nodeType":"YulIdentifier","src":"3057:7:2"},{"name":"headStart","nativeSrc":"3066:9:2","nodeType":"YulIdentifier","src":"3066:9:2"}],"functionName":{"name":"sub","nativeSrc":"3053:3:2","nodeType":"YulIdentifier","src":"3053:3:2"},"nativeSrc":"3053:23:2","nodeType":"YulFunctionCall","src":"3053:23:2"},{"kind":"number","nativeSrc":"3078:2:2","nodeType":"YulLiteral","src":"3078:2:2","type":"","value":"32"}],"functionName":{"name":"slt","nativeSrc":"3049:3:2","nodeType":"YulIdentifier","src":"3049:3:2"},"nativeSrc":"3049:32:2","nodeType":"YulFunctionCall","src":"3049:32:2"},"nativeSrc":"3046:52:2","nodeType":"YulIf","src":"3046:52:2"},{"nativeSrc":"3107:37:2","nodeType":"YulVariableDeclaration","src":"3107:37:2","value":{"arguments":[{"name":"headStart","nativeSrc":"3134:9:2","nodeType":"YulIdentifier","src":"3134:9:2"}],"functionName":{"name":"calldataload","nativeSrc":"3121:12:2","nodeType":"YulIdentifier","src":"3121:12:2"},"nativeSrc":"3121:23:2","nodeType":"YulFunctionCall","src":"3121:23:2"},"variables":[{"name":"offset","nativeSrc":"3111:6:2","nodeType":"YulTypedName","src":"3111:6:2","type":""}]},{"body":{"nativeSrc":"3187:16:2","nodeType":"YulBlock","src":"3187:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"3196:1:2","nodeType":"YulLiteral","src":"3196:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"3199:1:2","nodeType":"YulLiteral","src":"3199:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"3189:6:2","nodeType":"YulIdentifier","src":"3189:6:2"},"nativeSrc":"3189:12:2","nodeType":"YulFunctionCall","src":"3189:12:2"},"nativeSrc":"3189:12:2","nodeType":"YulExpressionStatement","src":"3189:12:2"}]},"condition":{"arguments":[{"name":"offset","nativeSrc":"3159:6:2","nodeType":"YulIdentifier","src":"3159:6:2"},{"kind":"number","nativeSrc":"3167:18:2","nodeType":"YulLiteral","src":"3167:18:2","type":"","value":"0xffffffffffffffff"}],"functionName":{"name":"gt","nativeSrc":"3156:2:2","nodeType":"YulIdentifier","src":"3156:2:2"},"nativeSrc":"3156:30:2","nodeType":"YulFunctionCall","src":"3156:30:2"},"nativeSrc":"3153:50:2","nodeType":"YulIf","src":"3153:50:2"},{"nativeSrc":"3212:60:2","nodeType":"YulAssignment","src":"3212:60:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"3244:9:2","nodeType":"YulIdentifier","src":"3244:9:2"},{"name":"offset","nativeSrc":"3255:6:2","nodeType":"YulIdentifier","src":"3255:6:2"}],"functionName":{"name":"add","nativeSrc":"3240:3:2","nodeType":"YulIdentifier","src":"3240:3:2"},"nativeSrc":"3240:22:2","nodeType":"YulFunctionCall","src":"3240:22:2"},{"name":"dataEnd","nativeSrc":"3264:7:2","nodeType":"YulIdentifier","src":"3264:7:2"}],"functionName":{"name":"abi_decode_string","nativeSrc":"3222:17:2","nodeType":"YulIdentifier","src":"3222:17:2"},"nativeSrc":"3222:50:2","nodeType":"YulFunctionCall","src":"3222:50:2"},"variableNames":[{"name":"value0","nativeSrc":"3212:6:2","nodeType":"YulIdentifier","src":"3212:6:2"}]}]},"name":"abi_decode_tuple_t_string_memory_ptr","nativeSrc":"2956:322:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"3002:9:2","nodeType":"YulTypedName","src":"3002:9:2","type":""},{"name":"dataEnd","nativeSrc":"3013:7:2","nodeType":"YulTypedName","src":"3013:7:2","type":""}],"returnVariables":[{"name":"value0","nativeSrc":"3025:6:2","nodeType":"YulTypedName","src":"3025:6:2","type":""}],"src":"2956:322:2"},{"body":{"nativeSrc":"3402:146:2","nodeType":"YulBlock","src":"3402:146:2","statements":[{"nativeSrc":"3412:26:2","nodeType":"YulAssignment","src":"3412:26:2","value":{"arguments":[{"name":"headStart","nativeSrc":"3424:9:2","nodeType":"YulIdentifier","src":"3424:9:2"},{"kind":"number","nativeSrc":"3435:2:2","nodeType":"YulLiteral","src":"3435:2:2","type":"","value":"64"}],"functionName":{"name":"add","nativeSrc":"3420:3:2","nodeType":"YulIdentifier","src":"3420:3:2"},"nativeSrc":"3420:18:2","nodeType":"YulFunctionCall","src":"3420:18:2"},"variableNames":[{"name":"tail","nativeSrc":"3412:4:2","nodeType":"YulIdentifier","src":"3412:4:2"}]},{"expression":{"arguments":[{"name":"headStart","nativeSrc":"3454:9:2","nodeType":"YulIdentifier","src":"3454:9:2"},{"arguments":[{"name":"value0","nativeSrc":"3469:6:2","nodeType":"YulIdentifier","src":"3469:6:2"},{"kind":"number","nativeSrc":"3477:4:2","nodeType":"YulLiteral","src":"3477:4:2","type":"","value":"0xff"}],"functionName":{"name":"and","nativeSrc":"3465:3:2","nodeType":"YulIdentifier","src":"3465:3:2"},"nativeSrc":"3465:17:2","nodeType":"YulFunctionCall","src":"3465:17:2"}],"functionName":{"name":"mstore","nativeSrc":"3447:6:2","nodeType":"YulIdentifier","src":"3447:6:2"},"nativeSrc":"3447:36:2","nodeType":"YulFunctionCall","src":"3447:36:2"},"nativeSrc":"3447:36:2","nodeType":"YulExpressionStatement","src":"3447:36:2"},{"expression":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"3503:9:2","nodeType":"YulIdentifier","src":"3503:9:2"},{"kind":"number","nativeSrc":"3514:2:2","nodeType":"YulLiteral","src":"3514:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"3499:3:2","nodeType":"YulIdentifier","src":"3499:3:2"},"nativeSrc":"3499:18:2","nodeType":"YulFunctionCall","src":"3499:18:2"},{"arguments":[{"arguments":[{"name":"value1","nativeSrc":"3533:6:2","nodeType":"YulIdentifier","src":"3533:6:2"}],"functionName":{"name":"iszero","nativeSrc":"3526:6:2","nodeType":"YulIdentifier","src":"3526:6:2"},"nativeSrc":"3526:14:2","nodeType":"YulFunctionCall","src":"3526:14:2"}],"functionName":{"name":"iszero","nativeSrc":"3519:6:2","nodeType":"YulIdentifier","src":"3519:6:2"},"nativeSrc":"3519:22:2","nodeType":"YulFunctionCall","src":"3519:22:2"}],"functionName":{"name":"mstore","nativeSrc":"3492:6:2","nodeType":"YulIdentifier","src":"3492:6:2"},"nativeSrc":"3492:50:2","nodeType":"YulFunctionCall","src":"3492:50:2"},"nativeSrc":"3492:50:2","nodeType":"YulExpressionStatement","src":"3492:50:2"}]},"name":"abi_encode_tuple_t_uint8_t_bool__to_t_uint8_t_bool__fromStack_reversed","nativeSrc":"3283:265:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"3363:9:2","nodeType":"YulTypedName","src":"3363:9:2","type":""},{"name":"value1","nativeSrc":"3374:6:2","nodeType":"YulTypedName","src":"3374:6:2","type":""},{"name":"value0","nativeSrc":"3382:6:2","nodeType":"YulTypedName","src":"3382:6:2","type":""}],"returnVariables":[{"name":"tail","nativeSrc":"3393:4:2","nodeType":"YulTypedName","src":"3393:4:2","type":""}],"src":"3283:265:2"},{"body":{"nativeSrc":"3600:109:2","nodeType":"YulBlock","src":"3600:109:2","statements":[{"nativeSrc":"3610:29:2","nodeType":"YulAssignment","src":"3610:29:2","value":{"arguments":[{"name":"offset","nativeSrc":"3632:6:2","nodeType":"YulIdentifier","src":"3632:6:2"}],"functionName":{"name":"calldataload","nativeSrc":"3619:12:2","nodeType":"YulIdentifier","src":"3619:12:2"},"nativeSrc":"3619:20:2","nodeType":"YulFunctionCall","src":"3619:20:2"},"variableNames":[{"name":"value","nativeSrc":"3610:5:2","nodeType":"YulIdentifier","src":"3610:5:2"}]},{"body":{"nativeSrc":"3687:16:2","nodeType":"YulBlock","src":"3687:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"3696:1:2","nodeType":"YulLiteral","src":"3696:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"3699:1:2","nodeType":"YulLiteral","src":"3699:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"3689:6:2","nodeType":"YulIdentifier","src":"3689:6:2"},"nativeSrc":"3689:12:2","nodeType":"YulFunctionCall","src":"3689:12:2"},"nativeSrc":"3689:12:2","nodeType":"YulExpressionStatement","src":"3689:12:2"}]},"condition":{"arguments":[{"arguments":[{"name":"value","nativeSrc":"3661:5:2","nodeType":"YulIdentifier","src":"3661:5:2"},{"arguments":[{"name":"value","nativeSrc":"3672:5:2","nodeType":"YulIdentifier","src":"3672:5:2"},{"kind":"number","nativeSrc":"3679:4:2","nodeType":"YulLiteral","src":"3679:4:2","type":"","value":"0xff"}],"functionName":{"name":"and","nativeSrc":"3668:3:2","nodeType":"YulIdentifier","src":"3668:3:2"},"nativeSrc":"3668:16:2","nodeType":"YulFunctionCall","src":"3668:16:2"}],"functionName":{"name":"eq","nativeSrc":"3658:2:2","nodeType":"YulIdentifier","src":"3658:2:2"},"nativeSrc":"3658:27:2","nodeType":"YulFunctionCall","src":"3658:27:2"}],"functionName":{"name":"iszero","nativeSrc":"3651:6:2","nodeType":"YulIdentifier","src":"3651:6:2"},"nativeSrc":"3651:35:2","nodeType":"YulFunctionCall","src":"3651:35:2"},"nativeSrc":"3648:55:2","nodeType":"YulIf","src":"3648:55:2"}]},"name":"abi_decode_uint8","nativeSrc":"3553:156:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"offset","nativeSrc":"3579:6:2","nodeType":"YulTypedName","src":"3579:6:2","type":""}],"returnVariables":[{"name":"value","nativeSrc":"3590:5:2","nodeType":"YulTypedName","src":"3590:5:2","type":""}],"src":"3553:156:2"},{"body":{"nativeSrc":"3782:114:2","nodeType":"YulBlock","src":"3782:114:2","statements":[{"body":{"nativeSrc":"3828:16:2","nodeType":"YulBlock","src":"3828:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"3837:1:2","nodeType":"YulLiteral","src":"3837:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"3840:1:2","nodeType":"YulLiteral","src":"3840:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"3830:6:2","nodeType":"YulIdentifier","src":"3830:6:2"},"nativeSrc":"3830:12:2","nodeType":"YulFunctionCall","src":"3830:12:2"},"nativeSrc":"3830:12:2","nodeType":"YulExpressionStatement","src":"3830:12:2"}]},"condition":{"arguments":[{"arguments":[{"name":"dataEnd","nativeSrc":"3803:7:2","nodeType":"YulIdentifier","src":"3803:7:2"},{"name":"headStart","nativeSrc":"3812:9:2","nodeType":"YulIdentifier","src":"3812:9:2"}],"functionName":{"name":"sub","nativeSrc":"3799:3:2","nodeType":"YulIdentifier","src":"3799:3:2"},"nativeSrc":"3799:23:2","nodeType":"YulFunctionCall","src":"3799:23:2"},{"kind":"number","nativeSrc":"3824:2:2","nodeType":"YulLiteral","src":"3824:2:2","type":"","value":"32"}],"functionName":{"name":"slt","nativeSrc":"3795:3:2","nodeType":"YulIdentifier","src":"3795:3:2"},"nativeSrc":"3795:32:2","nodeType":"YulFunctionCall","src":"3795:32:2"},"nativeSrc":"3792:52:2","nodeType":"YulIf","src":"3792:52:2"},{"nativeSrc":"3853:37:2","nodeType":"YulAssignment","src":"3853:37:2","value":{"arguments":[{"name":"headStart","nativeSrc":"3880:9:2","nodeType":"YulIdentifier","src":"3880:9:2"}],"functionName":{"name":"abi_decode_uint8","nativeSrc":"3863:16:2","nodeType":"YulIdentifier","src":"3863:16:2"},"nativeSrc":"3863:27:2","nodeType":"YulFunctionCall","src":"3863:27:2"},"variableNames":[{"name":"value0","nativeSrc":"3853:6:2","nodeType":"YulIdentifier","src":"3853:6:2"}]}]},"name":"abi_decode_tuple_t_uint8","nativeSrc":"3714:182:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"3748:9:2","nodeType":"YulTypedName","src":"3748:9:2","type":""},{"name":"dataEnd","nativeSrc":"3759:7:2","nodeType":"YulTypedName","src":"3759:7:2","type":""}],"returnVariables":[{"name":"value0","nativeSrc":"3771:6:2","nodeType":"YulTypedName","src":"3771:6:2","type":""}],"src":"3714:182:2"},{"body":{"nativeSrc":"4190:501:2","nodeType":"YulBlock","src":"4190:501:2","statements":[{"expression":{"arguments":[{"name":"headStart","nativeSrc":"4207:9:2","nodeType":"YulIdentifier","src":"4207:9:2"},{"kind":"number","nativeSrc":"4218:3:2","nodeType":"YulLiteral","src":"4218:3:2","type":"","value":"160"}],"functionName":{"name":"mstore","nativeSrc":"4200:6:2","nodeType":"YulIdentifier","src":"4200:6:2"},"nativeSrc":"4200:22:2","nodeType":"YulFunctionCall","src":"4200:22:2"},"nativeSrc":"4200:22:2","nodeType":"YulExpressionStatement","src":"4200:22:2"},{"nativeSrc":"4231:60:2","nodeType":"YulVariableDeclaration","src":"4231:60:2","value":{"arguments":[{"name":"value0","nativeSrc":"4263:6:2","nodeType":"YulIdentifier","src":"4263:6:2"},{"arguments":[{"name":"headStart","nativeSrc":"4275:9:2","nodeType":"YulIdentifier","src":"4275:9:2"},{"kind":"number","nativeSrc":"4286:3:2","nodeType":"YulLiteral","src":"4286:3:2","type":"","value":"160"}],"functionName":{"name":"add","nativeSrc":"4271:3:2","nodeType":"YulIdentifier","src":"4271:3:2"},"nativeSrc":"4271:19:2","nodeType":"YulFunctionCall","src":"4271:19:2"}],"functionName":{"name":"abi_encode_string","nativeSrc":"4245:17:2","nodeType":"YulIdentifier","src":"4245:17:2"},"nativeSrc":"4245:46:2","nodeType":"YulFunctionCall","src":"4245:46:2"},"variables":[{"name":"tail_1","nativeSrc":"4235:6:2","nodeType":"YulTypedName","src":"4235:6:2","type":""}]},{"expression":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"4311:9:2","nodeType":"YulIdentifier","src":"4311:9:2"},{"kind":"number","nativeSrc":"4322:2:2","nodeType":"YulLiteral","src":"4322:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"4307:3:2","nodeType":"YulIdentifier","src":"4307:3:2"},"nativeSrc":"4307:18:2","nodeType":"YulFunctionCall","src":"4307:18:2"},{"arguments":[{"name":"tail_1","nativeSrc":"4331:6:2","nodeType":"YulIdentifier","src":"4331:6:2"},{"name":"headStart","nativeSrc":"4339:9:2","nodeType":"YulIdentifier","src":"4339:9:2"}],"functionName":{"name":"sub","nativeSrc":"4327:3:2","nodeType":"YulIdentifier","src":"4327:3:2"},"nativeSrc":"4327:22:2","nodeType":"YulFunctionCall","src":"4327:22:2"}],"functionName":{"name":"mstore","nativeSrc":"4300:6:2","nodeType":"YulIdentifier","src":"4300:6:2"},"nativeSrc":"4300:50:2","nodeType":"YulFunctionCall","src":"4300:50:2"},"nativeSrc":"4300:50:2","nodeType":"YulExpressionStatement","src":"4300:50:2"},{"nativeSrc":"4359:47:2","nodeType":"YulVariableDeclaration","src":"4359:47:2","value":{"arguments":[{"name":"value1","nativeSrc":"4391:6:2","nodeType":"YulIdentifier","src":"4391:6:2"},{"name":"tail_1","nativeSrc":"4399:6:2","nodeType":"YulIdentifier","src":"4399:6:2"}],"functionName":{"name":"abi_encode_string","nativeSrc":"4373:17:2","nodeType":"YulIdentifier","src":"4373:17:2"},"nativeSrc":"4373:33:2","nodeType":"YulFunctionCall","src":"4373:33:2"},"variables":[{"name":"tail_2","nativeSrc":"4363:6:2","nodeType":"YulTypedName","src":"4363:6:2","type":""}]},{"expression":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"4426:9:2","nodeType":"YulIdentifier","src":"4426:9:2"},{"kind":"number","nativeSrc":"4437:2:2","nodeType":"YulLiteral","src":"4437:2:2","type":"","value":"64"}],"functionName":{"name":"add","nativeSrc":"4422:3:2","nodeType":"YulIdentifier","src":"4422:3:2"},"nativeSrc":"4422:18:2","nodeType":"YulFunctionCall","src":"4422:18:2"},{"arguments":[{"name":"tail_2","nativeSrc":"4446:6:2","nodeType":"YulIdentifier","src":"4446:6:2"},{"name":"headStart","nativeSrc":"4454:9:2","nodeType":"YulIdentifier","src":"4454:9:2"}],"functionName":{"name":"sub","nativeSrc":"4442:3:2","nodeType":"YulIdentifier","src":"4442:3:2"},"nativeSrc":"4442:22:2","nodeType":"YulFunctionCall","src":"4442:22:2"}],"functionName":{"name":"mstore","nativeSrc":"4415:6:2","nodeType":"YulIdentifier","src":"4415:6:2"},"nativeSrc":"4415:50:2","nodeType":"YulFunctionCall","src":"4415:50:2"},"nativeSrc":"4415:50:2","nodeType":"YulExpressionStatement","src":"4415:50:2"},{"nativeSrc":"4474:47:2","nodeType":"YulVariableDeclaration","src":"4474:47:2","value":{"arguments":[{"name":"value2","nativeSrc":"4506:6:2","nodeType":"YulIdentifier","src":"4506:6:2"},{"name":"tail_2","nativeSrc":"4514:6:2","nodeType":"YulIdentifier","src":"4514:6:2"}],"functionName":{"name":"abi_encode_string","nativeSrc":"4488:17:2","nodeType":"YulIdentifier","src":"4488:17:2"},"nativeSrc":"4488:33:2","nodeType":"YulFunctionCall","src":"4488:33:2"},"variables":[{"name":"tail_3","nativeSrc":"4478:6:2","nodeType":"YulTypedName","src":"4478:6:2","type":""}]},{"expression":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"4541:9:2","nodeType":"YulIdentifier","src":"4541:9:2"},{"kind":"number","nativeSrc":"4552:2:2","nodeType":"YulLiteral","src":"4552:2:2","type":"","value":"96"}],"functionName":{"name":"add","nativeSrc":"4537:3:2","nodeType":"YulIdentifier","src":"4537:3:2"},"nativeSrc":"4537:18:2","nodeType":"YulFunctionCall","src":"4537:18:2"},{"arguments":[{"name":"value3","nativeSrc":"4561:6:2","nodeType":"YulIdentifier","src":"4561:6:2"},{"kind":"number","nativeSrc":"4569:4:2","nodeType":"YulLiteral","src":"4569:4:2","type":"","value":"0xff"}],"functionName":{"name":"and","nativeSrc":"4557:3:2","nodeType":"YulIdentifier","src":"4557:3:2"},"nativeSrc":"4557:17:2","nodeType":"YulFunctionCall","src":"4557:17:2"}],"functionName":{"name":"mstore","nativeSrc":"4530:6:2","nodeType":"YulIdentifier","src":"4530:6:2"},"nativeSrc":"4530:45:2","nodeType":"YulFunctionCall","src":"4530:45:2"},"nativeSrc":"4530:45:2","nodeType":"YulExpressionStatement","src":"4530:45:2"},{"expression":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"4595:9:2","nodeType":"YulIdentifier","src":"4595:9:2"},{"kind":"number","nativeSrc":"4606:3:2","nodeType":"YulLiteral","src":"4606:3:2","type":"","value":"128"}],"functionName":{"name":"add","nativeSrc":"4591:3:2","nodeType":"YulIdentifier","src":"4591:3:2"},"nativeSrc":"4591:19:2","nodeType":"YulFunctionCall","src":"4591:19:2"},{"arguments":[{"name":"tail_3","nativeSrc":"4616:6:2","nodeType":"YulIdentifier","src":"4616:6:2"},{"name":"headStart","nativeSrc":"4624:9:2","nodeType":"YulIdentifier","src":"4624:9:2"}],"functionName":{"name":"sub","nativeSrc":"4612:3:2","nodeType":"YulIdentifier","src":"4612:3:2"},"nativeSrc":"4612:22:2","nodeType":"YulFunctionCall","src":"4612:22:2"}],"functionName":{"name":"mstore","nativeSrc":"4584:6:2","nodeType":"YulIdentifier","src":"4584:6:2"},"nativeSrc":"4584:51:2","nodeType":"YulFunctionCall","src":"4584:51:2"},"nativeSrc":"4584:51:2","nodeType":"YulExpressionStatement","src":"4584:51:2"},{"nativeSrc":"4644:41:2","nodeType":"YulAssignment","src":"4644:41:2","value":{"arguments":[{"name":"value4","nativeSrc":"4670:6:2","nodeType":"YulIdentifier","src":"4670:6:2"},{"name":"tail_3","nativeSrc":"4678:6:2","nodeType":"YulIdentifier","src":"4678:6:2"}],"functionName":{"name":"abi_encode_string","nativeSrc":"4652:17:2","nodeType":"YulIdentifier","src":"4652:17:2"},"nativeSrc":"4652:33:2","nodeType":"YulFunctionCall","src":"4652:33:2"},"variableNames":[{"name":"tail","nativeSrc":"4644:4:2","nodeType":"YulIdentifier","src":"4644:4:2"}]}]},"name":"abi_encode_tuple_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_uint8_t_string_memory_ptr__to_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_uint8_t_string_memory_ptr__fromStack_reversed","nativeSrc":"3901:790:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"4127:9:2","nodeType":"YulTypedName","src":"4127:9:2","type":""},{"name":"value4","nativeSrc":"4138:6:2","nodeType":"YulTypedName","src":"4138:6:2","type":""},{"name":"value3","nativeSrc":"4146:6:2","nodeType":"YulTypedName","src":"4146:6:2","type":""},{"name":"value2","nativeSrc":"4154:6:2","nodeType":"YulTypedName","src":"4154:6:2","type":""},{"name":"value1","nativeSrc":"4162:6:2","nodeType":"YulTypedName","src":"4162:6:2","type":""},{"name":"value0","nativeSrc":"4170:6:2","nodeType":"YulTypedName","src":"4170:6:2","type":""}],"returnVariables":[{"name":"tail","nativeSrc":"4181:4:2","nodeType":"YulTypedName","src":"4181:4:2","type":""}],"src":"3901:790:2"},{"body":{"nativeSrc":"4797:102:2","nodeType":"YulBlock","src":"4797:102:2","statements":[{"nativeSrc":"4807:26:2","nodeType":"YulAssignment","src":"4807:26:2","value":{"arguments":[{"name":"headStart","nativeSrc":"4819:9:2","nodeType":"YulIdentifier","src":"4819:9:2"},{"kind":"number","nativeSrc":"4830:2:2","nodeType":"YulLiteral","src":"4830:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"4815:3:2","nodeType":"YulIdentifier","src":"4815:3:2"},"nativeSrc":"4815:18:2","nodeType":"YulFunctionCall","src":"4815:18:2"},"variableNames":[{"name":"tail","nativeSrc":"4807:4:2","nodeType":"YulIdentifier","src":"4807:4:2"}]},{"expression":{"arguments":[{"name":"headStart","nativeSrc":"4849:9:2","nodeType":"YulIdentifier","src":"4849:9:2"},{"arguments":[{"name":"value0","nativeSrc":"4864:6:2","nodeType":"YulIdentifier","src":"4864:6:2"},{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"4880:3:2","nodeType":"YulLiteral","src":"4880:3:2","type":"","value":"160"},{"kind":"number","nativeSrc":"4885:1:2","nodeType":"YulLiteral","src":"4885:1:2","type":"","value":"1"}],"functionName":{"name":"shl","nativeSrc":"4876:3:2","nodeType":"YulIdentifier","src":"4876:3:2"},"nativeSrc":"4876:11:2","nodeType":"YulFunctionCall","src":"4876:11:2"},{"kind":"number","nativeSrc":"4889:1:2","nodeType":"YulLiteral","src":"4889:1:2","type":"","value":"1"}],"functionName":{"name":"sub","nativeSrc":"4872:3:2","nodeType":"YulIdentifier","src":"4872:3:2"},"nativeSrc":"4872:19:2","nodeType":"YulFunctionCall","src":"4872:19:2"}],"functionName":{"name":"and","nativeSrc":"4860:3:2","nodeType":"YulIdentifier","src":"4860:3:2"},"nativeSrc":"4860:32:2","nodeType":"YulFunctionCall","src":"4860:32:2"}],"functionName":{"name":"mstore","nativeSrc":"4842:6:2","nodeType":"YulIdentifier","src":"4842:6:2"},"nativeSrc":"4842:51:2","nodeType":"YulFunctionCall","src":"4842:51:2"},"nativeSrc":"4842:51:2","nodeType":"YulExpressionStatement","src":"4842:51:2"}]},"name":"abi_encode_tuple_t_address__to_t_address__fromStack_reversed","nativeSrc":"4696:203:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"4766:9:2","nodeType":"YulTypedName","src":"4766:9:2","type":""},{"name":"value0","nativeSrc":"4777:6:2","nodeType":"YulTypedName","src":"4777:6:2","type":""}],"returnVariables":[{"name":"tail","nativeSrc":"4788:4:2","nodeType":"YulTypedName","src":"4788:4:2","type":""}],"src":"4696:203:2"},{"body":{"nativeSrc":"4999:297:2","nodeType":"YulBlock","src":"4999:297:2","statements":[{"body":{"nativeSrc":"5045:16:2","nodeType":"YulBlock","src":"5045:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"5054:1:2","nodeType":"YulLiteral","src":"5054:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"5057:1:2","nodeType":"YulLiteral","src":"5057:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"5047:6:2","nodeType":"YulIdentifier","src":"5047:6:2"},"nativeSrc":"5047:12:2","nodeType":"YulFunctionCall","src":"5047:12:2"},"nativeSrc":"5047:12:2","nodeType":"YulExpressionStatement","src":"5047:12:2"}]},"condition":{"arguments":[{"arguments":[{"name":"dataEnd","nativeSrc":"5020:7:2","nodeType":"YulIdentifier","src":"5020:7:2"},{"name":"headStart","nativeSrc":"5029:9:2","nodeType":"YulIdentifier","src":"5029:9:2"}],"functionName":{"name":"sub","nativeSrc":"5016:3:2","nodeType":"YulIdentifier","src":"5016:3:2"},"nativeSrc":"5016:23:2","nodeType":"YulFunctionCall","src":"5016:23:2"},{"kind":"number","nativeSrc":"5041:2:2","nodeType":"YulLiteral","src":"5041:2:2","type":"","value":"64"}],"functionName":{"name":"slt","nativeSrc":"5012:3:2","nodeType":"YulIdentifier","src":"5012:3:2"},"nativeSrc":"5012:32:2","nodeType":"YulFunctionCall","src":"5012:32:2"},"nativeSrc":"5009:52:2","nodeType":"YulIf","src":"5009:52:2"},{"nativeSrc":"5070:37:2","nodeType":"YulAssignment","src":"5070:37:2","value":{"arguments":[{"name":"headStart","nativeSrc":"5097:9:2","nodeType":"YulIdentifier","src":"5097:9:2"}],"functionName":{"name":"abi_decode_uint8","nativeSrc":"5080:16:2","nodeType":"YulIdentifier","src":"5080:16:2"},"nativeSrc":"5080:27:2","nodeType":"YulFunctionCall","src":"5080:27:2"},"variableNames":[{"name":"value0","nativeSrc":"5070:6:2","nodeType":"YulIdentifier","src":"5070:6:2"}]},{"nativeSrc":"5116:46:2","nodeType":"YulVariableDeclaration","src":"5116:46:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"5147:9:2","nodeType":"YulIdentifier","src":"5147:9:2"},{"kind":"number","nativeSrc":"5158:2:2","nodeType":"YulLiteral","src":"5158:2:2","type":"","value":"32"}],"functionName":{"name":"add","nativeSrc":"5143:3:2","nodeType":"YulIdentifier","src":"5143:3:2"},"nativeSrc":"5143:18:2","nodeType":"YulFunctionCall","src":"5143:18:2"}],"functionName":{"name":"calldataload","nativeSrc":"5130:12:2","nodeType":"YulIdentifier","src":"5130:12:2"},"nativeSrc":"5130:32:2","nodeType":"YulFunctionCall","src":"5130:32:2"},"variables":[{"name":"offset","nativeSrc":"5120:6:2","nodeType":"YulTypedName","src":"5120:6:2","type":""}]},{"body":{"nativeSrc":"5205:16:2","nodeType":"YulBlock","src":"5205:16:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"5214:1:2","nodeType":"YulLiteral","src":"5214:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"5217:1:2","nodeType":"YulLiteral","src":"5217:1:2","type":"","value":"0"}],"functionName":{"name":"revert","nativeSrc":"5207:6:2","nodeType":"YulIdentifier","src":"5207:6:2"},"nativeSrc":"5207:12:2","nodeType":"YulFunctionCall","src":"5207:12:2"},"nativeSrc":"5207:12:2","nodeType":"YulExpressionStatement","src":"5207:12:2"}]},"condition":{"arguments":[{"name":"offset","nativeSrc":"5177:6:2","nodeType":"YulIdentifier","src":"5177:6:2"},{"kind":"number","nativeSrc":"5185:18:2","nodeType":"YulLiteral","src":"5185:18:2","type":"","value":"0xffffffffffffffff"}],"functionName":{"name":"gt","nativeSrc":"5174:2:2","nodeType":"YulIdentifier","src":"5174:2:2"},"nativeSrc":"5174:30:2","nodeType":"YulFunctionCall","src":"5174:30:2"},"nativeSrc":"5171:50:2","nodeType":"YulIf","src":"5171:50:2"},{"nativeSrc":"5230:60:2","nodeType":"YulAssignment","src":"5230:60:2","value":{"arguments":[{"arguments":[{"name":"headStart","nativeSrc":"5262:9:2","nodeType":"YulIdentifier","src":"5262:9:2"},{"name":"offset","nativeSrc":"5273:6:2","nodeType":"YulIdentifier","src":"5273:6:2"}],"functionName":{"name":"add","nativeSrc":"5258:3:2","nodeType":"YulIdentifier","src":"5258:3:2"},"nativeSrc":"5258:22:2","nodeType":"YulFunctionCall","src":"5258:22:2"},{"name":"dataEnd","nativeSrc":"5282:7:2","nodeType":"YulIdentifier","src":"5282:7:2"}],"functionName":{"name":"abi_decode_string","nativeSrc":"5240:17:2","nodeType":"YulIdentifier","src":"5240:17:2"},"nativeSrc":"5240:50:2","nodeType":"YulFunctionCall","src":"5240:50:2"},"variableNames":[{"name":"value1","nativeSrc":"5230:6:2","nodeType":"YulIdentifier","src":"5230:6:2"}]}]},"name":"abi_decode_tuple_t_uint8t_string_memory_ptr","nativeSrc":"4904:392:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"headStart","nativeSrc":"4957:9:2","nodeType":"YulTypedName","src":"4957:9:2","type":""},{"name":"dataEnd","nativeSrc":"4968:7:2","nodeType":"YulTypedName","src":"4968:7:2","type":""}],"returnVariables":[{"name":"value0","nativeSrc":"4980:6:2","nodeType":"YulTypedName","src":"4980:6:2","type":""},{"name":"value1","nativeSrc":"4988:6:2","nodeType":"YulTypedName","src":"4988:6:2","type":""}],"src":"4904:392:2"},{"body":{"nativeSrc":"5356:325:2","nodeType":"YulBlock","src":"5356:325:2","statements":[{"nativeSrc":"5366:22:2","nodeType":"YulAssignment","src":"5366:22:2","value":{"arguments":[{"kind":"number","nativeSrc":"5380:1:2","nodeType":"YulLiteral","src":"5380:1:2","type":"","value":"1"},{"name":"data","nativeSrc":"5383:4:2","nodeType":"YulIdentifier","src":"5383:4:2"}],"functionName":{"name":"shr","nativeSrc":"5376:3:2","nodeType":"YulIdentifier","src":"5376:3:2"},"nativeSrc":"5376:12:2","nodeType":"YulFunctionCall","src":"5376:12:2"},"variableNames":[{"name":"length","nativeSrc":"5366:6:2","nodeType":"YulIdentifier","src":"5366:6:2"}]},{"nativeSrc":"5397:38:2","nodeType":"YulVariableDeclaration","src":"5397:38:2","value":{"arguments":[{"name":"data","nativeSrc":"5427:4:2","nodeType":"YulIdentifier","src":"5427:4:2"},{"kind":"number","nativeSrc":"5433:1:2","nodeType":"YulLiteral","src":"5433:1:2","type":"","value":"1"}],"functionName":{"name":"and","nativeSrc":"5423:3:2","nodeType":"YulIdentifier","src":"5423:3:2"},"nativeSrc":"5423:12:2","nodeType":"YulFunctionCall","src":"5423:12:2"},"variables":[{"name":"outOfPlaceEncoding","nativeSrc":"5401:18:2","nodeType":"YulTypedName","src":"5401:18:2","type":""}]},{"body":{"nativeSrc":"5474:31:2","nodeType":"YulBlock","src":"5474:31:2","statements":[{"nativeSrc":"5476:27:2","nodeType":"YulAssignment","src":"5476:27:2","value":{"arguments":[{"name":"length","nativeSrc":"5490:6:2","nodeType":"YulIdentifier","src":"5490:6:2"},{"kind":"number","nativeSrc":"5498:4:2","nodeType":"YulLiteral","src":"5498:4:2","type":"","value":"0x7f"}],"functionName":{"name":"and","nativeSrc":"5486:3:2","nodeType":"YulIdentifier","src":"5486:3:2"},"nativeSrc":"5486:17:2","nodeType":"YulFunctionCall","src":"5486:17:2"},"variableNames":[{"name":"length","nativeSrc":"5476:6:2","nodeType":"YulIdentifier","src":"5476:6:2"}]}]},"condition":{"arguments":[{"name":"outOfPlaceEncoding","nativeSrc":"5454:18:2","nodeType":"YulIdentifier","src":"5454:18:2"}],"functionName":{"name":"iszero","nativeSrc":"5447:6:2","nodeType":"YulIdentifier","src":"5447:6:2"},"nativeSrc":"5447:26:2","nodeType":"YulFunctionCall","src":"5447:26:2"},"nativeSrc":"5444:61:2","nodeType":"YulIf","src":"5444:61:2"},{"body":{"nativeSrc":"5564:111:2","nodeType":"YulBlock","src":"5564:111:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"5585:1:2","nodeType":"YulLiteral","src":"5585:1:2","type":"","value":"0"},{"arguments":[{"kind":"number","nativeSrc":"5592:3:2","nodeType":"YulLiteral","src":"5592:3:2","type":"","value":"224"},{"kind":"number","nativeSrc":"5597:10:2","nodeType":"YulLiteral","src":"5597:10:2","type":"","value":"0x4e487b71"}],"functionName":{"name":"shl","nativeSrc":"5588:3:2","nodeType":"YulIdentifier","src":"5588:3:2"},"nativeSrc":"5588:20:2","nodeType":"YulFunctionCall","src":"5588:20:2"}],"functionName":{"name":"mstore","nativeSrc":"5578:6:2","nodeType":"YulIdentifier","src":"5578:6:2"},"nativeSrc":"5578:31:2","nodeType":"YulFunctionCall","src":"5578:31:2"},"nativeSrc":"5578:31:2","nodeType":"YulExpressionStatement","src":"5578:31:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"5629:1:2","nodeType":"YulLiteral","src":"5629:1:2","type":"","value":"4"},{"kind":"number","nativeSrc":"5632:4:2","nodeType":"YulLiteral","src":"5632:4:2","type":"","value":"0x22"}],"functionName":{"name":"mstore","nativeSrc":"5622:6:2","nodeType":"YulIdentifier","src":"5622:6:2"},"nativeSrc":"5622:15:2","nodeType":"YulFunctionCall","src":"5622:15:2"},"nativeSrc":"5622:15:2","nodeType":"YulExpressionStatement","src":"5622:15:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"5657:1:2","nodeType":"YulLiteral","src":"5657:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"5660:4:2","nodeType":"YulLiteral","src":"5660:4:2","type":"","value":"0x24"}],"functionName":{"name":"revert","nativeSrc":"5650:6:2","nodeType":"YulIdentifier","src":"5650:6:2"},"nativeSrc":"5650:15:2","nodeType":"YulFunctionCall","src":"5650:15:2"},"nativeSrc":"5650:15:2","nodeType":"YulExpressionStatement","src":"5650:15:2"}]},"condition":{"arguments":[{"name":"outOfPlaceEncoding","nativeSrc":"5520:18:2","nodeType":"YulIdentifier","src":"5520:18:2"},{"arguments":[{"name":"length","nativeSrc":"5543:6:2","nodeType":"YulIdentifier","src":"5543:6:2"},{"kind":"number","nativeSrc":"5551:2:2","nodeType":"YulLiteral","src":"5551:2:2","type":"","value":"32"}],"functionName":{"name":"lt","nativeSrc":"5540:2:2","nodeType":"YulIdentifier","src":"5540:2:2"},"nativeSrc":"5540:14:2","nodeType":"YulFunctionCall","src":"5540:14:2"}],"functionName":{"name":"eq","nativeSrc":"5517:2:2","nodeType":"YulIdentifier","src":"5517:2:2"},"nativeSrc":"5517:38:2","nodeType":"YulFunctionCall","src":"5517:38:2"},"nativeSrc":"5514:161:2","nodeType":"YulIf","src":"5514:161:2"}]},"name":"extract_byte_array_length","nativeSrc":"5301:380:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"data","nativeSrc":"5336:4:2","nodeType":"YulTypedName","src":"5336:4:2","type":""}],"returnVariables":[{"name":"length","nativeSrc":"5345:6:2","nodeType":"YulTypedName","src":"5345:6:2","type":""}],"src":"5301:380:2"},{"body":{"nativeSrc":"5731:227:2","nodeType":"YulBlock","src":"5731:227:2","statements":[{"nativeSrc":"5741:31:2","nodeType":"YulVariableDeclaration","src":"5741:31:2","value":{"arguments":[{"name":"value","nativeSrc":"5760:5:2","nodeType":"YulIdentifier","src":"5760:5:2"},{"kind":"number","nativeSrc":"5767:4:2","nodeType":"YulLiteral","src":"5767:4:2","type":"","value":"0xff"}],"functionName":{"name":"and","nativeSrc":"5756:3:2","nodeType":"YulIdentifier","src":"5756:3:2"},"nativeSrc":"5756:16:2","nodeType":"YulFunctionCall","src":"5756:16:2"},"variables":[{"name":"value_1","nativeSrc":"5745:7:2","nodeType":"YulTypedName","src":"5745:7:2","type":""}]},{"body":{"nativeSrc":"5810:111:2","nodeType":"YulBlock","src":"5810:111:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"5831:1:2","nodeType":"YulLiteral","src":"5831:1:2","type":"","value":"0"},{"arguments":[{"kind":"number","nativeSrc":"5838:3:2","nodeType":"YulLiteral","src":"5838:3:2","type":"","value":"224"},{"kind":"number","nativeSrc":"5843:10:2","nodeType":"YulLiteral","src":"5843:10:2","type":"","value":"0x4e487b71"}],"functionName":{"name":"shl","nativeSrc":"5834:3:2","nodeType":"YulIdentifier","src":"5834:3:2"},"nativeSrc":"5834:20:2","nodeType":"YulFunctionCall","src":"5834:20:2"}],"functionName":{"name":"mstore","nativeSrc":"5824:6:2","nodeType":"YulIdentifier","src":"5824:6:2"},"nativeSrc":"5824:31:2","nodeType":"YulFunctionCall","src":"5824:31:2"},"nativeSrc":"5824:31:2","nodeType":"YulExpressionStatement","src":"5824:31:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"5875:1:2","nodeType":"YulLiteral","src":"5875:1:2","type":"","value":"4"},{"kind":"number","nativeSrc":"5878:4:2","nodeType":"YulLiteral","src":"5878:4:2","type":"","value":"0x11"}],"functionName":{"name":"mstore","nativeSrc":"5868:6:2","nodeType":"YulIdentifier","src":"5868:6:2"},"nativeSrc":"5868:15:2","nodeType":"YulFunctionCall","src":"5868:15:2"},"nativeSrc":"5868:15:2","nodeType":"YulExpressionStatement","src":"5868:15:2"},{"expression":{"arguments":[{"kind":"number","nativeSrc":"5903:1:2","nodeType":"YulLiteral","src":"5903:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"5906:4:2","nodeType":"YulLiteral","src":"5906:4:2","type":"","value":"0x24"}],"functionName":{"name":"revert","nativeSrc":"5896:6:2","nodeType":"YulIdentifier","src":"5896:6:2"},"nativeSrc":"5896:15:2","nodeType":"YulFunctionCall","src":"5896:15:2"},"nativeSrc":"5896:15:2","nodeType":"YulExpressionStatement","src":"5896:15:2"}]},"condition":{"arguments":[{"name":"value_1","nativeSrc":"5787:7:2","nodeType":"YulIdentifier","src":"5787:7:2"},{"kind":"number","nativeSrc":"5796:4:2","nodeType":"YulLiteral","src":"5796:4:2","type":"","value":"0xff"}],"functionName":{"name":"eq","nativeSrc":"5784:2:2","nodeType":"YulIdentifier","src":"5784:2:2"},"nativeSrc":"5784:17:2","nodeType":"YulFunctionCall","src":"5784:17:2"},"nativeSrc":"5781:140:2","nodeType":"YulIf","src":"5781:140:2"},{"nativeSrc":"5930:22:2","nodeType":"YulAssignment","src":"5930:22:2","value":{"arguments":[{"name":"value_1","nativeSrc":"5941:7:2","nodeType":"YulIdentifier","src":"5941:7:2"},{"kind":"number","nativeSrc":"5950:1:2","nodeType":"YulLiteral","src":"5950:1:2","type":"","value":"1"}],"functionName":{"name":"add","nativeSrc":"5937:3:2","nodeType":"YulIdentifier","src":"5937:3:2"},"nativeSrc":"5937:15:2","nodeType":"YulFunctionCall","src":"5937:15:2"},"variableNames":[{"name":"ret","nativeSrc":"5930:3:2","nodeType":"YulIdentifier","src":"5930:3:2"}]}]},"name":"increment_t_uint8","nativeSrc":"5686:272:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"value","nativeSrc":"5713:5:2","nodeType":"YulTypedName","src":"5713:5:2","type":""}],"returnVariables":[{"name":"ret","nativeSrc":"5723:3:2","nodeType":"YulTypedName","src":"5723:3:2","type":""}],"src":"5686:272:2"},{"body":{"nativeSrc":"6019:65:2","nodeType":"YulBlock","src":"6019:65:2","statements":[{"expression":{"arguments":[{"kind":"number","nativeSrc":"6036:1:2","nodeType":"YulLiteral","src":"6036:1:2","type":"","value":"0"},{"name":"ptr","nativeSrc":"6039:3:2","nodeType":"YulIdentifier","src":"6039:3:2"}],"functionName":{"name":"mstore","nativeSrc":"6029:6:2","nodeType":"YulIdentifier","src":"6029:6:2"},"nativeSrc":"6029:14:2","nodeType":"YulFunctionCall","src":"6029:14:2"},"nativeSrc":"6029:14:2","nodeType":"YulExpressionStatement","src":"6029:14:2"},{"nativeSrc":"6052:26:2","nodeType":"YulAssignment","src":"6052:26:2","value":{"arguments":[{"kind":"number","nativeSrc":"6070:1:2","nodeType":"YulLiteral","src":"6070:1:2","type":"","value":"0"},{"kind":"number","nativeSrc":"6073:4:2","nodeType":"YulLiteral","src":"6073:4:2","type":"","value":"0x20"}],"functionName":{"name":"keccak256","nativeSrc":"6060:9:2","nodeType":"YulIdentifier","src":"6060:9:2"},"nativeSrc":"6060:18:2","nodeType":"YulFunctionCall","src":"6060:18:2"},"variableNames":[{"name":"data","nativeSrc":"6052:4:2","nodeType":"YulIdentifier","src":"6052:4:2"}]}]},"name":"array_dataslot_string_storage","nativeSrc":"5963:121:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"ptr","nativeSrc":"6002:3:2","nodeType":"YulTypedName","src":"6002:3:2","type":""}],"returnVariables":[{"name":"data","nativeSrc":"6010:4:2","nodeType":"YulTypedName","src":"6010:4:2","type":""}],"src":"5963:121:2"},{"body":{"nativeSrc":"6170:464:2","nodeType":"YulBlock","src":"6170:464:2","statements":[{"body":{"nativeSrc":"6203:425:2","nodeType":"YulBlock","src":"6203:425:2","statements":[{"nativeSrc":"6217:11:2","nodeType":"YulVariableDeclaration","src":"6217:11:2","value":{"kind":"number","nativeSrc":"6227:1:2","nodeType":"YulLiteral","src":"6227:1:2","type":"","value":"0"},"variables":[{"name":"_1","nativeSrc":"6221:2:2","nodeType":"YulTypedName","src":"6221:2:2","type":""}]},{"expression":{"arguments":[{"name":"_1","nativeSrc":"6248:2:2","nodeType":"YulIdentifier","src":"6248:2:2"},{"name":"array","nativeSrc":"6252:5:2","nodeType":"YulIdentifier","src":"6252:5:2"}],"functionName":{"name":"mstore","nativeSrc":"6241:6:2","nodeType":"YulIdentifier","src":"6241:6:2"},"nativeSrc":"6241:17:2","nodeType":"YulFunctionCall","src":"6241:17:2"},"nativeSrc":"6241:17:2","nodeType":"YulExpressionStatement","src":"6241:17:2"},{"nativeSrc":"6271:31:2","nodeType":"YulVariableDeclaration","src":"6271:31:2","value":{"arguments":[{"name":"_1","nativeSrc":"6293:2:2","nodeType":"YulIdentifier","src":"6293:2:2"},{"kind":"number","nativeSrc":"6297:4:2","nodeType":"YulLiteral","src":"6297:4:2","type":"","value":"0x20"}],"functionName":{"name":"keccak256","nativeSrc":"6283:9:2","nodeType":"YulIdentifier","src":"6283:9:2"},"nativeSrc":"6283:19:2","nodeType":"YulFunctionCall","src":"6283:19:2"},"variables":[{"name":"data","nativeSrc":"6275:4:2","nodeType":"YulTypedName","src":"6275:4:2","type":""}]},{"nativeSrc":"6315:57:2","nodeType":"YulVariableDeclaration","src":"6315:57:2","value":{"arguments":[{"name":"data","nativeSrc":"6338:4:2","nodeType":"YulIdentifier","src":"6338:4:2"},{"arguments":[{"kind":"number","nativeSrc":"6348:1:2","nodeType":"YulLiteral","src":"6348:1:2","type":"","value":"5"},{"arguments":[{"name":"startIndex","nativeSrc":"6355:10:2","nodeType":"YulIdentifier","src":"6355:10:2"},{"kind":"number","nativeSrc":"6367:2:2","nodeType":"YulLiteral","src":"6367:2:2","type":"","value":"31"}],"functionName":{"name":"add","nativeSrc":"6351:3:2","nodeType":"YulIdentifier","src":"6351:3:2"},"nativeSrc":"6351:19:2","nodeType":"YulFunctionCall","src":"6351:19:2"}],"functionName":{"name":"shr","nativeSrc":"6344:3:2","nodeType":"YulIdentifier","src":"6344:3:2"},"nativeSrc":"6344:27:2","nodeType":"YulFunctionCall","src":"6344:27:2"}],"functionName":{"name":"add","nativeSrc":"6334:3:2","nodeType":"YulIdentifier","src":"6334:3:2"},"nativeSrc":"6334:38:2","nodeType":"YulFunctionCall","src":"6334:38:2"},"variables":[{"name":"deleteStart","nativeSrc":"6319:11:2","nodeType":"YulTypedName","src":"6319:11:2","type":""}]},{"body":{"nativeSrc":"6409:23:2","nodeType":"YulBlock","src":"6409:23:2","statements":[{"nativeSrc":"6411:19:2","nodeType":"YulAssignment","src":"6411:19:2","value":{"name":"data","nativeSrc":"6426:4:2","nodeType":"YulIdentifier","src":"6426:4:2"},"variableNames":[{"name":"deleteStart","nativeSrc":"6411:11:2","nodeType":"YulIdentifier","src":"6411:11:2"}]}]},"condition":{"arguments":[{"name":"startIndex","nativeSrc":"6391:10:2","nodeType":"YulIdentifier","src":"6391:10:2"},{"kind":"number","nativeSrc":"6403:4:2","nodeType":"YulLiteral","src":"6403:4:2","type":"","value":"0x20"}],"functionName":{"name":"lt","nativeSrc":"6388:2:2","nodeType":"YulIdentifier","src":"6388:2:2"},"nativeSrc":"6388:20:2","nodeType":"YulFunctionCall","src":"6388:20:2"},"nativeSrc":"6385:47:2","nodeType":"YulIf","src":"6385:47:2"},{"nativeSrc":"6445:41:2","nodeType":"YulVariableDeclaration","src":"6445:41:2","value":{"arguments":[{"name":"data","nativeSrc":"6459:4:2","nodeType":"YulIdentifier","src":"6459:4:2"},{"arguments":[{"kind":"number","nativeSrc":"6469:1:2","nodeType":"YulLiteral","src":"6469:1:2","type":"","value":"5"},{"arguments":[{"name":"len","nativeSrc":"6476:3:2","nodeType":"YulIdentifier","src":"6476:3:2"},{"kind":"number","nativeSrc":"6481:2:2","nodeType":"YulLiteral","src":"6481:2:2","type":"","value":"31"}],"functionName":{"name":"add","nativeSrc":"6472:3:2","nodeType":"YulIdentifier","src":"6472:3:2"},"nativeSrc":"6472:12:2","nodeType":"YulFunctionCall","src":"6472:12:2"}],"functionName":{"name":"shr","nativeSrc":"6465:3:2","nodeType":"YulIdentifier","src":"6465:3:2"},"nativeSrc":"6465:20:2","nodeType":"YulFunctionCall","src":"6465:20:2"}],"functionName":{"name":"add","nativeSrc":"6455:3:2","nodeType":"YulIdentifier","src":"6455:3:2"},"nativeSrc":"6455:31:2","nodeType":"YulFunctionCall","src":"6455:31:2"},"variables":[{"name":"_2","nativeSrc":"6449:2:2","nodeType":"YulTypedName","src":"6449:2:2","type":""}]},{"nativeSrc":"6499:24:2","nodeType":"YulVariableDeclaration","src":"6499:24:2","value":{"name":"deleteStart","nativeSrc":"6512:11:2","nodeType":"YulIdentifier","src":"6512:11:2"},"variables":[{"name":"start","nativeSrc":"6503:5:2","nodeType":"YulTypedName","src":"6503:5:2","type":""}]},{"body":{"nativeSrc":"6597:21:2","nodeType":"YulBlock","src":"6597:21:2","statements":[{"expression":{"arguments":[{"name":"start","nativeSrc":"6606:5:2","nodeType":"YulIdentifier","src":"6606:5:2"},{"name":"_1","nativeSrc":"6613:2:2","nodeType":"YulIdentifier","src":"6613:2:2"}],"functionName":{"name":"sstore","nativeSrc":"6599:6:2","nodeType":"YulIdentifier","src":"6599:6:2"},"nativeSrc":"6599:17:2","nodeType":"YulFunctionCall","src":"6599:17:2"},"nativeSrc":"6599:17:2","nodeType":"YulExpressionStatement","src":"6599:17:2"}]},"condition":{"arguments":[{"name":"start","nativeSrc":"6547:5:2","nodeType":"YulIdentifier","src":"6547:5:2"},{"name":"_2","nativeSrc":"6554:2:2","nodeType":"YulIdentifier","src":"6554:2:2"}],"functionName":{"name":"lt","nativeSrc":"6544:2:2","nodeType":"YulIdentifier","src":"6544:2:2"},"nativeSrc":"6544:13:2","nodeType":"YulFunctionCall","src":"6544:13:2"},"nativeSrc":"6536:82:2","nodeType":"YulForLoop","post":{"nativeSrc":"6558:26:2","nodeType":"YulBlock","src":"6558:26:2","statements":[{"nativeSrc":"6560:22:2","nodeType":"YulAssignment","src":"6560:22:2","value":{"arguments":[{"name":"start","nativeSrc":"6573:5:2","nodeType":"YulIdentifier","src":"6573:5:2"},{"kind":"number","nativeSrc":"6580:1:2","nodeType":"YulLiteral","src":"6580:1:2","type":"","value":"1"}],"functionName":{"name":"add","nativeSrc":"6569:3:2","nodeType":"YulIdentifier","src":"6569:3:2"},"nativeSrc":"6569:13:2","nodeType":"YulFunctionCall","src":"6569:13:2"},"variableNames":[{"name":"start","nativeSrc":"6560:5:2","nodeType":"YulIdentifier","src":"6560:5:2"}]}]},"pre":{"nativeSrc":"6540:3:2","nodeType":"YulBlock","src":"6540:3:2","statements":[]},"src":"6536:82:2"}]},"condition":{"arguments":[{"name":"len","nativeSrc":"6186:3:2","nodeType":"YulIdentifier","src":"6186:3:2"},{"kind":"number","nativeSrc":"6191:2:2","nodeType":"YulLiteral","src":"6191:2:2","type":"","value":"31"}],"functionName":{"name":"gt","nativeSrc":"6183:2:2","nodeType":"YulIdentifier","src":"6183:2:2"},"nativeSrc":"6183:11:2","nodeType":"YulFunctionCall","src":"6183:11:2"},"nativeSrc":"6180:448:2","nodeType":"YulIf","src":"6180:448:2"}]},"name":"clean_up_bytearray_end_slots_string_storage","nativeSrc":"6089:545:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"array","nativeSrc":"6142:5:2","nodeType":"YulTypedName","src":"6142:5:2","type":""},{"name":"len","nativeSrc":"6149:3:2","nodeType":"YulTypedName","src":"6149:3:2","type":""},{"name":"startIndex","nativeSrc":"6154:10:2","nodeType":"YulTypedName","src":"6154:10:2","type":""}],"src":"6089:545:2"},{"body":{"nativeSrc":"6724:81:2","nodeType":"YulBlock","src":"6724:81:2","statements":[{"nativeSrc":"6734:65:2","nodeType":"YulAssignment","src":"6734:65:2","value":{"arguments":[{"arguments":[{"name":"data","nativeSrc":"6749:4:2","nodeType":"YulIdentifier","src":"6749:4:2"},{"arguments":[{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"6767:1:2","nodeType":"YulLiteral","src":"6767:1:2","type":"","value":"3"},{"name":"len","nativeSrc":"6770:3:2","nodeType":"YulIdentifier","src":"6770:3:2"}],"functionName":{"name":"shl","nativeSrc":"6763:3:2","nodeType":"YulIdentifier","src":"6763:3:2"},"nativeSrc":"6763:11:2","nodeType":"YulFunctionCall","src":"6763:11:2"},{"arguments":[{"kind":"number","nativeSrc":"6780:1:2","nodeType":"YulLiteral","src":"6780:1:2","type":"","value":"0"}],"functionName":{"name":"not","nativeSrc":"6776:3:2","nodeType":"YulIdentifier","src":"6776:3:2"},"nativeSrc":"6776:6:2","nodeType":"YulFunctionCall","src":"6776:6:2"}],"functionName":{"name":"shr","nativeSrc":"6759:3:2","nodeType":"YulIdentifier","src":"6759:3:2"},"nativeSrc":"6759:24:2","nodeType":"YulFunctionCall","src":"6759:24:2"}],"functionName":{"name":"not","nativeSrc":"6755:3:2","nodeType":"YulIdentifier","src":"6755:3:2"},"nativeSrc":"6755:29:2","nodeType":"YulFunctionCall","src":"6755:29:2"}],"functionName":{"name":"and","nativeSrc":"6745:3:2","nodeType":"YulIdentifier","src":"6745:3:2"},"nativeSrc":"6745:40:2","nodeType":"YulFunctionCall","src":"6745:40:2"},{"arguments":[{"kind":"number","nativeSrc":"6791:1:2","nodeType":"YulLiteral","src":"6791:1:2","type":"","value":"1"},{"name":"len","nativeSrc":"6794:3:2","nodeType":"YulIdentifier","src":"6794:3:2"}],"functionName":{"name":"shl","nativeSrc":"6787:3:2","nodeType":"YulIdentifier","src":"6787:3:2"},"nativeSrc":"6787:11:2","nodeType":"YulFunctionCall","src":"6787:11:2"}],"functionName":{"name":"or","nativeSrc":"6742:2:2","nodeType":"YulIdentifier","src":"6742:2:2"},"nativeSrc":"6742:57:2","nodeType":"YulFunctionCall","src":"6742:57:2"},"variableNames":[{"name":"used","nativeSrc":"6734:4:2","nodeType":"YulIdentifier","src":"6734:4:2"}]}]},"name":"extract_used_part_and_set_length_of_short_byte_array","nativeSrc":"6639:166:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"data","nativeSrc":"6701:4:2","nodeType":"YulTypedName","src":"6701:4:2","type":""},{"name":"len","nativeSrc":"6707:3:2","nodeType":"YulTypedName","src":"6707:3:2","type":""}],"returnVariables":[{"name":"used","nativeSrc":"6715:4:2","nodeType":"YulTypedName","src":"6715:4:2","type":""}],"src":"6639:166:2"},{"body":{"nativeSrc":"6906:1256:2","nodeType":"YulBlock","src":"6906:1256:2","statements":[{"nativeSrc":"6916:24:2","nodeType":"YulVariableDeclaration","src":"6916:24:2","value":{"arguments":[{"name":"src","nativeSrc":"6936:3:2","nodeType":"YulIdentifier","src":"6936:3:2"}],"functionName":{"name":"mload","nativeSrc":"6930:5:2","nodeType":"YulIdentifier","src":"6930:5:2"},"nativeSrc":"6930:10:2","nodeType":"YulFunctionCall","src":"6930:10:2"},"variables":[{"name":"newLen","nativeSrc":"6920:6:2","nodeType":"YulTypedName","src":"6920:6:2","type":""}]},{"body":{"nativeSrc":"6983:22:2","nodeType":"YulBlock","src":"6983:22:2","statements":[{"expression":{"arguments":[],"functionName":{"name":"panic_error_0x41","nativeSrc":"6985:16:2","nodeType":"YulIdentifier","src":"6985:16:2"},"nativeSrc":"6985:18:2","nodeType":"YulFunctionCall","src":"6985:18:2"},"nativeSrc":"6985:18:2","nodeType":"YulExpressionStatement","src":"6985:18:2"}]},"condition":{"arguments":[{"name":"newLen","nativeSrc":"6955:6:2","nodeType":"YulIdentifier","src":"6955:6:2"},{"kind":"number","nativeSrc":"6963:18:2","nodeType":"YulLiteral","src":"6963:18:2","type":"","value":"0xffffffffffffffff"}],"functionName":{"name":"gt","nativeSrc":"6952:2:2","nodeType":"YulIdentifier","src":"6952:2:2"},"nativeSrc":"6952:30:2","nodeType":"YulFunctionCall","src":"6952:30:2"},"nativeSrc":"6949:56:2","nodeType":"YulIf","src":"6949:56:2"},{"expression":{"arguments":[{"name":"slot","nativeSrc":"7058:4:2","nodeType":"YulIdentifier","src":"7058:4:2"},{"arguments":[{"arguments":[{"name":"slot","nativeSrc":"7096:4:2","nodeType":"YulIdentifier","src":"7096:4:2"}],"functionName":{"name":"sload","nativeSrc":"7090:5:2","nodeType":"YulIdentifier","src":"7090:5:2"},"nativeSrc":"7090:11:2","nodeType":"YulFunctionCall","src":"7090:11:2"}],"functionName":{"name":"extract_byte_array_length","nativeSrc":"7064:25:2","nodeType":"YulIdentifier","src":"7064:25:2"},"nativeSrc":"7064:38:2","nodeType":"YulFunctionCall","src":"7064:38:2"},{"name":"newLen","nativeSrc":"7104:6:2","nodeType":"YulIdentifier","src":"7104:6:2"}],"functionName":{"name":"clean_up_bytearray_end_slots_string_storage","nativeSrc":"7014:43:2","nodeType":"YulIdentifier","src":"7014:43:2"},"nativeSrc":"7014:97:2","nodeType":"YulFunctionCall","src":"7014:97:2"},"nativeSrc":"7014:97:2","nodeType":"YulExpressionStatement","src":"7014:97:2"},{"nativeSrc":"7120:18:2","nodeType":"YulVariableDeclaration","src":"7120:18:2","value":{"kind":"number","nativeSrc":"7137:1:2","nodeType":"YulLiteral","src":"7137:1:2","type":"","value":"0"},"variables":[{"name":"srcOffset","nativeSrc":"7124:9:2","nodeType":"YulTypedName","src":"7124:9:2","type":""}]},{"nativeSrc":"7147:23:2","nodeType":"YulVariableDeclaration","src":"7147:23:2","value":{"kind":"number","nativeSrc":"7166:4:2","nodeType":"YulLiteral","src":"7166:4:2","type":"","value":"0x20"},"variables":[{"name":"srcOffset_1","nativeSrc":"7151:11:2","nodeType":"YulTypedName","src":"7151:11:2","type":""}]},{"nativeSrc":"7179:24:2","nodeType":"YulAssignment","src":"7179:24:2","value":{"name":"srcOffset_1","nativeSrc":"7192:11:2","nodeType":"YulIdentifier","src":"7192:11:2"},"variableNames":[{"name":"srcOffset","nativeSrc":"7179:9:2","nodeType":"YulIdentifier","src":"7179:9:2"}]},{"cases":[{"body":{"nativeSrc":"7249:656:2","nodeType":"YulBlock","src":"7249:656:2","statements":[{"nativeSrc":"7263:35:2","nodeType":"YulVariableDeclaration","src":"7263:35:2","value":{"arguments":[{"name":"newLen","nativeSrc":"7282:6:2","nodeType":"YulIdentifier","src":"7282:6:2"},{"arguments":[{"kind":"number","nativeSrc":"7294:2:2","nodeType":"YulLiteral","src":"7294:2:2","type":"","value":"31"}],"functionName":{"name":"not","nativeSrc":"7290:3:2","nodeType":"YulIdentifier","src":"7290:3:2"},"nativeSrc":"7290:7:2","nodeType":"YulFunctionCall","src":"7290:7:2"}],"functionName":{"name":"and","nativeSrc":"7278:3:2","nodeType":"YulIdentifier","src":"7278:3:2"},"nativeSrc":"7278:20:2","nodeType":"YulFunctionCall","src":"7278:20:2"},"variables":[{"name":"loopEnd","nativeSrc":"7267:7:2","nodeType":"YulTypedName","src":"7267:7:2","type":""}]},{"nativeSrc":"7311:49:2","nodeType":"YulVariableDeclaration","src":"7311:49:2","value":{"arguments":[{"name":"slot","nativeSrc":"7355:4:2","nodeType":"YulIdentifier","src":"7355:4:2"}],"functionName":{"name":"array_dataslot_string_storage","nativeSrc":"7325:29:2","nodeType":"YulIdentifier","src":"7325:29:2"},"nativeSrc":"7325:35:2","nodeType":"YulFunctionCall","src":"7325:35:2"},"variables":[{"name":"dstPtr","nativeSrc":"7315:6:2","nodeType":"YulTypedName","src":"7315:6:2","type":""}]},{"nativeSrc":"7373:10:2","nodeType":"YulVariableDeclaration","src":"7373:10:2","value":{"kind":"number","nativeSrc":"7382:1:2","nodeType":"YulLiteral","src":"7382:1:2","type":"","value":"0"},"variables":[{"name":"i","nativeSrc":"7377:1:2","nodeType":"YulTypedName","src":"7377:1:2","type":""}]},{"body":{"nativeSrc":"7460:172:2","nodeType":"YulBlock","src":"7460:172:2","statements":[{"expression":{"arguments":[{"name":"dstPtr","nativeSrc":"7485:6:2","nodeType":"YulIdentifier","src":"7485:6:2"},{"arguments":[{"arguments":[{"name":"src","nativeSrc":"7503:3:2","nodeType":"YulIdentifier","src":"7503:3:2"},{"name":"srcOffset","nativeSrc":"7508:9:2","nodeType":"YulIdentifier","src":"7508:9:2"}],"functionName":{"name":"add","nativeSrc":"7499:3:2","nodeType":"YulIdentifier","src":"7499:3:2"},"nativeSrc":"7499:19:2","nodeType":"YulFunctionCall","src":"7499:19:2"}],"functionName":{"name":"mload","nativeSrc":"7493:5:2","nodeType":"YulIdentifier","src":"7493:5:2"},"nativeSrc":"7493:26:2","nodeType":"YulFunctionCall","src":"7493:26:2"}],"functionName":{"name":"sstore","nativeSrc":"7478:6:2","nodeType":"YulIdentifier","src":"7478:6:2"},"nativeSrc":"7478:42:2","nodeType":"YulFunctionCall","src":"7478:42:2"},"nativeSrc":"7478:42:2","nodeType":"YulExpressionStatement","src":"7478:42:2"},{"nativeSrc":"7537:24:2","nodeType":"YulAssignment","src":"7537:24:2","value":{"arguments":[{"name":"dstPtr","nativeSrc":"7551:6:2","nodeType":"YulIdentifier","src":"7551:6:2"},{"kind":"number","nativeSrc":"7559:1:2","nodeType":"YulLiteral","src":"7559:1:2","type":"","value":"1"}],"functionName":{"name":"add","nativeSrc":"7547:3:2","nodeType":"YulIdentifier","src":"7547:3:2"},"nativeSrc":"7547:14:2","nodeType":"YulFunctionCall","src":"7547:14:2"},"variableNames":[{"name":"dstPtr","nativeSrc":"7537:6:2","nodeType":"YulIdentifier","src":"7537:6:2"}]},{"nativeSrc":"7578:40:2","nodeType":"YulAssignment","src":"7578:40:2","value":{"arguments":[{"name":"srcOffset","nativeSrc":"7595:9:2","nodeType":"YulIdentifier","src":"7595:9:2"},{"name":"srcOffset_1","nativeSrc":"7606:11:2","nodeType":"YulIdentifier","src":"7606:11:2"}],"functionName":{"name":"add","nativeSrc":"7591:3:2","nodeType":"YulIdentifier","src":"7591:3:2"},"nativeSrc":"7591:27:2","nodeType":"YulFunctionCall","src":"7591:27:2"},"variableNames":[{"name":"srcOffset","nativeSrc":"7578:9:2","nodeType":"YulIdentifier","src":"7578:9:2"}]}]},"condition":{"arguments":[{"name":"i","nativeSrc":"7407:1:2","nodeType":"YulIdentifier","src":"7407:1:2"},{"name":"loopEnd","nativeSrc":"7410:7:2","nodeType":"YulIdentifier","src":"7410:7:2"}],"functionName":{"name":"lt","nativeSrc":"7404:2:2","nodeType":"YulIdentifier","src":"7404:2:2"},"nativeSrc":"7404:14:2","nodeType":"YulFunctionCall","src":"7404:14:2"},"nativeSrc":"7396:236:2","nodeType":"YulForLoop","post":{"nativeSrc":"7419:28:2","nodeType":"YulBlock","src":"7419:28:2","statements":[{"nativeSrc":"7421:24:2","nodeType":"YulAssignment","src":"7421:24:2","value":{"arguments":[{"name":"i","nativeSrc":"7430:1:2","nodeType":"YulIdentifier","src":"7430:1:2"},{"name":"srcOffset_1","nativeSrc":"7433:11:2","nodeType":"YulIdentifier","src":"7433:11:2"}],"functionName":{"name":"add","nativeSrc":"7426:3:2","nodeType":"YulIdentifier","src":"7426:3:2"},"nativeSrc":"7426:19:2","nodeType":"YulFunctionCall","src":"7426:19:2"},"variableNames":[{"name":"i","nativeSrc":"7421:1:2","nodeType":"YulIdentifier","src":"7421:1:2"}]}]},"pre":{"nativeSrc":"7400:3:2","nodeType":"YulBlock","src":"7400:3:2","statements":[]},"src":"7396:236:2"},{"body":{"nativeSrc":"7680:166:2","nodeType":"YulBlock","src":"7680:166:2","statements":[{"nativeSrc":"7698:43:2","nodeType":"YulVariableDeclaration","src":"7698:43:2","value":{"arguments":[{"arguments":[{"name":"src","nativeSrc":"7725:3:2","nodeType":"YulIdentifier","src":"7725:3:2"},{"name":"srcOffset","nativeSrc":"7730:9:2","nodeType":"YulIdentifier","src":"7730:9:2"}],"functionName":{"name":"add","nativeSrc":"7721:3:2","nodeType":"YulIdentifier","src":"7721:3:2"},"nativeSrc":"7721:19:2","nodeType":"YulFunctionCall","src":"7721:19:2"}],"functionName":{"name":"mload","nativeSrc":"7715:5:2","nodeType":"YulIdentifier","src":"7715:5:2"},"nativeSrc":"7715:26:2","nodeType":"YulFunctionCall","src":"7715:26:2"},"variables":[{"name":"lastValue","nativeSrc":"7702:9:2","nodeType":"YulTypedName","src":"7702:9:2","type":""}]},{"expression":{"arguments":[{"name":"dstPtr","nativeSrc":"7765:6:2","nodeType":"YulIdentifier","src":"7765:6:2"},{"arguments":[{"name":"lastValue","nativeSrc":"7777:9:2","nodeType":"YulIdentifier","src":"7777:9:2"},{"arguments":[{"arguments":[{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"7804:1:2","nodeType":"YulLiteral","src":"7804:1:2","type":"","value":"3"},{"name":"newLen","nativeSrc":"7807:6:2","nodeType":"YulIdentifier","src":"7807:6:2"}],"functionName":{"name":"shl","nativeSrc":"7800:3:2","nodeType":"YulIdentifier","src":"7800:3:2"},"nativeSrc":"7800:14:2","nodeType":"YulFunctionCall","src":"7800:14:2"},{"kind":"number","nativeSrc":"7816:3:2","nodeType":"YulLiteral","src":"7816:3:2","type":"","value":"248"}],"functionName":{"name":"and","nativeSrc":"7796:3:2","nodeType":"YulIdentifier","src":"7796:3:2"},"nativeSrc":"7796:24:2","nodeType":"YulFunctionCall","src":"7796:24:2"},{"arguments":[{"kind":"number","nativeSrc":"7826:1:2","nodeType":"YulLiteral","src":"7826:1:2","type":"","value":"0"}],"functionName":{"name":"not","nativeSrc":"7822:3:2","nodeType":"YulIdentifier","src":"7822:3:2"},"nativeSrc":"7822:6:2","nodeType":"YulFunctionCall","src":"7822:6:2"}],"functionName":{"name":"shr","nativeSrc":"7792:3:2","nodeType":"YulIdentifier","src":"7792:3:2"},"nativeSrc":"7792:37:2","nodeType":"YulFunctionCall","src":"7792:37:2"}],"functionName":{"name":"not","nativeSrc":"7788:3:2","nodeType":"YulIdentifier","src":"7788:3:2"},"nativeSrc":"7788:42:2","nodeType":"YulFunctionCall","src":"7788:42:2"}],"functionName":{"name":"and","nativeSrc":"7773:3:2","nodeType":"YulIdentifier","src":"7773:3:2"},"nativeSrc":"7773:58:2","nodeType":"YulFunctionCall","src":"7773:58:2"}],"functionName":{"name":"sstore","nativeSrc":"7758:6:2","nodeType":"YulIdentifier","src":"7758:6:2"},"nativeSrc":"7758:74:2","nodeType":"YulFunctionCall","src":"7758:74:2"},"nativeSrc":"7758:74:2","nodeType":"YulExpressionStatement","src":"7758:74:2"}]},"condition":{"arguments":[{"name":"loopEnd","nativeSrc":"7651:7:2","nodeType":"YulIdentifier","src":"7651:7:2"},{"name":"newLen","nativeSrc":"7660:6:2","nodeType":"YulIdentifier","src":"7660:6:2"}],"functionName":{"name":"lt","nativeSrc":"7648:2:2","nodeType":"YulIdentifier","src":"7648:2:2"},"nativeSrc":"7648:19:2","nodeType":"YulFunctionCall","src":"7648:19:2"},"nativeSrc":"7645:201:2","nodeType":"YulIf","src":"7645:201:2"},{"expression":{"arguments":[{"name":"slot","nativeSrc":"7866:4:2","nodeType":"YulIdentifier","src":"7866:4:2"},{"arguments":[{"arguments":[{"kind":"number","nativeSrc":"7880:1:2","nodeType":"YulLiteral","src":"7880:1:2","type":"","value":"1"},{"name":"newLen","nativeSrc":"7883:6:2","nodeType":"YulIdentifier","src":"7883:6:2"}],"functionName":{"name":"shl","nativeSrc":"7876:3:2","nodeType":"YulIdentifier","src":"7876:3:2"},"nativeSrc":"7876:14:2","nodeType":"YulFunctionCall","src":"7876:14:2"},{"kind":"number","nativeSrc":"7892:1:2","nodeType":"YulLiteral","src":"7892:1:2","type":"","value":"1"}],"functionName":{"name":"add","nativeSrc":"7872:3:2","nodeType":"YulIdentifier","src":"7872:3:2"},"nativeSrc":"7872:22:2","nodeType":"YulFunctionCall","src":"7872:22:2"}],"functionName":{"name":"sstore","nativeSrc":"7859:6:2","nodeType":"YulIdentifier","src":"7859:6:2"},"nativeSrc":"7859:36:2","nodeType":"YulFunctionCall","src":"7859:36:2"},"nativeSrc":"7859:36:2","nodeType":"YulExpressionStatement","src":"7859:36:2"}]},"nativeSrc":"7242:663:2","nodeType":"YulCase","src":"7242:663:2","value":{"kind":"number","nativeSrc":"7247:1:2","nodeType":"YulLiteral","src":"7247:1:2","type":"","value":"1"}},{"body":{"nativeSrc":"7922:234:2","nodeType":"YulBlock","src":"7922:234:2","statements":[{"nativeSrc":"7936:14:2","nodeType":"YulVariableDeclaration","src":"7936:14:2","value":{"kind":"number","nativeSrc":"7949:1:2","nodeType":"YulLiteral","src":"7949:1:2","type":"","value":"0"},"variables":[{"name":"value","nativeSrc":"7940:5:2","nodeType":"YulTypedName","src":"7940:5:2","type":""}]},{"body":{"nativeSrc":"7985:67:2","nodeType":"YulBlock","src":"7985:67:2","statements":[{"nativeSrc":"8003:35:2","nodeType":"YulAssignment","src":"8003:35:2","value":{"arguments":[{"arguments":[{"name":"src","nativeSrc":"8022:3:2","nodeType":"YulIdentifier","src":"8022:3:2"},{"name":"srcOffset","nativeSrc":"8027:9:2","nodeType":"YulIdentifier","src":"8027:9:2"}],"functionName":{"name":"add","nativeSrc":"8018:3:2","nodeType":"YulIdentifier","src":"8018:3:2"},"nativeSrc":"8018:19:2","nodeType":"YulFunctionCall","src":"8018:19:2"}],"functionName":{"name":"mload","nativeSrc":"8012:5:2","nodeType":"YulIdentifier","src":"8012:5:2"},"nativeSrc":"8012:26:2","nodeType":"YulFunctionCall","src":"8012:26:2"},"variableNames":[{"name":"value","nativeSrc":"8003:5:2","nodeType":"YulIdentifier","src":"8003:5:2"}]}]},"condition":{"name":"newLen","nativeSrc":"7966:6:2","nodeType":"YulIdentifier","src":"7966:6:2"},"nativeSrc":"7963:89:2","nodeType":"YulIf","src":"7963:89:2"},{"expression":{"arguments":[{"name":"slot","nativeSrc":"8072:4:2","nodeType":"YulIdentifier","src":"8072:4:2"},{"arguments":[{"name":"value","nativeSrc":"8131:5:2","nodeType":"YulIdentifier","src":"8131:5:2"},{"name":"newLen","nativeSrc":"8138:6:2","nodeType":"YulIdentifier","src":"8138:6:2"}],"functionName":{"name":"extract_used_part_and_set_length_of_short_byte_array","nativeSrc":"8078:52:2","nodeType":"YulIdentifier","src":"8078:52:2"},"nativeSrc":"8078:67:2","nodeType":"YulFunctionCall","src":"8078:67:2"}],"functionName":{"name":"sstore","nativeSrc":"8065:6:2","nodeType":"YulIdentifier","src":"8065:6:2"},"nativeSrc":"8065:81:2","nodeType":"YulFunctionCall","src":"8065:81:2"},"nativeSrc":"8065:81:2","nodeType":"YulExpressionStatement","src":"8065:81:2"}]},"nativeSrc":"7914:242:2","nodeType":"YulCase","src":"7914:242:2","value":"default"}],"expression":{"arguments":[{"name":"newLen","nativeSrc":"7222:6:2","nodeType":"YulIdentifier","src":"7222:6:2"},{"kind":"number","nativeSrc":"7230:2:2","nodeType":"YulLiteral","src":"7230:2:2","type":"","value":"31"}],"functionName":{"name":"gt","nativeSrc":"7219:2:2","nodeType":"YulIdentifier","src":"7219:2:2"},"nativeSrc":"7219:14:2","nodeType":"YulFunctionCall","src":"7219:14:2"},"nativeSrc":"7212:944:2","nodeType":"YulSwitch","src":"7212:944:2"}]},"name":"copy_byte_array_to_storage_from_t_string_memory_ptr_to_t_string_storage","nativeSrc":"6810:1352:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"slot","nativeSrc":"6891:4:2","nodeType":"YulTypedName","src":"6891:4:2","type":""},{"name":"src","nativeSrc":"6897:3:2","nodeType":"YulTypedName","src":"6897:3:2","type":""}],"src":"6810:1352:2"},{"body":{"nativeSrc":"8306:150:2","nodeType":"YulBlock","src":"8306:150:2","statements":[{"nativeSrc":"8316:27:2","nodeType":"YulVariableDeclaration","src":"8316:27:2","value":{"arguments":[{"name":"value0","nativeSrc":"8336:6:2","nodeType":"YulIdentifier","src":"8336:6:2"}],"functionName":{"name":"mload","nativeSrc":"8330:5:2","nodeType":"YulIdentifier","src":"8330:5:2"},"nativeSrc":"8330:13:2","nodeType":"YulFunctionCall","src":"8330:13:2"},"variables":[{"name":"length","nativeSrc":"8320:6:2","nodeType":"YulTypedName","src":"8320:6:2","type":""}]},{"expression":{"arguments":[{"arguments":[{"name":"value0","nativeSrc":"8391:6:2","nodeType":"YulIdentifier","src":"8391:6:2"},{"kind":"number","nativeSrc":"8399:4:2","nodeType":"YulLiteral","src":"8399:4:2","type":"","value":"0x20"}],"functionName":{"name":"add","nativeSrc":"8387:3:2","nodeType":"YulIdentifier","src":"8387:3:2"},"nativeSrc":"8387:17:2","nodeType":"YulFunctionCall","src":"8387:17:2"},{"name":"pos","nativeSrc":"8406:3:2","nodeType":"YulIdentifier","src":"8406:3:2"},{"name":"length","nativeSrc":"8411:6:2","nodeType":"YulIdentifier","src":"8411:6:2"}],"functionName":{"name":"copy_memory_to_memory_with_cleanup","nativeSrc":"8352:34:2","nodeType":"YulIdentifier","src":"8352:34:2"},"nativeSrc":"8352:66:2","nodeType":"YulFunctionCall","src":"8352:66:2"},"nativeSrc":"8352:66:2","nodeType":"YulExpressionStatement","src":"8352:66:2"},{"nativeSrc":"8427:23:2","nodeType":"YulAssignment","src":"8427:23:2","value":{"arguments":[{"name":"pos","nativeSrc":"8438:3:2","nodeType":"YulIdentifier","src":"8438:3:2"},{"name":"length","nativeSrc":"8443:6:2","nodeType":"YulIdentifier","src":"8443:6:2"}],"functionName":{"name":"add","nativeSrc":"8434:3:2","nodeType":"YulIdentifier","src":"8434:3:2"},"nativeSrc":"8434:16:2","nodeType":"YulFunctionCall","src":"8434:16:2"},"variableNames":[{"name":"end","nativeSrc":"8427:3:2","nodeType":"YulIdentifier","src":"8427:3:2"}]}]},"name":"abi_encode_tuple_packed_t_string_memory_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed","nativeSrc":"8167:289:2","nodeType":"YulFunctionDefinition","parameters":[{"name":"pos","nativeSrc":"8282:3:2","nodeType":"YulTypedName","src":"8282:3:2","type":""},{"name":"value0","nativeSrc":"8287:6:2","nodeType":"YulTypedName","src":"8287:6:2","type":""}],"returnVariables":[{"name":"end","nativeSrc":"8298:3:2","nodeType":"YulTypedName","src":"8298:3:2","type":""}],"src":"8167:289:2"}]},"contents":"{\n    { }\n    function copy_memory_to_memory_with_cleanup(src, dst, length)\n    {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        mstore(add(dst, length), 0)\n    }\n    function abi_encode_string(value, pos) -> end\n    {\n        let length := mload(value)\n        mstore(pos, length)\n        copy_memory_to_memory_with_cleanup(add(value, 0x20), add(pos, 0x20), length)\n        end := add(add(pos, and(add(length, 31), not(31))), 0x20)\n    }\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        mstore(headStart, 32)\n        tail := abi_encode_string(value0, add(headStart, 32))\n    }\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, iszero(iszero(value0)))\n    }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n    function abi_decode_string(offset, end) -> array\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let _1 := calldataload(offset)\n        let _2 := 0xffffffffffffffff\n        if gt(_1, _2) { panic_error_0x41() }\n        let _3 := not(31)\n        let memPtr := mload(64)\n        let newFreePtr := add(memPtr, and(add(and(add(_1, 0x1f), _3), 63), _3))\n        if or(gt(newFreePtr, _2), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n        mstore(memPtr, _1)\n        if gt(add(add(offset, _1), 0x20), end) { revert(0, 0) }\n        calldatacopy(add(memPtr, 0x20), add(offset, 0x20), _1)\n        mstore(add(add(memPtr, _1), 0x20), 0)\n        array := memPtr\n    }\n    function abi_decode_tuple_t_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := 0xffffffffffffffff\n        if gt(offset, _1) { revert(0, 0) }\n        value0 := abi_decode_string(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value1 := abi_decode_string(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 64))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value2 := abi_decode_string(add(headStart, offset_2), dataEnd)\n        let offset_3 := calldataload(add(headStart, 96))\n        if gt(offset_3, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset_3), dataEnd)\n    }\n    function abi_encode_tuple_t_uint8__to_t_uint8__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xff))\n    }\n    function abi_decode_tuple_t_string_memory_ptr(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n        value0 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_encode_tuple_t_uint8_t_bool__to_t_uint8_t_bool__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, and(value0, 0xff))\n        mstore(add(headStart, 32), iszero(iszero(value1)))\n    }\n    function abi_decode_uint8(offset) -> value\n    {\n        value := calldataload(offset)\n        if iszero(eq(value, and(value, 0xff))) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_uint8(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := abi_decode_uint8(headStart)\n    }\n    function abi_encode_tuple_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_uint8_t_string_memory_ptr__to_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_uint8_t_string_memory_ptr__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, 160)\n        let tail_1 := abi_encode_string(value0, add(headStart, 160))\n        mstore(add(headStart, 32), sub(tail_1, headStart))\n        let tail_2 := abi_encode_string(value1, tail_1)\n        mstore(add(headStart, 64), sub(tail_2, headStart))\n        let tail_3 := abi_encode_string(value2, tail_2)\n        mstore(add(headStart, 96), and(value3, 0xff))\n        mstore(add(headStart, 128), sub(tail_3, headStart))\n        tail := abi_encode_string(value4, tail_3)\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_decode_tuple_t_uint8t_string_memory_ptr(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_uint8(headStart)\n        let offset := calldataload(add(headStart, 32))\n        if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n        value1 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function extract_byte_array_length(data) -> length\n    {\n        length := shr(1, data)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) { length := and(length, 0x7f) }\n        if eq(outOfPlaceEncoding, lt(length, 32))\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x22)\n            revert(0, 0x24)\n        }\n    }\n    function increment_t_uint8(value) -> ret\n    {\n        let value_1 := and(value, 0xff)\n        if eq(value_1, 0xff)\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x11)\n            revert(0, 0x24)\n        }\n        ret := add(value_1, 1)\n    }\n    function array_dataslot_string_storage(ptr) -> data\n    {\n        mstore(0, ptr)\n        data := keccak256(0, 0x20)\n    }\n    function clean_up_bytearray_end_slots_string_storage(array, len, startIndex)\n    {\n        if gt(len, 31)\n        {\n            let _1 := 0\n            mstore(_1, array)\n            let data := keccak256(_1, 0x20)\n            let deleteStart := add(data, shr(5, add(startIndex, 31)))\n            if lt(startIndex, 0x20) { deleteStart := data }\n            let _2 := add(data, shr(5, add(len, 31)))\n            let start := deleteStart\n            for { } lt(start, _2) { start := add(start, 1) }\n            { sstore(start, _1) }\n        }\n    }\n    function extract_used_part_and_set_length_of_short_byte_array(data, len) -> used\n    {\n        used := or(and(data, not(shr(shl(3, len), not(0)))), shl(1, len))\n    }\n    function copy_byte_array_to_storage_from_t_string_memory_ptr_to_t_string_storage(slot, src)\n    {\n        let newLen := mload(src)\n        if gt(newLen, 0xffffffffffffffff) { panic_error_0x41() }\n        clean_up_bytearray_end_slots_string_storage(slot, extract_byte_array_length(sload(slot)), newLen)\n        let srcOffset := 0\n        let srcOffset_1 := 0x20\n        srcOffset := srcOffset_1\n        switch gt(newLen, 31)\n        case 1 {\n            let loopEnd := and(newLen, not(31))\n            let dstPtr := array_dataslot_string_storage(slot)\n            let i := 0\n            for { } lt(i, loopEnd) { i := add(i, srcOffset_1) }\n            {\n                sstore(dstPtr, mload(add(src, srcOffset)))\n                dstPtr := add(dstPtr, 1)\n                srcOffset := add(srcOffset, srcOffset_1)\n            }\n            if lt(loopEnd, newLen)\n            {\n                let lastValue := mload(add(src, srcOffset))\n                sstore(dstPtr, and(lastValue, not(shr(and(shl(3, newLen), 248), not(0)))))\n            }\n            sstore(slot, add(shl(1, newLen), 1))\n        }\n        default {\n            let value := 0\n            if newLen\n            {\n                value := mload(add(src, srcOffset))\n            }\n            sstore(slot, extract_used_part_and_set_length_of_short_byte_array(value, newLen))\n        }\n    }\n    function abi_encode_tuple_packed_t_string_memory_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value0) -> end\n    {\n        let length := mload(value0)\n        copy_memory_to_memory_with_cleanup(add(value0, 0x20), pos, length)\n        end := add(pos, length)\n    }\n}","id":2,"language":"Yul","name":"#utility.yul"}],"sourceMap":"155:78:0:-:0;;;-1:-1:-1;;;;;;155:78:0;191:42;155:78;;;240:58;61:3058;240:58;;61:3058;240:58;;;;;;155:78;;240:58;;155:78;240:58;:::i;:::-;;305:71;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;383:25:0;;;-1:-1:-1;;383:25:0;404:4;383:25;;;773:30;;;-1:-1:-1;;810:26:0;;;1019:235;;;;;;;;;-1:-1:-1;1090:18:0;:31;;-1:-1:-1;;;;;;1090:31:0;1111:10;1090:31;;;;;1137:27;;1111:10;;1137:27;;;1226:20;:18;:20::i;:::-;61:3058;;1266:262;1331:67;;;;;;;;;;;;;;;-1:-1:-1;;;1331:67:0;;;;;;;;;;;;;;;;-1:-1:-1;;;1331:67:0;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1331:67:0;;;;;;;;-1:-1:-1;;;;1331:67:0;;;;;;;;;;;;;;-1:-1:-1;;;1331:67:0;;;;-1:-1:-1;;;1331:67:0;;;;1315:13;;;:10;:13;;;:83;;:13;;;;:83;;:13;:83;:::i;:::-;-1:-1:-1;1315:83:0;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1315:83:0;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1315:83:0;;;;;;;;;-1:-1:-1;;1315:83:0;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;1425:67:0;;;;;;;;;;;;;;;-1:-1:-1;;;1425:67:0;;;;;;;;;;;;;;;;-1:-1:-1;;;1425:67:0;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1425:67:0;;;;;;;;-1:-1:-1;;;;1425:67:0;;;;;;;;;;;;;;-1:-1:-1;;;1425:67:0;;;;-1:-1:-1;;;1425:67:0;;;;1420:1;1409:13;;;:10;:13;;;:83;;1425:67;;-1:-1:-1;1409:13:0;;;;:83;;:13;:83;:::i;:::-;-1:-1:-1;1409:83:0;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1409:83:0;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1409:83:0;;;;;;;;;-1:-1:-1;;1409:83:0;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;1503:13:0;:17;;-1:-1:-1;;1503:17:0;1519:1;1503:17;;;-1:-1:-1;1266:262:0:o;14:127:2:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:380;225:1;221:12;;;;268;;;289:61;;343:4;335:6;331:17;321:27;;289:61;396:2;388:6;385:14;365:18;362:38;359:161;;442:10;437:3;433:20;430:1;423:31;477:4;474:1;467:15;505:4;502:1;495:15;359:161;;146:380;;;:::o;657:545::-;759:2;754:3;751:11;748:448;;;795:1;820:5;816:2;809:17;865:4;861:2;851:19;935:2;923:10;919:19;916:1;912:27;906:4;902:38;971:4;959:10;956:20;953:47;;;-1:-1:-1;994:4:2;953:47;1049:2;1044:3;1040:12;1037:1;1033:20;1027:4;1023:31;1013:41;;1104:82;1122:2;1115:5;1112:13;1104:82;;;1167:17;;;1148:1;1137:13;1104:82;;;1108:3;;;748:448;657:545;;;:::o;1378:1352::-;1498:10;;-1:-1:-1;;;;;1520:30:2;;1517:56;;;1553:18;;:::i;:::-;1582:97;1672:6;1632:38;1664:4;1658:11;1632:38;:::i;:::-;1626:4;1582:97;:::i;:::-;1734:4;;1798:2;1787:14;;1815:1;1810:663;;;;2517:1;2534:6;2531:89;;;-1:-1:-1;2586:19:2;;;2580:26;2531:89;-1:-1:-1;;1335:1:2;1331:11;;;1327:24;1323:29;1313:40;1359:1;1355:11;;;1310:57;2633:81;;1780:944;;1810:663;604:1;597:14;;;641:4;628:18;;-1:-1:-1;;1846:20:2;;;1964:236;1978:7;1975:1;1972:14;1964:236;;;2067:19;;;2061:26;2046:42;;2159:27;;;;2127:1;2115:14;;;;1994:19;;1964:236;;;1968:3;2228:6;2219:7;2216:19;2213:201;;;2289:19;;;2283:26;-1:-1:-1;;2372:1:2;2368:14;;;2384:3;2364:24;2360:37;2356:42;2341:58;2326:74;;2213:201;-1:-1:-1;;;;;2460:1:2;2444:14;;;2440:22;2427:36;;-1:-1:-1;1378:1352:2:o;:::-;61:3058:0;;;;;;","deployedSourceMap":"61:3058:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:71;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;383:25;;;;;;;;;;;;935:14:2;;928:22;910:41;;898:2;883:18;383:25:0;770:187:2;1574:382:0;;;;;;:::i;:::-;;:::i;:::-;;810:26;;;;;;;;;;;;;;;2939:4:2;2927:17;;;2909:36;;2897:2;2882:18;810:26:0;2767:184:2;773:30:0;;;;;;;;;722:38;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3477:4:2;3465:17;;;3447:36;;3526:14;;3519:22;3514:2;3499:18;;3492:50;3420:18;722:38:0;3283:265:2;3049:67:0;;3094:6;:14;;-1:-1:-1;;3094:14:0;;;3049:67;670:45;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;;;;:::i;155:78::-;;;;;-1:-1:-1;;;;;155:78:0;;;;;;-1:-1:-1;;;;;4860:32:2;;;4842:51;;4830:2;4815:18;155:78:0;4696:203:2;2639:398:0;;;:::i;1964:298::-;;;;;;:::i;:::-;;:::i;2270:360::-;;;;;;:::i;:::-;;:::i;240:58::-;;;:::i;305:71::-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1574:382::-;1806:13;:15;;1786:17;;1806:15;;;;;1786:17;1806:15;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;1858:47;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1858:47:0;;;;;;;;;;;;1832:23;;;;;:10;:23;;;;:73;;:23;;-1:-1:-1;1858:47:0;;1832:23;;:73;;:23;:73;:::i;:::-;-1:-1:-1;1832:73:0;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1832:73:0;;;;;;;;;;;;:::i;:::-;-1:-1:-1;1832:73:0;;;;;;;;;-1:-1:-1;;1832:73:0;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;1921:27:0;;;;;;-1:-1:-1;1921:27:0;;;;;1741:215;1574:382;;;;:::o;670:45::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;670:45:0;;;;;;;;;;;;;;;;;;-1:-1:-1;670:45:0;-1:-1:-1;670:45:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;2639:398::-;2687:5;2752:13;;;:10;:13;;:23;;2687:5;;2752:13;:23;;2796:207;2817:13;;;;;;2813:17;;;;2796:207;;;2855:34;:13;;;;;;;:10;:13;;;;;:23;;;:34;;;:23;;:34;2852:140;;;2921:13;;;;;;;;:10;:13;;;;;:23;;;2932:1;;-1:-1:-1;2921:23:0;;-1:-1:-1;2932:1:0;2852:140;2832:3;;;;:::i;:::-;;;;2796:207;;;-1:-1:-1;3020:9:0;;2639:398;-1:-1:-1;;2639:398:0:o;1964:298::-;2113:24;;;;;;;;;;;;;2132:4;2113:24;;;;2092:18;;:6;;:18;;2099:10;;2092:18;:::i;:::-;;;;;;;;;;;;;;;;;;:45;;;;;;;;;;;;-1:-1:-1;;2092:45:0;;;;;;;;;;;;;;2148:23;;;2092:45;2148:23;;;:10;:23;;;;;:33;;:35;;;;;;:33;:35;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;2194:9;:11;;;;;;;;;;-1:-1:-1;;2194:11:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;2230:10;-1:-1:-1;;;;;2221:33:0;;2242:11;2221:33;;;;;2939:4:2;2927:17;;;;2909:36;;2897:2;2882:18;;2767:184;2221:33:0;;;;;;;;1964:298;;:::o;2270:360::-;2342:18;2371:25;2407:21;2439:15;2465:19;2503;2525:10;:23;2536:11;2525:23;;;;;;;;;;;;;;;2503:45;;2567:1;:6;;2575:1;:13;;2590:1;:9;;2601:1;:11;;;;;;;;;;;;2614:1;:7;;2559:63;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2270:360;;;;;;;:::o;240:58::-;;;;;;;:::i;14:250:2:-;99:1;109:113;123:6;120:1;117:13;109:113;;;199:11;;;193:18;180:11;;;173:39;145:2;138:10;109:113;;;-1:-1:-1;;256:1:2;238:16;;231:27;14:250::o;269:271::-;311:3;349:5;343:12;376:6;371:3;364:19;392:76;461:6;454:4;449:3;445:14;438:4;431:5;427:16;392:76;:::i;:::-;522:2;501:15;-1:-1:-1;;497:29:2;488:39;;;;529:4;484:50;;269:271;-1:-1:-1;;269:271:2:o;545:220::-;694:2;683:9;676:21;657:4;714:45;755:2;744:9;740:18;732:6;714:45;:::i;:::-;706:53;545:220;-1:-1:-1;;;545:220:2:o;962:127::-;1023:10;1018:3;1014:20;1011:1;1004:31;1054:4;1051:1;1044:15;1078:4;1075:1;1068:15;1094:719;1137:5;1190:3;1183:4;1175:6;1171:17;1167:27;1157:55;;1208:1;1205;1198:12;1157:55;1244:6;1231:20;1270:18;1307:2;1303;1300:10;1297:36;;;1313:18;;:::i;:::-;1388:2;1382:9;1356:2;1442:13;;-1:-1:-1;;1438:22:2;;;1462:2;1434:31;1430:40;1418:53;;;1486:18;;;1506:22;;;1483:46;1480:72;;;1532:18;;:::i;:::-;1572:10;1568:2;1561:22;1607:2;1599:6;1592:18;1653:3;1646:4;1641:2;1633:6;1629:15;1625:26;1622:35;1619:55;;;1670:1;1667;1660:12;1619:55;1734:2;1727:4;1719:6;1715:17;1708:4;1700:6;1696:17;1683:54;1781:1;1774:4;1769:2;1761:6;1757:15;1753:26;1746:37;1801:6;1792:15;;;;;;1094:719;;;;:::o;1818:944::-;1944:6;1952;1960;1968;2021:3;2009:9;2000:7;1996:23;1992:33;1989:53;;;2038:1;2035;2028:12;1989:53;2078:9;2065:23;2107:18;2148:2;2140:6;2137:14;2134:34;;;2164:1;2161;2154:12;2134:34;2187:50;2229:7;2220:6;2209:9;2205:22;2187:50;:::i;:::-;2177:60;;2290:2;2279:9;2275:18;2262:32;2246:48;;2319:2;2309:8;2306:16;2303:36;;;2335:1;2332;2325:12;2303:36;2358:52;2402:7;2391:8;2380:9;2376:24;2358:52;:::i;:::-;2348:62;;2463:2;2452:9;2448:18;2435:32;2419:48;;2492:2;2482:8;2479:16;2476:36;;;2508:1;2505;2498:12;2476:36;2531:52;2575:7;2564:8;2553:9;2549:24;2531:52;:::i;:::-;2521:62;;2636:2;2625:9;2621:18;2608:32;2592:48;;2665:2;2655:8;2652:16;2649:36;;;2681:1;2678;2671:12;2649:36;;2704:52;2748:7;2737:8;2726:9;2722:24;2704:52;:::i;:::-;2694:62;;;1818:944;;;;;;;:::o;2956:322::-;3025:6;3078:2;3066:9;3057:7;3053:23;3049:32;3046:52;;;3094:1;3091;3084:12;3046:52;3134:9;3121:23;3167:18;3159:6;3156:30;3153:50;;;3199:1;3196;3189:12;3153:50;3222;3264:7;3255:6;3244:9;3240:22;3222:50;:::i;:::-;3212:60;2956:322;-1:-1:-1;;;;2956:322:2:o;3553:156::-;3619:20;;3679:4;3668:16;;3658:27;;3648:55;;3699:1;3696;3689:12;3648:55;3553:156;;;:::o;3714:182::-;3771:6;3824:2;3812:9;3803:7;3799:23;3795:32;3792:52;;;3840:1;3837;3830:12;3792:52;3863:27;3880:9;3863:27;:::i;3901:790::-;4218:3;4207:9;4200:22;4181:4;4245:46;4286:3;4275:9;4271:19;4263:6;4245:46;:::i;:::-;4339:9;4331:6;4327:22;4322:2;4311:9;4307:18;4300:50;4373:33;4399:6;4391;4373:33;:::i;:::-;4359:47;;4454:9;4446:6;4442:22;4437:2;4426:9;4422:18;4415:50;4488:33;4514:6;4506;4488:33;:::i;:::-;4474:47;;4569:4;4561:6;4557:17;4552:2;4541:9;4537:18;4530:45;4624:9;4616:6;4612:22;4606:3;4595:9;4591:19;4584:51;4652:33;4678:6;4670;4652:33;:::i;:::-;4644:41;3901:790;-1:-1:-1;;;;;;;;3901:790:2:o;4904:392::-;4980:6;4988;5041:2;5029:9;5020:7;5016:23;5012:32;5009:52;;;5057:1;5054;5047:12;5009:52;5080:27;5097:9;5080:27;:::i;:::-;5070:37;;5158:2;5147:9;5143:18;5130:32;5185:18;5177:6;5174:30;5171:50;;;5217:1;5214;5207:12;5171:50;5240;5282:7;5273:6;5262:9;5258:22;5240:50;:::i;:::-;5230:60;;;4904:392;;;;;:::o;5301:380::-;5380:1;5376:12;;;;5423;;;5444:61;;5498:4;5490:6;5486:17;5476:27;;5444:61;5551:2;5543:6;5540:14;5520:18;5517:38;5514:161;;5597:10;5592:3;5588:20;5585:1;5578:31;5632:4;5629:1;5622:15;5660:4;5657:1;5650:15;5514:161;;5301:380;;;:::o;5686:272::-;5723:3;5767:4;5760:5;5756:16;5796:4;5787:7;5784:17;5781:140;;5843:10;5838:3;5834:20;5831:1;5824:31;5878:4;5875:1;5868:15;5906:4;5903:1;5896:15;5781:140;5950:1;5937:15;;5686:272;-1:-1:-1;;5686:272:2:o;6089:545::-;6191:2;6186:3;6183:11;6180:448;;;6227:1;6252:5;6248:2;6241:17;6297:4;6293:2;6283:19;6367:2;6355:10;6351:19;6348:1;6344:27;6338:4;6334:38;6403:4;6391:10;6388:20;6385:47;;;-1:-1:-1;6426:4:2;6385:47;6481:2;6476:3;6472:12;6469:1;6465:20;6459:4;6455:31;6445:41;;6536:82;6554:2;6547:5;6544:13;6536:82;;;6599:17;;;6580:1;6569:13;6536:82;;;6540:3;;;6180:448;6089:545;;;:::o;6810:1352::-;6936:3;6930:10;6963:18;6955:6;6952:30;6949:56;;;6985:18;;:::i;:::-;7014:97;7104:6;7064:38;7096:4;7090:11;7064:38;:::i;:::-;7058:4;7014:97;:::i;:::-;7166:4;;7230:2;7219:14;;7247:1;7242:663;;;;7949:1;7966:6;7963:89;;;-1:-1:-1;8018:19:2;;;8012:26;7963:89;-1:-1:-1;;6767:1:2;6763:11;;;6759:24;6755:29;6745:40;6791:1;6787:11;;;6742:57;8065:81;;7212:944;;7242:663;6036:1;6029:14;;;6073:4;6060:18;;-1:-1:-1;;7278:20:2;;;7396:236;7410:7;7407:1;7404:14;7396:236;;;7499:19;;;7493:26;7478:42;;7591:27;;;;7559:1;7547:14;;;;7426:19;;7396:236;;;7400:3;7660:6;7651:7;7648:19;7645:201;;;7721:19;;;7715:26;-1:-1:-1;;7804:1:2;7800:14;;;7816:3;7796:24;7792:37;7788:42;7773:58;7758:74;;7645:201;-1:-1:-1;;;;;7892:1:2;7876:14;;;7872:22;7859:36;;-1:-1:-1;6810:1352:2:o;8167:289::-;8298:3;8336:6;8330:13;8352:66;8411:6;8406:3;8399:4;8391:6;8387:17;8352:66;:::i;:::-;8434:16;;;;;8167:289;-1:-1:-1;;8167:289:2:o","source":"// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.21;\r\n\r\ncontract Election {\r\n    // 100% HARDCODED VALUES - NO PARAMETERS, NO REQUIRE STATEMENTS\r\n    address public election_authority = 0xa579675518D32c99B6f1929AFe8397d42D896f84;\r\n    string public election_name = \"2024 Presidential Election\";\r\n    string public election_description = \"Vote for your favorite candidate\";\r\n    bool public status = true;\r\n    \r\n    struct Candidate {\r\n        string name;\r\n        string description;\r\n        string imgHash;\r\n        uint8 voteCount;\r\n        string email;\r\n    }\r\n    \r\n    struct Voter {\r\n        uint8 candidateIdVoted;\r\n        bool voted;\r\n    }\r\n    \r\n    mapping(uint8 => Candidate) public candidates;\r\n    mapping(string => Voter) public voters;\r\n    \r\n    uint8 public numCandidates = 0;\r\n    uint8 public numVoters = 0;\r\n\r\n    event ElectionCreated(address indexed authority);\r\n    event CandidateAdded(uint8 indexed candidateId);\r\n    event VoteCast(address indexed voter, uint8 candidateId);\r\n\r\n    constructor() {\r\n        // ABSOLUTELY NO LOGIC THAT CAN FAIL\r\n        election_authority = msg.sender;\r\n        emit ElectionCreated(msg.sender);\r\n        \r\n        // Pre-add some test candidates\r\n        _addTestCandidates();\r\n    }\r\n    \r\n    function _addTestCandidates() private {\r\n        candidates[0] = Candidate(\"Candidate A\", \"Description A\", \"hash1\", 0, \"a@test.com\");\r\n        candidates[1] = Candidate(\"Candidate B\", \"Description B\", \"hash2\", 0, \"b@test.com\");\r\n        numCandidates = 2;\r\n    }\r\n\r\n    // REMOVE ALL REQUIRE STATEMENTS\r\n    function addCandidate(\r\n        string memory name, \r\n        string memory description, \r\n        string memory imgHash,\r\n        string memory email\r\n    ) external {\r\n        // NO REQUIRE STATEMENTS\r\n        uint8 candidateId = numCandidates++;\r\n        candidates[candidateId] = Candidate(name, description, imgHash, 0, email);\r\n        emit CandidateAdded(candidateId);\r\n    }\r\n\r\n    function vote(uint8 candidateId, string memory voterEmail) external {\r\n        // NO REQUIRE STATEMENTS - JUST EXECUTE\r\n        voters[voterEmail] = Voter(candidateId, true);\r\n        candidates[candidateId].voteCount++;\r\n        numVoters++;\r\n        emit VoteCast(msg.sender, candidateId);\r\n    }\r\n\r\n    function getCandidate(uint8 candidateId) public view returns (\r\n        string memory name,\r\n        string memory description,\r\n        string memory imgHash,\r\n        uint8 voteCount,\r\n        string memory email\r\n    ) {\r\n        Candidate storage c = candidates[candidateId];\r\n        return (c.name, c.description, c.imgHash, c.voteCount, c.email);\r\n    } \r\n\r\n    function winnerCandidate() public view returns (uint8) {\r\n        uint8 winningId = 0;\r\n        uint8 maxVotes = candidates[0].voteCount;\r\n        \r\n        for(uint8 i = 1; i < numCandidates; i++) {\r\n            if(candidates[i].voteCount > maxVotes) {\r\n                maxVotes = candidates[i].voteCount;\r\n                winningId = i;\r\n            }\r\n        }\r\n        return winningId;\r\n    }\r\n    \r\n    function closeElection() external {\r\n        status = false;\r\n    }\r\n}","sourcePath":"C:\\Users\\Sathyajothi\\Desktop\\BlockChainVoting\\Ethereum\\contracts\\Election.sol","ast":{"absolutePath":"project:/contracts/Election.sol","exportedSymbols":{"Election":[267]},"id":268,"license":"MIT","nodeType":"SourceUnit","nodes":[{"id":1,"literals":["solidity","^","0.8",".21"],"nodeType":"PragmaDirective","src":"33:24:0"},{"abstract":false,"baseContracts":[],"canonicalName":"Election","contractDependencies":[],"contractKind":"contract","fullyImplemented":true,"id":267,"linearizedBaseContracts":[267],"name":"Election","nameLocation":"70:8:0","nodeType":"ContractDefinition","nodes":[{"constant":false,"functionSelector":"82e15fcd","id":4,"mutability":"mutable","name":"election_authority","nameLocation":"170:18:0","nodeType":"VariableDeclaration","scope":267,"src":"155:78:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"},"typeName":{"id":2,"name":"address","nodeType":"ElementaryTypeName","src":"155:7:0","stateMutability":"nonpayable","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}},"value":{"hexValue":"307861353739363735353138443332633939423666313932394146653833393764343244383936663834","id":3,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"191:42:0","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"},"value":"0xa579675518D32c99B6f1929AFe8397d42D896f84"},"visibility":"public"},{"constant":false,"functionSelector":"ed35a5da","id":7,"mutability":"mutable","name":"election_name","nameLocation":"254:13:0","nodeType":"VariableDeclaration","scope":267,"src":"240:58:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string"},"typeName":{"id":5,"name":"string","nodeType":"ElementaryTypeName","src":"240:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"value":{"hexValue":"3230323420507265736964656e7469616c20456c656374696f6e","id":6,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"270:28:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_e11ec827278476091fedcaf269b48dd206f774ce66506f01fef2940463f61f68","typeString":"literal_string \"2024 Presidential Election\""},"value":"2024 Presidential Election"},"visibility":"public"},{"constant":false,"functionSelector":"044d5a97","id":10,"mutability":"mutable","name":"election_description","nameLocation":"319:20:0","nodeType":"VariableDeclaration","scope":267,"src":"305:71:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string"},"typeName":{"id":8,"name":"string","nodeType":"ElementaryTypeName","src":"305:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"value":{"hexValue":"566f746520666f7220796f7572206661766f726974652063616e646964617465","id":9,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"342:34:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_dd1ad731ce93f5682467a206a6997ee4fab9c07a1adf5950b92477bad6e8a232","typeString":"literal_string \"Vote for your favorite candidate\""},"value":"Vote for your favorite candidate"},"visibility":"public"},{"constant":false,"functionSelector":"200d2ed2","id":13,"mutability":"mutable","name":"status","nameLocation":"395:6:0","nodeType":"VariableDeclaration","scope":267,"src":"383:25:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":11,"name":"bool","nodeType":"ElementaryTypeName","src":"383:4:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"value":{"hexValue":"74727565","id":12,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"404:4:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"true"},"visibility":"public"},{"canonicalName":"Election.Candidate","id":24,"members":[{"constant":false,"id":15,"mutability":"mutable","name":"name","nameLocation":"456:4:0","nodeType":"VariableDeclaration","scope":24,"src":"449:11:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"},"typeName":{"id":14,"name":"string","nodeType":"ElementaryTypeName","src":"449:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":17,"mutability":"mutable","name":"description","nameLocation":"478:11:0","nodeType":"VariableDeclaration","scope":24,"src":"471:18:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"},"typeName":{"id":16,"name":"string","nodeType":"ElementaryTypeName","src":"471:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":19,"mutability":"mutable","name":"imgHash","nameLocation":"507:7:0","nodeType":"VariableDeclaration","scope":24,"src":"500:14:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"},"typeName":{"id":18,"name":"string","nodeType":"ElementaryTypeName","src":"500:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":21,"mutability":"mutable","name":"voteCount","nameLocation":"531:9:0","nodeType":"VariableDeclaration","scope":24,"src":"525:15:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":20,"name":"uint8","nodeType":"ElementaryTypeName","src":"525:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"},{"constant":false,"id":23,"mutability":"mutable","name":"email","nameLocation":"558:5:0","nodeType":"VariableDeclaration","scope":24,"src":"551:12:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"},"typeName":{"id":22,"name":"string","nodeType":"ElementaryTypeName","src":"551:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"}],"name":"Candidate","nameLocation":"428:9:0","nodeType":"StructDefinition","scope":267,"src":"421:150:0","visibility":"public"},{"canonicalName":"Election.Voter","id":29,"members":[{"constant":false,"id":26,"mutability":"mutable","name":"candidateIdVoted","nameLocation":"613:16:0","nodeType":"VariableDeclaration","scope":29,"src":"607:22:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":25,"name":"uint8","nodeType":"ElementaryTypeName","src":"607:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"},{"constant":false,"id":28,"mutability":"mutable","name":"voted","nameLocation":"645:5:0","nodeType":"VariableDeclaration","scope":29,"src":"640:10:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"typeName":{"id":27,"name":"bool","nodeType":"ElementaryTypeName","src":"640:4:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"visibility":"internal"}],"name":"Voter","nameLocation":"590:5:0","nodeType":"StructDefinition","scope":267,"src":"583:75:0","visibility":"public"},{"constant":false,"functionSelector":"6d6277f4","id":34,"mutability":"mutable","name":"candidates","nameLocation":"705:10:0","nodeType":"VariableDeclaration","scope":267,"src":"670:45:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate)"},"typeName":{"id":33,"keyName":"","keyNameLocation":"-1:-1:-1","keyType":{"id":30,"name":"uint8","nodeType":"ElementaryTypeName","src":"678:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"Mapping","src":"670:27:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate)"},"valueName":"","valueNameLocation":"-1:-1:-1","valueType":{"id":32,"nodeType":"UserDefinedTypeName","pathNode":{"id":31,"name":"Candidate","nameLocations":["687:9:0"],"nodeType":"IdentifierPath","referencedDeclaration":24,"src":"687:9:0"},"referencedDeclaration":24,"src":"687:9:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate"}}},"visibility":"public"},{"constant":false,"functionSelector":"53fa2e64","id":39,"mutability":"mutable","name":"voters","nameLocation":"754:6:0","nodeType":"VariableDeclaration","scope":267,"src":"722:38:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_mapping$_t_string_memory_ptr_$_t_struct$_Voter_$29_storage_$","typeString":"mapping(string => struct Election.Voter)"},"typeName":{"id":38,"keyName":"","keyNameLocation":"-1:-1:-1","keyType":{"id":35,"name":"string","nodeType":"ElementaryTypeName","src":"730:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"nodeType":"Mapping","src":"722:24:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_string_memory_ptr_$_t_struct$_Voter_$29_storage_$","typeString":"mapping(string => struct Election.Voter)"},"valueName":"","valueNameLocation":"-1:-1:-1","valueType":{"id":37,"nodeType":"UserDefinedTypeName","pathNode":{"id":36,"name":"Voter","nameLocations":["740:5:0"],"nodeType":"IdentifierPath","referencedDeclaration":29,"src":"740:5:0"},"referencedDeclaration":29,"src":"740:5:0","typeDescriptions":{"typeIdentifier":"t_struct$_Voter_$29_storage_ptr","typeString":"struct Election.Voter"}}},"visibility":"public"},{"constant":false,"functionSelector":"5216509a","id":42,"mutability":"mutable","name":"numCandidates","nameLocation":"786:13:0","nodeType":"VariableDeclaration","scope":267,"src":"773:30:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":40,"name":"uint8","nodeType":"ElementaryTypeName","src":"773:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"value":{"hexValue":"30","id":41,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"802:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"constant":false,"functionSelector":"4cbe32b8","id":45,"mutability":"mutable","name":"numVoters","nameLocation":"823:9:0","nodeType":"VariableDeclaration","scope":267,"src":"810:26:0","stateVariable":true,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":43,"name":"uint8","nodeType":"ElementaryTypeName","src":"810:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"value":{"hexValue":"30","id":44,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"835:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"visibility":"public"},{"anonymous":false,"eventSelector":"3bf25a9dfa34d3f99eec4217177ec490f7a345ee390de1e739e9c816a37122f0","id":49,"name":"ElectionCreated","nameLocation":"851:15:0","nodeType":"EventDefinition","parameters":{"id":48,"nodeType":"ParameterList","parameters":[{"constant":false,"id":47,"indexed":true,"mutability":"mutable","name":"authority","nameLocation":"883:9:0","nodeType":"VariableDeclaration","scope":49,"src":"867:25:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"},"typeName":{"id":46,"name":"address","nodeType":"ElementaryTypeName","src":"867:7:0","stateMutability":"nonpayable","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}},"visibility":"internal"}],"src":"866:27:0"},"src":"845:49:0"},{"anonymous":false,"eventSelector":"cdd1fa9d4679a5e2302f1bc82c05bfaad863215e9a34a2cd3ca69389742add4d","id":53,"name":"CandidateAdded","nameLocation":"906:14:0","nodeType":"EventDefinition","parameters":{"id":52,"nodeType":"ParameterList","parameters":[{"constant":false,"id":51,"indexed":true,"mutability":"mutable","name":"candidateId","nameLocation":"935:11:0","nodeType":"VariableDeclaration","scope":53,"src":"921:25:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":50,"name":"uint8","nodeType":"ElementaryTypeName","src":"921:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"src":"920:27:0"},"src":"900:48:0"},{"anonymous":false,"eventSelector":"efffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f","id":59,"name":"VoteCast","nameLocation":"960:8:0","nodeType":"EventDefinition","parameters":{"id":58,"nodeType":"ParameterList","parameters":[{"constant":false,"id":55,"indexed":true,"mutability":"mutable","name":"voter","nameLocation":"985:5:0","nodeType":"VariableDeclaration","scope":59,"src":"969:21:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"},"typeName":{"id":54,"name":"address","nodeType":"ElementaryTypeName","src":"969:7:0","stateMutability":"nonpayable","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}},"visibility":"internal"},{"constant":false,"id":57,"indexed":false,"mutability":"mutable","name":"candidateId","nameLocation":"998:11:0","nodeType":"VariableDeclaration","scope":59,"src":"992:17:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":56,"name":"uint8","nodeType":"ElementaryTypeName","src":"992:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"src":"968:42:0"},"src":"954:57:0"},{"body":{"id":75,"nodeType":"Block","src":"1033:221:0","statements":[{"expression":{"id":65,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"id":62,"name":"election_authority","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":4,"src":"1090:18:0","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"expression":{"id":63,"name":"msg","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":4294967281,"src":"1111:3:0","typeDescriptions":{"typeIdentifier":"t_magic_message","typeString":"msg"}},"id":64,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"memberLocation":"1115:6:0","memberName":"sender","nodeType":"MemberAccess","src":"1111:10:0","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}},"src":"1090:31:0","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}},"id":66,"nodeType":"ExpressionStatement","src":"1090:31:0"},{"eventCall":{"arguments":[{"expression":{"id":68,"name":"msg","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":4294967281,"src":"1153:3:0","typeDescriptions":{"typeIdentifier":"t_magic_message","typeString":"msg"}},"id":69,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"memberLocation":"1157:6:0","memberName":"sender","nodeType":"MemberAccess","src":"1153:10:0","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}}],"expression":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"}],"id":67,"name":"ElectionCreated","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":49,"src":"1137:15:0","typeDescriptions":{"typeIdentifier":"t_function_event_nonpayable$_t_address_$returns$__$","typeString":"function (address)"}},"id":70,"isConstant":false,"isLValue":false,"isPure":false,"kind":"functionCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"1137:27:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_tuple$__$","typeString":"tuple()"}},"id":71,"nodeType":"EmitStatement","src":"1132:32:0"},{"expression":{"arguments":[],"expression":{"argumentTypes":[],"id":72,"name":"_addTestCandidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":108,"src":"1226:18:0","typeDescriptions":{"typeIdentifier":"t_function_internal_nonpayable$__$returns$__$","typeString":"function ()"}},"id":73,"isConstant":false,"isLValue":false,"isPure":false,"kind":"functionCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"1226:20:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_tuple$__$","typeString":"tuple()"}},"id":74,"nodeType":"ExpressionStatement","src":"1226:20:0"}]},"id":76,"implemented":true,"kind":"constructor","modifiers":[],"name":"","nameLocation":"-1:-1:-1","nodeType":"FunctionDefinition","parameters":{"id":60,"nodeType":"ParameterList","parameters":[],"src":"1030:2:0"},"returnParameters":{"id":61,"nodeType":"ParameterList","parameters":[],"src":"1033:0:0"},"scope":267,"src":"1019:235:0","stateMutability":"nonpayable","virtual":false,"visibility":"public"},{"body":{"id":107,"nodeType":"Block","src":"1304:224:0","statements":[{"expression":{"id":89,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"baseExpression":{"id":79,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"1315:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":81,"indexExpression":{"hexValue":"30","id":80,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"1326:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"nodeType":"IndexAccess","src":"1315:13:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"arguments":[{"hexValue":"43616e6469646174652041","id":83,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1341:13:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_faa4b28913ce48ae40cccb9a71d265404475ab170947918142d133825a935333","typeString":"literal_string \"Candidate A\""},"value":"Candidate A"},{"hexValue":"4465736372697074696f6e2041","id":84,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1356:15:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_de68f87ca500f066af85e02735c5b6b01921e85fecd18ccdc79a13ffbed894d8","typeString":"literal_string \"Description A\""},"value":"Description A"},{"hexValue":"6861736831","id":85,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1373:7:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_4df6da8fb90bf07cca00104ea30a84e39a27a1e4029fce6f2e99e6466eb7d5df","typeString":"literal_string \"hash1\""},"value":"hash1"},{"hexValue":"30","id":86,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"1382:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},{"hexValue":"6140746573742e636f6d","id":87,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1385:12:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_b630dd5380dcd43bd6a17951e6fabeab816daf906d6951c289026ddbc0dfa84d","typeString":"literal_string \"a@test.com\""},"value":"a@test.com"}],"expression":{"argumentTypes":[{"typeIdentifier":"t_stringliteral_faa4b28913ce48ae40cccb9a71d265404475ab170947918142d133825a935333","typeString":"literal_string \"Candidate A\""},{"typeIdentifier":"t_stringliteral_de68f87ca500f066af85e02735c5b6b01921e85fecd18ccdc79a13ffbed894d8","typeString":"literal_string \"Description A\""},{"typeIdentifier":"t_stringliteral_4df6da8fb90bf07cca00104ea30a84e39a27a1e4029fce6f2e99e6466eb7d5df","typeString":"literal_string \"hash1\""},{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},{"typeIdentifier":"t_stringliteral_b630dd5380dcd43bd6a17951e6fabeab816daf906d6951c289026ddbc0dfa84d","typeString":"literal_string \"a@test.com\""}],"id":82,"name":"Candidate","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":24,"src":"1331:9:0","typeDescriptions":{"typeIdentifier":"t_type$_t_struct$_Candidate_$24_storage_ptr_$","typeString":"type(struct Election.Candidate storage pointer)"}},"id":88,"isConstant":false,"isLValue":false,"isPure":true,"kind":"structConstructorCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"1331:67:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_memory_ptr","typeString":"struct Election.Candidate memory"}},"src":"1315:83:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"id":90,"nodeType":"ExpressionStatement","src":"1315:83:0"},{"expression":{"id":101,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"baseExpression":{"id":91,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"1409:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":93,"indexExpression":{"hexValue":"31","id":92,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"1420:1:0","typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"nodeType":"IndexAccess","src":"1409:13:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"arguments":[{"hexValue":"43616e6469646174652042","id":95,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1435:13:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_e00d0afcea1cba843c6855a2895761d3c85ac869008914b4375fdb414fbe54ba","typeString":"literal_string \"Candidate B\""},"value":"Candidate B"},{"hexValue":"4465736372697074696f6e2042","id":96,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1450:15:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_1add75f485ac82a5a887ad4785a91f6d5fce2f9e395905f5d4880239ce5f2dbe","typeString":"literal_string \"Description B\""},"value":"Description B"},{"hexValue":"6861736832","id":97,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1467:7:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_f748a54bb7b69310fdbd21f29eb3f7e159ac747f21186df0d28adf60a8400648","typeString":"literal_string \"hash2\""},"value":"hash2"},{"hexValue":"30","id":98,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"1476:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},{"hexValue":"6240746573742e636f6d","id":99,"isConstant":false,"isLValue":false,"isPure":true,"kind":"string","lValueRequested":false,"nodeType":"Literal","src":"1479:12:0","typeDescriptions":{"typeIdentifier":"t_stringliteral_7fe9116c248890fa3f9a960aaf09ae25253d50d9b863f605b818ca160288837d","typeString":"literal_string \"b@test.com\""},"value":"b@test.com"}],"expression":{"argumentTypes":[{"typeIdentifier":"t_stringliteral_e00d0afcea1cba843c6855a2895761d3c85ac869008914b4375fdb414fbe54ba","typeString":"literal_string \"Candidate B\""},{"typeIdentifier":"t_stringliteral_1add75f485ac82a5a887ad4785a91f6d5fce2f9e395905f5d4880239ce5f2dbe","typeString":"literal_string \"Description B\""},{"typeIdentifier":"t_stringliteral_f748a54bb7b69310fdbd21f29eb3f7e159ac747f21186df0d28adf60a8400648","typeString":"literal_string \"hash2\""},{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},{"typeIdentifier":"t_stringliteral_7fe9116c248890fa3f9a960aaf09ae25253d50d9b863f605b818ca160288837d","typeString":"literal_string \"b@test.com\""}],"id":94,"name":"Candidate","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":24,"src":"1425:9:0","typeDescriptions":{"typeIdentifier":"t_type$_t_struct$_Candidate_$24_storage_ptr_$","typeString":"type(struct Election.Candidate storage pointer)"}},"id":100,"isConstant":false,"isLValue":false,"isPure":true,"kind":"structConstructorCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"1425:67:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_memory_ptr","typeString":"struct Election.Candidate memory"}},"src":"1409:83:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"id":102,"nodeType":"ExpressionStatement","src":"1409:83:0"},{"expression":{"id":105,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"id":103,"name":"numCandidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":42,"src":"1503:13:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"hexValue":"32","id":104,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"1519:1:0","typeDescriptions":{"typeIdentifier":"t_rational_2_by_1","typeString":"int_const 2"},"value":"2"},"src":"1503:17:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"id":106,"nodeType":"ExpressionStatement","src":"1503:17:0"}]},"id":108,"implemented":true,"kind":"function","modifiers":[],"name":"_addTestCandidates","nameLocation":"1275:18:0","nodeType":"FunctionDefinition","parameters":{"id":77,"nodeType":"ParameterList","parameters":[],"src":"1293:2:0"},"returnParameters":{"id":78,"nodeType":"ParameterList","parameters":[],"src":"1304:0:0"},"scope":267,"src":"1266:262:0","stateMutability":"nonpayable","virtual":false,"visibility":"private"},{"body":{"id":140,"nodeType":"Block","src":"1741:215:0","statements":[{"assignments":[120],"declarations":[{"constant":false,"id":120,"mutability":"mutable","name":"candidateId","nameLocation":"1792:11:0","nodeType":"VariableDeclaration","scope":140,"src":"1786:17:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":119,"name":"uint8","nodeType":"ElementaryTypeName","src":"1786:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"id":123,"initialValue":{"id":122,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"nodeType":"UnaryOperation","operator":"++","prefix":false,"src":"1806:15:0","subExpression":{"id":121,"name":"numCandidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":42,"src":"1806:13:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"VariableDeclarationStatement","src":"1786:35:0"},{"expression":{"id":134,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"baseExpression":{"id":124,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"1832:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":126,"indexExpression":{"id":125,"name":"candidateId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":120,"src":"1843:11:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"nodeType":"IndexAccess","src":"1832:23:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"arguments":[{"id":128,"name":"name","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":110,"src":"1868:4:0","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}},{"id":129,"name":"description","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":112,"src":"1874:11:0","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}},{"id":130,"name":"imgHash","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":114,"src":"1887:7:0","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}},{"hexValue":"30","id":131,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"1896:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},{"id":132,"name":"email","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":116,"src":"1899:5:0","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}}],"expression":{"argumentTypes":[{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"},{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"},{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"},{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}],"id":127,"name":"Candidate","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":24,"src":"1858:9:0","typeDescriptions":{"typeIdentifier":"t_type$_t_struct$_Candidate_$24_storage_ptr_$","typeString":"type(struct Election.Candidate storage pointer)"}},"id":133,"isConstant":false,"isLValue":false,"isPure":false,"kind":"structConstructorCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"1858:47:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_memory_ptr","typeString":"struct Election.Candidate memory"}},"src":"1832:73:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"id":135,"nodeType":"ExpressionStatement","src":"1832:73:0"},{"eventCall":{"arguments":[{"id":137,"name":"candidateId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":120,"src":"1936:11:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}}],"expression":{"argumentTypes":[{"typeIdentifier":"t_uint8","typeString":"uint8"}],"id":136,"name":"CandidateAdded","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":53,"src":"1921:14:0","typeDescriptions":{"typeIdentifier":"t_function_event_nonpayable$_t_uint8_$returns$__$","typeString":"function (uint8)"}},"id":138,"isConstant":false,"isLValue":false,"isPure":false,"kind":"functionCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"1921:27:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_tuple$__$","typeString":"tuple()"}},"id":139,"nodeType":"EmitStatement","src":"1916:32:0"}]},"functionSelector":"42b03cc9","id":141,"implemented":true,"kind":"function","modifiers":[],"name":"addCandidate","nameLocation":"1583:12:0","nodeType":"FunctionDefinition","parameters":{"id":117,"nodeType":"ParameterList","parameters":[{"constant":false,"id":110,"mutability":"mutable","name":"name","nameLocation":"1620:4:0","nodeType":"VariableDeclaration","scope":141,"src":"1606:18:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":109,"name":"string","nodeType":"ElementaryTypeName","src":"1606:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":112,"mutability":"mutable","name":"description","nameLocation":"1650:11:0","nodeType":"VariableDeclaration","scope":141,"src":"1636:25:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":111,"name":"string","nodeType":"ElementaryTypeName","src":"1636:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":114,"mutability":"mutable","name":"imgHash","nameLocation":"1687:7:0","nodeType":"VariableDeclaration","scope":141,"src":"1673:21:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":113,"name":"string","nodeType":"ElementaryTypeName","src":"1673:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":116,"mutability":"mutable","name":"email","nameLocation":"1719:5:0","nodeType":"VariableDeclaration","scope":141,"src":"1705:19:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":115,"name":"string","nodeType":"ElementaryTypeName","src":"1705:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"}],"src":"1595:136:0"},"returnParameters":{"id":118,"nodeType":"ParameterList","parameters":[],"src":"1741:0:0"},"scope":267,"src":"1574:382:0","stateMutability":"nonpayable","virtual":false,"visibility":"external"},{"body":{"id":172,"nodeType":"Block","src":"2032:230:0","statements":[{"expression":{"id":155,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"baseExpression":{"id":148,"name":"voters","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":39,"src":"2092:6:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_string_memory_ptr_$_t_struct$_Voter_$29_storage_$","typeString":"mapping(string memory => struct Election.Voter storage ref)"}},"id":150,"indexExpression":{"id":149,"name":"voterEmail","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":145,"src":"2099:10:0","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string memory"}},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"nodeType":"IndexAccess","src":"2092:18:0","typeDescriptions":{"typeIdentifier":"t_struct$_Voter_$29_storage","typeString":"struct Election.Voter storage ref"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"arguments":[{"id":152,"name":"candidateId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":143,"src":"2119:11:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},{"hexValue":"74727565","id":153,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"2132:4:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"true"}],"expression":{"argumentTypes":[{"typeIdentifier":"t_uint8","typeString":"uint8"},{"typeIdentifier":"t_bool","typeString":"bool"}],"id":151,"name":"Voter","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":29,"src":"2113:5:0","typeDescriptions":{"typeIdentifier":"t_type$_t_struct$_Voter_$29_storage_ptr_$","typeString":"type(struct Election.Voter storage pointer)"}},"id":154,"isConstant":false,"isLValue":false,"isPure":false,"kind":"structConstructorCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"2113:24:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_struct$_Voter_$29_memory_ptr","typeString":"struct Election.Voter memory"}},"src":"2092:45:0","typeDescriptions":{"typeIdentifier":"t_struct$_Voter_$29_storage","typeString":"struct Election.Voter storage ref"}},"id":156,"nodeType":"ExpressionStatement","src":"2092:45:0"},{"expression":{"id":161,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"nodeType":"UnaryOperation","operator":"++","prefix":false,"src":"2148:35:0","subExpression":{"expression":{"baseExpression":{"id":157,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"2148:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":159,"indexExpression":{"id":158,"name":"candidateId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":143,"src":"2159:11:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"nodeType":"IndexAccess","src":"2148:23:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"id":160,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"memberLocation":"2172:9:0","memberName":"voteCount","nodeType":"MemberAccess","referencedDeclaration":21,"src":"2148:33:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"id":162,"nodeType":"ExpressionStatement","src":"2148:35:0"},{"expression":{"id":164,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"nodeType":"UnaryOperation","operator":"++","prefix":false,"src":"2194:11:0","subExpression":{"id":163,"name":"numVoters","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":45,"src":"2194:9:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"id":165,"nodeType":"ExpressionStatement","src":"2194:11:0"},{"eventCall":{"arguments":[{"expression":{"id":167,"name":"msg","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":4294967281,"src":"2230:3:0","typeDescriptions":{"typeIdentifier":"t_magic_message","typeString":"msg"}},"id":168,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"memberLocation":"2234:6:0","memberName":"sender","nodeType":"MemberAccess","src":"2230:10:0","typeDescriptions":{"typeIdentifier":"t_address","typeString":"address"}},{"id":169,"name":"candidateId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":143,"src":"2242:11:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}}],"expression":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_uint8","typeString":"uint8"}],"id":166,"name":"VoteCast","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":59,"src":"2221:8:0","typeDescriptions":{"typeIdentifier":"t_function_event_nonpayable$_t_address_$_t_uint8_$returns$__$","typeString":"function (address,uint8)"}},"id":170,"isConstant":false,"isLValue":false,"isPure":false,"kind":"functionCall","lValueRequested":false,"nameLocations":[],"names":[],"nodeType":"FunctionCall","src":"2221:33:0","tryCall":false,"typeDescriptions":{"typeIdentifier":"t_tuple$__$","typeString":"tuple()"}},"id":171,"nodeType":"EmitStatement","src":"2216:38:0"}]},"functionSelector":"b224c40a","id":173,"implemented":true,"kind":"function","modifiers":[],"name":"vote","nameLocation":"1973:4:0","nodeType":"FunctionDefinition","parameters":{"id":146,"nodeType":"ParameterList","parameters":[{"constant":false,"id":143,"mutability":"mutable","name":"candidateId","nameLocation":"1984:11:0","nodeType":"VariableDeclaration","scope":173,"src":"1978:17:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":142,"name":"uint8","nodeType":"ElementaryTypeName","src":"1978:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"},{"constant":false,"id":145,"mutability":"mutable","name":"voterEmail","nameLocation":"2011:10:0","nodeType":"VariableDeclaration","scope":173,"src":"1997:24:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":144,"name":"string","nodeType":"ElementaryTypeName","src":"1997:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"}],"src":"1977:45:0"},"returnParameters":{"id":147,"nodeType":"ParameterList","parameters":[],"src":"2032:0:0"},"scope":267,"src":"1964:298:0","stateMutability":"nonpayable","virtual":false,"visibility":"external"},{"body":{"id":207,"nodeType":"Block","src":"2492:138:0","statements":[{"assignments":[190],"declarations":[{"constant":false,"id":190,"mutability":"mutable","name":"c","nameLocation":"2521:1:0","nodeType":"VariableDeclaration","scope":207,"src":"2503:19:0","stateVariable":false,"storageLocation":"storage","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate"},"typeName":{"id":189,"nodeType":"UserDefinedTypeName","pathNode":{"id":188,"name":"Candidate","nameLocations":["2503:9:0"],"nodeType":"IdentifierPath","referencedDeclaration":24,"src":"2503:9:0"},"referencedDeclaration":24,"src":"2503:9:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate"}},"visibility":"internal"}],"id":194,"initialValue":{"baseExpression":{"id":191,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"2525:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":193,"indexExpression":{"id":192,"name":"candidateId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":175,"src":"2536:11:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"nodeType":"IndexAccess","src":"2525:23:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"nodeType":"VariableDeclarationStatement","src":"2503:45:0"},{"expression":{"components":[{"expression":{"id":195,"name":"c","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":190,"src":"2567:1:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate storage pointer"}},"id":196,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2569:4:0","memberName":"name","nodeType":"MemberAccess","referencedDeclaration":15,"src":"2567:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}},{"expression":{"id":197,"name":"c","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":190,"src":"2575:1:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate storage pointer"}},"id":198,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2577:11:0","memberName":"description","nodeType":"MemberAccess","referencedDeclaration":17,"src":"2575:13:0","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}},{"expression":{"id":199,"name":"c","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":190,"src":"2590:1:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate storage pointer"}},"id":200,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2592:7:0","memberName":"imgHash","nodeType":"MemberAccess","referencedDeclaration":19,"src":"2590:9:0","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}},{"expression":{"id":201,"name":"c","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":190,"src":"2601:1:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate storage pointer"}},"id":202,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2603:9:0","memberName":"voteCount","nodeType":"MemberAccess","referencedDeclaration":21,"src":"2601:11:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},{"expression":{"id":203,"name":"c","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":190,"src":"2614:1:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage_ptr","typeString":"struct Election.Candidate storage pointer"}},"id":204,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2616:5:0","memberName":"email","nodeType":"MemberAccess","referencedDeclaration":23,"src":"2614:7:0","typeDescriptions":{"typeIdentifier":"t_string_storage","typeString":"string storage ref"}}],"id":205,"isConstant":false,"isInlineArray":false,"isLValue":false,"isPure":false,"lValueRequested":false,"nodeType":"TupleExpression","src":"2566:56:0","typeDescriptions":{"typeIdentifier":"t_tuple$_t_string_storage_$_t_string_storage_$_t_string_storage_$_t_uint8_$_t_string_storage_$","typeString":"tuple(string storage ref,string storage ref,string storage ref,uint8,string storage ref)"}},"functionReturnParameters":187,"id":206,"nodeType":"Return","src":"2559:63:0"}]},"functionSelector":"cde9370f","id":208,"implemented":true,"kind":"function","modifiers":[],"name":"getCandidate","nameLocation":"2279:12:0","nodeType":"FunctionDefinition","parameters":{"id":176,"nodeType":"ParameterList","parameters":[{"constant":false,"id":175,"mutability":"mutable","name":"candidateId","nameLocation":"2298:11:0","nodeType":"VariableDeclaration","scope":208,"src":"2292:17:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":174,"name":"uint8","nodeType":"ElementaryTypeName","src":"2292:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"src":"2291:19:0"},"returnParameters":{"id":187,"nodeType":"ParameterList","parameters":[{"constant":false,"id":178,"mutability":"mutable","name":"name","nameLocation":"2356:4:0","nodeType":"VariableDeclaration","scope":208,"src":"2342:18:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":177,"name":"string","nodeType":"ElementaryTypeName","src":"2342:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":180,"mutability":"mutable","name":"description","nameLocation":"2385:11:0","nodeType":"VariableDeclaration","scope":208,"src":"2371:25:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":179,"name":"string","nodeType":"ElementaryTypeName","src":"2371:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":182,"mutability":"mutable","name":"imgHash","nameLocation":"2421:7:0","nodeType":"VariableDeclaration","scope":208,"src":"2407:21:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":181,"name":"string","nodeType":"ElementaryTypeName","src":"2407:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"},{"constant":false,"id":184,"mutability":"mutable","name":"voteCount","nameLocation":"2445:9:0","nodeType":"VariableDeclaration","scope":208,"src":"2439:15:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":183,"name":"uint8","nodeType":"ElementaryTypeName","src":"2439:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"},{"constant":false,"id":186,"mutability":"mutable","name":"email","nameLocation":"2479:5:0","nodeType":"VariableDeclaration","scope":208,"src":"2465:19:0","stateVariable":false,"storageLocation":"memory","typeDescriptions":{"typeIdentifier":"t_string_memory_ptr","typeString":"string"},"typeName":{"id":185,"name":"string","nodeType":"ElementaryTypeName","src":"2465:6:0","typeDescriptions":{"typeIdentifier":"t_string_storage_ptr","typeString":"string"}},"visibility":"internal"}],"src":"2331:160:0"},"scope":267,"src":"2270:360:0","stateMutability":"view","virtual":false,"visibility":"public"},{"body":{"id":257,"nodeType":"Block","src":"2694:343:0","statements":[{"assignments":[214],"declarations":[{"constant":false,"id":214,"mutability":"mutable","name":"winningId","nameLocation":"2711:9:0","nodeType":"VariableDeclaration","scope":257,"src":"2705:15:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":213,"name":"uint8","nodeType":"ElementaryTypeName","src":"2705:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"id":216,"initialValue":{"hexValue":"30","id":215,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"2723:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"nodeType":"VariableDeclarationStatement","src":"2705:19:0"},{"assignments":[218],"declarations":[{"constant":false,"id":218,"mutability":"mutable","name":"maxVotes","nameLocation":"2741:8:0","nodeType":"VariableDeclaration","scope":257,"src":"2735:14:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":217,"name":"uint8","nodeType":"ElementaryTypeName","src":"2735:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"id":223,"initialValue":{"expression":{"baseExpression":{"id":219,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"2752:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":221,"indexExpression":{"hexValue":"30","id":220,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"2763:1:0","typeDescriptions":{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"},"value":"0"},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"nodeType":"IndexAccess","src":"2752:13:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"id":222,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2766:9:0","memberName":"voteCount","nodeType":"MemberAccess","referencedDeclaration":21,"src":"2752:23:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"VariableDeclarationStatement","src":"2735:40:0"},{"body":{"id":253,"nodeType":"Block","src":"2837:166:0","statements":[{"condition":{"commonType":{"typeIdentifier":"t_uint8","typeString":"uint8"},"id":239,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftExpression":{"expression":{"baseExpression":{"id":234,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"2855:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":236,"indexExpression":{"id":235,"name":"i","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":225,"src":"2866:1:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"nodeType":"IndexAccess","src":"2855:13:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"id":237,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2869:9:0","memberName":"voteCount","nodeType":"MemberAccess","referencedDeclaration":21,"src":"2855:23:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"BinaryOperation","operator":">","rightExpression":{"id":238,"name":"maxVotes","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":218,"src":"2881:8:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"src":"2855:34:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"id":252,"nodeType":"IfStatement","src":"2852:140:0","trueBody":{"id":251,"nodeType":"Block","src":"2891:101:0","statements":[{"expression":{"id":245,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"id":240,"name":"maxVotes","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":218,"src":"2910:8:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"expression":{"baseExpression":{"id":241,"name":"candidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":34,"src":"2921:10:0","typeDescriptions":{"typeIdentifier":"t_mapping$_t_uint8_$_t_struct$_Candidate_$24_storage_$","typeString":"mapping(uint8 => struct Election.Candidate storage ref)"}},"id":243,"indexExpression":{"id":242,"name":"i","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":225,"src":"2932:1:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"nodeType":"IndexAccess","src":"2921:13:0","typeDescriptions":{"typeIdentifier":"t_struct$_Candidate_$24_storage","typeString":"struct Election.Candidate storage ref"}},"id":244,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"memberLocation":"2935:9:0","memberName":"voteCount","nodeType":"MemberAccess","referencedDeclaration":21,"src":"2921:23:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"src":"2910:34:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"id":246,"nodeType":"ExpressionStatement","src":"2910:34:0"},{"expression":{"id":249,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"id":247,"name":"winningId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":214,"src":"2963:9:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"id":248,"name":"i","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":225,"src":"2975:1:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"src":"2963:13:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"id":250,"nodeType":"ExpressionStatement","src":"2963:13:0"}]}}]},"condition":{"commonType":{"typeIdentifier":"t_uint8","typeString":"uint8"},"id":230,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftExpression":{"id":228,"name":"i","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":225,"src":"2813:1:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"nodeType":"BinaryOperation","operator":"<","rightExpression":{"id":229,"name":"numCandidates","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":42,"src":"2817:13:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"src":"2813:17:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"id":254,"initializationExpression":{"assignments":[225],"declarations":[{"constant":false,"id":225,"mutability":"mutable","name":"i","nameLocation":"2806:1:0","nodeType":"VariableDeclaration","scope":254,"src":"2800:7:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":224,"name":"uint8","nodeType":"ElementaryTypeName","src":"2800:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"id":227,"initialValue":{"hexValue":"31","id":226,"isConstant":false,"isLValue":false,"isPure":true,"kind":"number","lValueRequested":false,"nodeType":"Literal","src":"2810:1:0","typeDescriptions":{"typeIdentifier":"t_rational_1_by_1","typeString":"int_const 1"},"value":"1"},"nodeType":"VariableDeclarationStatement","src":"2800:11:0"},"loopExpression":{"expression":{"id":232,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"nodeType":"UnaryOperation","operator":"++","prefix":false,"src":"2832:3:0","subExpression":{"id":231,"name":"i","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":225,"src":"2832:1:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"id":233,"nodeType":"ExpressionStatement","src":"2832:3:0"},"nodeType":"ForStatement","src":"2796:207:0"},{"expression":{"id":255,"name":"winningId","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":214,"src":"3020:9:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"functionReturnParameters":212,"id":256,"nodeType":"Return","src":"3013:16:0"}]},"functionSelector":"a15148d1","id":258,"implemented":true,"kind":"function","modifiers":[],"name":"winnerCandidate","nameLocation":"2648:15:0","nodeType":"FunctionDefinition","parameters":{"id":209,"nodeType":"ParameterList","parameters":[],"src":"2663:2:0"},"returnParameters":{"id":212,"nodeType":"ParameterList","parameters":[{"constant":false,"id":211,"mutability":"mutable","name":"","nameLocation":"-1:-1:-1","nodeType":"VariableDeclaration","scope":258,"src":"2687:5:0","stateVariable":false,"storageLocation":"default","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"},"typeName":{"id":210,"name":"uint8","nodeType":"ElementaryTypeName","src":"2687:5:0","typeDescriptions":{"typeIdentifier":"t_uint8","typeString":"uint8"}},"visibility":"internal"}],"src":"2686:7:0"},"scope":267,"src":"2639:398:0","stateMutability":"view","virtual":false,"visibility":"public"},{"body":{"id":265,"nodeType":"Block","src":"3083:33:0","statements":[{"expression":{"id":263,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"leftHandSide":{"id":261,"name":"status","nodeType":"Identifier","overloadedDeclarations":[],"referencedDeclaration":13,"src":"3094:6:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"nodeType":"Assignment","operator":"=","rightHandSide":{"hexValue":"66616c7365","id":262,"isConstant":false,"isLValue":false,"isPure":true,"kind":"bool","lValueRequested":false,"nodeType":"Literal","src":"3103:5:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"},"value":"false"},"src":"3094:14:0","typeDescriptions":{"typeIdentifier":"t_bool","typeString":"bool"}},"id":264,"nodeType":"ExpressionStatement","src":"3094:14:0"}]},"functionSelector":"6c6c32d0","id":266,"implemented":true,"kind":"function","modifiers":[],"name":"closeElection","nameLocation":"3058:13:0","nodeType":"FunctionDefinition","parameters":{"id":259,"nodeType":"ParameterList","parameters":[],"src":"3071:2:0"},"returnParameters":{"id":260,"nodeType":"ParameterList","parameters":[],"src":"3083:0:0"},"scope":267,"src":"3049:67:0","stateMutability":"nonpayable","virtual":false,"visibility":"external"}],"scope":268,"src":"61:3058:0","usedErrors":[],"usedEvents":[49,53,59]}],"src":"33:3086:0"},"compiler":{"name":"solc","version":"0.8.21+commit.d9974bed.Emscripten.clang"},"networks":{"5777":{"events":{"0xcdd1fa9d4679a5e2302f1bc82c05bfaad863215e9a34a2cd3ca69389742add4d":{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint8","name":"candidateId","type":"uint8"}],"name":"CandidateAdded","type":"event"},"0x3bf25a9dfa34d3f99eec4217177ec490f7a345ee390de1e739e9c816a37122f0":{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"authority","type":"address"}],"name":"ElectionCreated","type":"event"},"0xefffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f":{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"voter","type":"address"},{"indexed":false,"internalType":"uint8","name":"candidateId","type":"uint8"}],"name":"VoteCast","type":"event"}},"links":{},"address":"0x68fB0FbF52d2b5b14451bE10a1FDe220b428f450","transactionHash":"0x5a80496794b05e424ac5cc06f6cc252282caf6b51d2af43035d94b29a4bb94c5"}},"schemaVersion":"3.4.16","updatedAt":"2025-09-03T22:50:51.328Z","networkType":"ethereum","devdoc":{"kind":"dev","methods":{},"version":1},"userdoc":{"kind":"user","methods":{},"version":1}};
+
+/***/ }),
+
+/***/ "./Ethereum/election.js":
+/*!******************************!*\
+  !*** ./Ethereum/election.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _web3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./web3 */ "./Ethereum/web3.js");
+/* harmony import */ var _Build_Election_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Build/Election.json */ "./Ethereum/Build/Election.json");
+var _Build_Election_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./Build/Election.json */ "./Ethereum/Build/Election.json", 1);
+
+
+
+
+// Debug: Check what's in the Election import
+console.log('Election contract data:', _Build_Election_json__WEBPACK_IMPORTED_MODULE_2__);
+console.log('Election.abi:', _Build_Election_json__WEBPACK_IMPORTED_MODULE_2__.abi);
+
+// Use the abi property instead of interface
+var contractABI = _Build_Election_json__WEBPACK_IMPORTED_MODULE_2__.abi;
+if (!contractABI || !_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(contractABI)) {
+  console.error('No valid ABI found in Election.json');
+  throw new Error('Contract ABI is missing or invalid. Please check your contract compilation.');
+}
+/* harmony default export */ __webpack_exports__["default"] = (function (address) {
+  try {
+    return new _web3__WEBPACK_IMPORTED_MODULE_1__["default"].eth.Contract(contractABI,
+    // Use the abi property
+    address);
+  } catch (error) {
+    console.error("Error creating contract instance:", error);
+    throw new Error("Failed to create election contract instance");
+  }
+});
+
+/***/ }),
+
+/***/ "./Ethereum/web3.js":
+/*!**************************!*\
+  !*** ./Ethereum/web3.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/set-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var web3__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! web3 */ "web3");
+/* harmony import */ var web3__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(web3__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3___default.a ? _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3___default.a : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default()(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i.return) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1___default.a; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default()(c); function f(e) { return _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default.a ? _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default()(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default()(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4___default.a; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+
+var web3;
+if (typeof window !== 'undefined' && typeof window.ethereum !== 'undefined') {
+  // Modern dapp browsers (MetaMask v10+)
+  web3 = new web3__WEBPACK_IMPORTED_MODULE_6___default.a(window.ethereum);
+
+  // Wrap in async IIFE to use await
+  Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])(/*#__PURE__*/_regenerator().m(function _callee() {
+    var _t;
+    return _regenerator().w(function (_context) {
+      while (1) switch (_context.n) {
+        case 0:
+          _context.p = 0;
+          _context.n = 1;
+          return window.ethereum.request({
+            method: 'eth_requestAccounts'
+          });
+        case 1:
+          _context.n = 3;
+          break;
+        case 2:
+          _context.p = 2;
+          _t = _context.v;
+          console.error("User denied account access");
+        case 3:
+          return _context.a(2);
+      }
+    }, _callee, null, [[0, 2]]);
+  }))();
+} else {
+  // Fallback for old MetaMask/localhost
+  console.log('Using fallback web3 provider');
+  var provider = new web3__WEBPACK_IMPORTED_MODULE_6___default.a.providers.HttpProvider('http://localhost:7545');
+  web3 = new web3__WEBPACK_IMPORTED_MODULE_6___default.a(provider);
+}
+/* harmony default export */ __webpack_exports__["default"] = (web3);
+
+/***/ }),
+
+/***/ "./components/Header.js":
+/*!******************************!*\
+  !*** ./components/Header.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! semantic-ui-react */ "semantic-ui-react");
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! js-cookie */ "js-cookie");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "jsx-526457433" + " " + "header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    id: "526457433"
+  }, ".header.jsx-526457433{z-index:10;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcU2F0aHlham90aGlcXERlc2t0b3BcXEJsb2NrQ2hhaW5Wb3RpbmdcXGNvbXBvbmVudHNcXEhlYWRlci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPZSxBQUdpQixXQUNaIiwiZmlsZSI6IkM6XFxVc2Vyc1xcU2F0aHlham90aGlcXERlc2t0b3BcXEJsb2NrQ2hhaW5Wb3RpbmdcXGNvbXBvbmVudHNcXEhlYWRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IE1lbnUgfSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XHJcbmltcG9ydCBDb29raWVzIGZyb20gJ2pzLWNvb2tpZSc7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBwcm9wcyA9PiB7XHJcblx0cmV0dXJuIChcclxuXHRcdDxkaXYgY2xhc3NOYW1lPVwiaGVhZGVyXCI+XHJcblx0XHRcdDxzdHlsZSBqc3g+e2BcclxuXHRcdFx0XHQuaGVhZGVyIHtcclxuXHRcdFx0XHRcdHotaW5kZXg6IDEwO1xyXG5cdFx0XHRcdH1cclxuXHRcdFx0YH08L3N0eWxlPlxyXG5cdFx0XHQ8TWVudSBzZWNvbmRhcnkgc3R5bGU9e3sgbWF4SGVpZ2h0OiAnNTBweCcgfX0+XHJcblx0XHRcdFx0PGxpbmsgcmVsPVwic3R5bGVzaGVldFwiIGhyZWY9XCIvL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3NlbWFudGljLXVpQDIuNC4yL2Rpc3Qvc2VtYW50aWMubWluLmNzc1wiIC8+XHJcblx0XHRcdFx0PE1lbnUuSXRlbVxyXG5cdFx0XHRcdFx0bmFtZT1cIkV2ZXJ5IHZvdGUgbWF0dGVyc1wiXHJcblx0XHRcdFx0XHRzdHlsZT17eyBmb250U2l6ZTogJzQwcHgnLCBwYWRkaW5nVG9wOiAnNCUnIH19XHJcblx0XHRcdFx0Lz5cclxuXHRcdFx0XHQ8TWVudS5NZW51IHBvc2l0aW9uPVwicmlnaHRcIj5cclxuXHRcdFx0XHRcdDxNZW51Lkl0ZW0gaWNvbj1cInVzZXJcIiAvPlxyXG5cdFx0XHRcdFx0PE1lbnUuSXRlbSBzdHlsZT17eyBwYWRkaW5nUmlnaHQ6ICcxMHB4JyB9fT5cclxuXHRcdFx0XHRcdFx0e0Nvb2tpZXMuZ2V0KCdjb21wYW55X2VtYWlsJykgfHwgQ29va2llcy5nZXQoJ3ZvdGVyX2VtYWlsJyl9XHJcblx0XHRcdFx0XHQ8L01lbnUuSXRlbT5cclxuXHRcdFx0XHQ8L01lbnUuTWVudT5cclxuXHRcdFx0PC9NZW51PlxyXG5cdFx0XHQ8aHIgLz5cclxuXHRcdFx0e3Byb3BzLmNoaWxkcmVufVxyXG5cdFx0PC9kaXY+XHJcblx0KTtcclxufTtcclxuIl19 */\n/*@ sourceURL=C:\\Users\\Sathyajothi\\Desktop\\BlockChainVoting\\components\\Header.js */"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
+    secondary: true,
+    style: {
+      maxHeight: '50px'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
+    rel: "stylesheet",
+    href: "//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css",
+    className: "jsx-526457433"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+    name: "Every vote matters",
+    style: {
+      fontSize: '40px',
+      paddingTop: '4%'
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"].Menu, {
+    position: "right"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+    icon: "user"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+    style: {
+      paddingRight: '10px'
+    }
+  }, js_cookie__WEBPACK_IMPORTED_MODULE_3___default.a.get('company_email') || js_cookie__WEBPACK_IMPORTED_MODULE_3___default.a.get('voter_email')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("hr", {
+    className: "jsx-526457433"
+  }), props.children);
+});
+
+/***/ }),
+
+/***/ "./components/Layout.js":
+/*!******************************!*\
+  !*** ./components/Layout.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! semantic-ui-react */ "semantic-ui-react");
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Container"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+    rel: "stylesheet",
+    href: "//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), props.children);
+});
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "core-js/library/fn/array/from");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "core-js/library/fn/array/is-array");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/date/now.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/date/now.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/date/now */ "core-js/library/fn/date/now");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "core-js/library/fn/is-iterable");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/create */ "core-js/library/fn/object/create");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/define-property */ "core-js/library/fn/object/define-property");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "core-js/library/fn/object/get-own-property-symbols");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ "core-js/library/fn/object/get-prototype-of");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "core-js/library/fn/object/set-prototype-of");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/promise.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/promise.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "core-js/library/fn/promise");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/reflect/construct */ "core-js/library/fn/reflect/construct");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "core-js/library/fn/symbol");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "core-js/library/fn/symbol/iterator");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+
+function _arrayWithoutHoles(arr) {
+  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _assertThisInitialized; });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _asyncToGenerator; });
+/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _classCallCheck; });
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _createClass; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _getPrototypeOf; });
+/* harmony import */ var _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js");
+/* harmony import */ var _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/object/set-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
+/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1___default.a ? _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0___default.a : function _getPrototypeOf(o) {
+    return o.__proto__ || _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0___default()(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inherits; });
+/* harmony import */ var _core_js_object_create__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
+/* harmony import */ var _core_js_object_create__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_create__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/setPrototypeOf.js");
+
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = _core_js_object_create__WEBPACK_IMPORTED_MODULE_0___default()(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object(_setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/is-iterable */ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js");
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _iterableToArray(iter) {
+  if (_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default()(Object(iter)) || Object.prototype.toString.call(iter) === "[object Arguments]") return _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()(iter);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectSpread; });
+/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
+/* harmony import */ var _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_keys__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+
+
+
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    var ownKeys = _core_js_object_keys__WEBPACK_IMPORTED_MODULE_2___default()(source);
+
+    if (typeof _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default.a === 'function') {
+      ownKeys = ownKeys.concat(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_1___default()(source).filter(function (sym) {
+        return _core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_0___default()(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      Object(_defineProperty__WEBPACK_IMPORTED_MODULE_3__["default"])(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _possibleConstructorReturn; });
+/* harmony import */ var _helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../helpers/esm/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js");
+/* harmony import */ var _assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (Object(_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return Object(_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(self);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/setPrototypeOf.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/setPrototypeOf.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _setPrototypeOf; });
+/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/set-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
+/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__);
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default.a || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
+/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js");
+/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js");
+
+
+
+function _toConsumableArray(arr) {
+  return Object(_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__["default"])();
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _typeof; });
+/* harmony import */ var _core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/symbol/iterator */ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js");
+/* harmony import */ var _core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/symbol */ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js");
+/* harmony import */ var _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_symbol__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function _typeof2(obj) { if (typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && typeof _core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default.a === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && obj.constructor === _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a && obj !== _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+
+function _typeof(obj) {
+  if (typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && _typeof2(_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default.a) === "symbol") {
+    _typeof = function _typeof(obj) {
+      return _typeof2(obj);
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && obj.constructor === _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a && obj !== _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a.prototype ? "symbol" : _typeof2(obj);
+    };
+  }
+
+  return _typeof(obj);
+}
+
+/***/ }),
+
+/***/ "./node_modules/string-hash/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/string-hash/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function hash(str) {
+  var hash = 5381,
+      i    = str.length;
+
+  while(i) {
+    hash = (hash * 33) ^ str.charCodeAt(--i);
+  }
+
+  /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
+   * integers. Since we want the results to be always positive, convert the
+   * signed int to an unsigned by doing an unsigned bitshift. */
+  return hash >>> 0;
+}
+
+module.exports = hash;
+
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/lib/stylesheet.js":
+/*!********************************************************!*\
+  !*** ./node_modules/styled-jsx/dist/lib/stylesheet.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/*
+Based on Glamor's sheet
+https://github.com/threepointone/glamor/blob/667b480d31b3721a905021b26e1290ce92ca2879/src/sheet.js
+*/
+var isProd = process.env && "development" === 'production';
+
+var isString = function isString(o) {
+  return Object.prototype.toString.call(o) === '[object String]';
+};
+
+var StyleSheet =
+/*#__PURE__*/
+function () {
+  function StyleSheet() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$name = _ref.name,
+        name = _ref$name === void 0 ? 'stylesheet' : _ref$name,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === void 0 ? isProd : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === void 0 ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    _classCallCheck(this, StyleSheet);
+
+    invariant(isString(name), '`name` must be a string');
+    this._name = name;
+    this._deletedRulePlaceholder = "#".concat(name, "-deleted-rule____{}");
+    invariant(typeof optimizeForSpeed === 'boolean', '`optimizeForSpeed` must be a boolean');
+    this._optimizeForSpeed = optimizeForSpeed;
+    this._isBrowser = isBrowser;
+    this._serverSheet = undefined;
+    this._tags = [];
+    this._injected = false;
+    this._rulesCount = 0;
+    var node = this._isBrowser && document.querySelector('meta[property="csp-nonce"]');
+    this._nonce = node ? node.getAttribute('content') : null;
+  }
+
+  _createClass(StyleSheet, [{
+    key: "setOptimizeForSpeed",
+    value: function setOptimizeForSpeed(bool) {
+      invariant(typeof bool === 'boolean', '`setOptimizeForSpeed` accepts a boolean');
+      invariant(this._rulesCount === 0, 'optimizeForSpeed cannot be when rules have already been inserted');
+      this.flush();
+      this._optimizeForSpeed = bool;
+      this.inject();
+    }
+  }, {
+    key: "isOptimizeForSpeed",
+    value: function isOptimizeForSpeed() {
+      return this._optimizeForSpeed;
+    }
+  }, {
+    key: "inject",
+    value: function inject() {
+      var _this = this;
+
+      invariant(!this._injected, 'sheet already injected');
+      this._injected = true;
+
+      if (this._isBrowser && this._optimizeForSpeed) {
+        this._tags[0] = this.makeStyleTag(this._name);
+        this._optimizeForSpeed = 'insertRule' in this.getSheet();
+
+        if (!this._optimizeForSpeed) {
+          if (!isProd) {
+            console.warn('StyleSheet: optimizeForSpeed mode not supported falling back to standard mode.');
+          }
+
+          this.flush();
+          this._injected = true;
+        }
+
+        return;
+      }
+
+      this._serverSheet = {
+        cssRules: [],
+        insertRule: function insertRule(rule, index) {
+          if (typeof index === 'number') {
+            _this._serverSheet.cssRules[index] = {
+              cssText: rule
+            };
+          } else {
+            _this._serverSheet.cssRules.push({
+              cssText: rule
+            });
+          }
+
+          return index;
+        },
+        deleteRule: function deleteRule(index) {
+          _this._serverSheet.cssRules[index] = null;
+        }
+      };
+    }
+  }, {
+    key: "getSheetForTag",
+    value: function getSheetForTag(tag) {
+      if (tag.sheet) {
+        return tag.sheet;
+      } // this weirdness brought to you by firefox
+
+
+      for (var i = 0; i < document.styleSheets.length; i++) {
+        if (document.styleSheets[i].ownerNode === tag) {
+          return document.styleSheets[i];
+        }
+      }
+    }
+  }, {
+    key: "getSheet",
+    value: function getSheet() {
+      return this.getSheetForTag(this._tags[this._tags.length - 1]);
+    }
+  }, {
+    key: "insertRule",
+    value: function insertRule(rule, index) {
+      invariant(isString(rule), '`insertRule` accepts only strings');
+
+      if (!this._isBrowser) {
+        if (typeof index !== 'number') {
+          index = this._serverSheet.cssRules.length;
+        }
+
+        this._serverSheet.insertRule(rule, index);
+
+        return this._rulesCount++;
+      }
+
+      if (this._optimizeForSpeed) {
+        var sheet = this.getSheet();
+
+        if (typeof index !== 'number') {
+          index = sheet.cssRules.length;
+        } // this weirdness for perf, and chrome's weird bug
+        // https://stackoverflow.com/questions/20007992/chrome-suddenly-stopped-accepting-insertrule
+
+
+        try {
+          sheet.insertRule(rule, index);
+        } catch (error) {
+          if (!isProd) {
+            console.warn("StyleSheet: illegal rule: \n\n".concat(rule, "\n\nSee https://stackoverflow.com/q/20007992 for more info"));
+          }
+
+          return -1;
+        }
+      } else {
+        var insertionPoint = this._tags[index];
+
+        this._tags.push(this.makeStyleTag(this._name, rule, insertionPoint));
+      }
+
+      return this._rulesCount++;
+    }
+  }, {
+    key: "replaceRule",
+    value: function replaceRule(index, rule) {
+      if (this._optimizeForSpeed || !this._isBrowser) {
+        var sheet = this._isBrowser ? this.getSheet() : this._serverSheet;
+
+        if (!rule.trim()) {
+          rule = this._deletedRulePlaceholder;
+        }
+
+        if (!sheet.cssRules[index]) {
+          // @TBD Should we throw an error?
+          return index;
+        }
+
+        sheet.deleteRule(index);
+
+        try {
+          sheet.insertRule(rule, index);
+        } catch (error) {
+          if (!isProd) {
+            console.warn("StyleSheet: illegal rule: \n\n".concat(rule, "\n\nSee https://stackoverflow.com/q/20007992 for more info"));
+          } // In order to preserve the indices we insert a deleteRulePlaceholder
+
+
+          sheet.insertRule(this._deletedRulePlaceholder, index);
+        }
+      } else {
+        var tag = this._tags[index];
+        invariant(tag, "old rule at index `".concat(index, "` not found"));
+        tag.textContent = rule;
+      }
+
+      return index;
+    }
+  }, {
+    key: "deleteRule",
+    value: function deleteRule(index) {
+      if (!this._isBrowser) {
+        this._serverSheet.deleteRule(index);
+
+        return;
+      }
+
+      if (this._optimizeForSpeed) {
+        this.replaceRule(index, '');
+      } else {
+        var tag = this._tags[index];
+        invariant(tag, "rule at index `".concat(index, "` not found"));
+        tag.parentNode.removeChild(tag);
+        this._tags[index] = null;
+      }
+    }
+  }, {
+    key: "flush",
+    value: function flush() {
+      this._injected = false;
+      this._rulesCount = 0;
+
+      if (this._isBrowser) {
+        this._tags.forEach(function (tag) {
+          return tag && tag.parentNode.removeChild(tag);
+        });
+
+        this._tags = [];
+      } else {
+        // simpler on server
+        this._serverSheet.cssRules = [];
+      }
+    }
+  }, {
+    key: "cssRules",
+    value: function cssRules() {
+      var _this2 = this;
+
+      if (!this._isBrowser) {
+        return this._serverSheet.cssRules;
+      }
+
+      return this._tags.reduce(function (rules, tag) {
+        if (tag) {
+          rules = rules.concat(_this2.getSheetForTag(tag).cssRules.map(function (rule) {
+            return rule.cssText === _this2._deletedRulePlaceholder ? null : rule;
+          }));
+        } else {
+          rules.push(null);
+        }
+
+        return rules;
+      }, []);
+    }
+  }, {
+    key: "makeStyleTag",
+    value: function makeStyleTag(name, cssString, relativeToTag) {
+      if (cssString) {
+        invariant(isString(cssString), 'makeStyleTag acceps only strings as second parameter');
+      }
+
+      var tag = document.createElement('style');
+      if (this._nonce) tag.setAttribute('nonce', this._nonce);
+      tag.type = 'text/css';
+      tag.setAttribute("data-".concat(name), '');
+
+      if (cssString) {
+        tag.appendChild(document.createTextNode(cssString));
+      }
+
+      var head = document.head || document.getElementsByTagName('head')[0];
+
+      if (relativeToTag) {
+        head.insertBefore(tag, relativeToTag);
+      } else {
+        head.appendChild(tag);
+      }
+
+      return tag;
+    }
+  }, {
+    key: "length",
+    get: function get() {
+      return this._rulesCount;
+    }
+  }]);
+
+  return StyleSheet;
+}();
+
+exports.default = StyleSheet;
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error("StyleSheet: ".concat(message, "."));
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/style.js":
+/*!***********************************************!*\
+  !*** ./node_modules/styled-jsx/dist/style.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.flush = flush;
+exports.default = void 0;
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _stylesheetRegistry = _interopRequireDefault(__webpack_require__(/*! ./stylesheet-registry */ "./node_modules/styled-jsx/dist/stylesheet-registry.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var styleSheetRegistry = new _stylesheetRegistry.default();
+
+var JSXStyle =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(JSXStyle, _Component);
+
+  function JSXStyle(props) {
+    var _this;
+
+    _classCallCheck(this, JSXStyle);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(JSXStyle).call(this, props));
+    _this.prevProps = {};
+    return _this;
+  }
+
+  _createClass(JSXStyle, [{
+    key: "shouldComponentUpdate",
+    // probably faster than PureComponent (shallowEqual)
+    value: function shouldComponentUpdate(otherProps) {
+      return this.props.id !== otherProps.id || // We do this check because `dynamic` is an array of strings or undefined.
+      // These are the computed values for dynamic styles.
+      String(this.props.dynamic) !== String(otherProps.dynamic);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      styleSheetRegistry.remove(this.props);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // This is a workaround to make the side effect async safe in the "render" phase.
+      // See https://github.com/zeit/styled-jsx/pull/484
+      if (this.shouldComponentUpdate(this.prevProps)) {
+        // Updates
+        if (this.prevProps.id) {
+          styleSheetRegistry.remove(this.prevProps);
+        }
+
+        styleSheetRegistry.add(this.props);
+        this.prevProps = this.props;
+      }
+
+      return null;
+    }
+  }], [{
+    key: "dynamic",
+    value: function dynamic(info) {
+      return info.map(function (tagInfo) {
+        var baseId = tagInfo[0];
+        var props = tagInfo[1];
+        return styleSheetRegistry.computeId(baseId, props);
+      }).join(' ');
+    }
+  }]);
+
+  return JSXStyle;
+}(_react.Component);
+
+exports.default = JSXStyle;
+
+function flush() {
+  var cssRules = styleSheetRegistry.cssRules();
+  styleSheetRegistry.flush();
+  return cssRules;
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/stylesheet-registry.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/styled-jsx/dist/stylesheet-registry.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _stringHash = _interopRequireDefault(__webpack_require__(/*! string-hash */ "./node_modules/string-hash/index.js"));
+
+var _stylesheet = _interopRequireDefault(__webpack_require__(/*! ./lib/stylesheet */ "./node_modules/styled-jsx/dist/lib/stylesheet.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var sanitize = function sanitize(rule) {
+  return rule.replace(/\/style/gi, '\\/style');
+};
+
+var StyleSheetRegistry =
+/*#__PURE__*/
+function () {
+  function StyleSheetRegistry() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$styleSheet = _ref.styleSheet,
+        styleSheet = _ref$styleSheet === void 0 ? null : _ref$styleSheet,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === void 0 ? false : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === void 0 ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    _classCallCheck(this, StyleSheetRegistry);
+
+    this._sheet = styleSheet || new _stylesheet.default({
+      name: 'styled-jsx',
+      optimizeForSpeed: optimizeForSpeed
+    });
+
+    this._sheet.inject();
+
+    if (styleSheet && typeof optimizeForSpeed === 'boolean') {
+      this._sheet.setOptimizeForSpeed(optimizeForSpeed);
+
+      this._optimizeForSpeed = this._sheet.isOptimizeForSpeed();
+    }
+
+    this._isBrowser = isBrowser;
+    this._fromServer = undefined;
+    this._indices = {};
+    this._instancesCounts = {};
+    this.computeId = this.createComputeId();
+    this.computeSelector = this.createComputeSelector();
+  }
+
+  _createClass(StyleSheetRegistry, [{
+    key: "add",
+    value: function add(props) {
+      var _this = this;
+
+      if (undefined === this._optimizeForSpeed) {
+        this._optimizeForSpeed = Array.isArray(props.children);
+
+        this._sheet.setOptimizeForSpeed(this._optimizeForSpeed);
+
+        this._optimizeForSpeed = this._sheet.isOptimizeForSpeed();
+      }
+
+      if (this._isBrowser && !this._fromServer) {
+        this._fromServer = this.selectFromServer();
+        this._instancesCounts = Object.keys(this._fromServer).reduce(function (acc, tagName) {
+          acc[tagName] = 0;
+          return acc;
+        }, {});
+      }
+
+      var _this$getIdAndRules = this.getIdAndRules(props),
+          styleId = _this$getIdAndRules.styleId,
+          rules = _this$getIdAndRules.rules; // Deduping: just increase the instances count.
+
+
+      if (styleId in this._instancesCounts) {
+        this._instancesCounts[styleId] += 1;
+        return;
+      }
+
+      var indices = rules.map(function (rule) {
+        return _this._sheet.insertRule(rule);
+      }) // Filter out invalid rules
+      .filter(function (index) {
+        return index !== -1;
+      });
+      this._indices[styleId] = indices;
+      this._instancesCounts[styleId] = 1;
+    }
+  }, {
+    key: "remove",
+    value: function remove(props) {
+      var _this2 = this;
+
+      var _this$getIdAndRules2 = this.getIdAndRules(props),
+          styleId = _this$getIdAndRules2.styleId;
+
+      invariant(styleId in this._instancesCounts, "styleId: `".concat(styleId, "` not found"));
+      this._instancesCounts[styleId] -= 1;
+
+      if (this._instancesCounts[styleId] < 1) {
+        var tagFromServer = this._fromServer && this._fromServer[styleId];
+
+        if (tagFromServer) {
+          tagFromServer.parentNode.removeChild(tagFromServer);
+          delete this._fromServer[styleId];
+        } else {
+          this._indices[styleId].forEach(function (index) {
+            return _this2._sheet.deleteRule(index);
+          });
+
+          delete this._indices[styleId];
+        }
+
+        delete this._instancesCounts[styleId];
+      }
+    }
+  }, {
+    key: "update",
+    value: function update(props, nextProps) {
+      this.add(nextProps);
+      this.remove(props);
+    }
+  }, {
+    key: "flush",
+    value: function flush() {
+      this._sheet.flush();
+
+      this._sheet.inject();
+
+      this._fromServer = undefined;
+      this._indices = {};
+      this._instancesCounts = {};
+      this.computeId = this.createComputeId();
+      this.computeSelector = this.createComputeSelector();
+    }
+  }, {
+    key: "cssRules",
+    value: function cssRules() {
+      var _this3 = this;
+
+      var fromServer = this._fromServer ? Object.keys(this._fromServer).map(function (styleId) {
+        return [styleId, _this3._fromServer[styleId]];
+      }) : [];
+
+      var cssRules = this._sheet.cssRules();
+
+      return fromServer.concat(Object.keys(this._indices).map(function (styleId) {
+        return [styleId, _this3._indices[styleId].map(function (index) {
+          return cssRules[index].cssText;
+        }).join(_this3._optimizeForSpeed ? '' : '\n')];
+      }) // filter out empty rules
+      .filter(function (rule) {
+        return Boolean(rule[1]);
+      }));
+    }
+    /**
+     * createComputeId
+     *
+     * Creates a function to compute and memoize a jsx id from a basedId and optionally props.
+     */
+
+  }, {
+    key: "createComputeId",
+    value: function createComputeId() {
+      var cache = {};
+      return function (baseId, props) {
+        if (!props) {
+          return "jsx-".concat(baseId);
+        }
+
+        var propsToString = String(props);
+        var key = baseId + propsToString; // return `jsx-${hashString(`${baseId}-${propsToString}`)}`
+
+        if (!cache[key]) {
+          cache[key] = "jsx-".concat((0, _stringHash.default)("".concat(baseId, "-").concat(propsToString)));
+        }
+
+        return cache[key];
+      };
+    }
+    /**
+     * createComputeSelector
+     *
+     * Creates a function to compute and memoize dynamic selectors.
+     */
+
+  }, {
+    key: "createComputeSelector",
+    value: function createComputeSelector() {
+      var selectoPlaceholderRegexp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : /__jsx-style-dynamic-selector/g;
+      var cache = {};
+      return function (id, css) {
+        // Sanitize SSR-ed CSS.
+        // Client side code doesn't need to be sanitized since we use
+        // document.createTextNode (dev) and the CSSOM api sheet.insertRule (prod).
+        if (!this._isBrowser) {
+          css = sanitize(css);
+        }
+
+        var idcss = id + css;
+
+        if (!cache[idcss]) {
+          cache[idcss] = css.replace(selectoPlaceholderRegexp, id);
+        }
+
+        return cache[idcss];
+      };
+    }
+  }, {
+    key: "getIdAndRules",
+    value: function getIdAndRules(props) {
+      var _this4 = this;
+
+      var css = props.children,
+          dynamic = props.dynamic,
+          id = props.id;
+
+      if (dynamic) {
+        var styleId = this.computeId(id, dynamic);
+        return {
+          styleId: styleId,
+          rules: Array.isArray(css) ? css.map(function (rule) {
+            return _this4.computeSelector(styleId, rule);
+          }) : [this.computeSelector(styleId, css)]
+        };
+      }
+
+      return {
+        styleId: this.computeId(id),
+        rules: Array.isArray(css) ? css : [css]
+      };
+    }
+    /**
+     * selectFromServer
+     *
+     * Collects style tags from the document with id __jsx-XXX
+     */
+
+  }, {
+    key: "selectFromServer",
+    value: function selectFromServer() {
+      var elements = Array.prototype.slice.call(document.querySelectorAll('[id^="__jsx-"]'));
+      return elements.reduce(function (acc, element) {
+        var id = element.id.slice(2);
+        acc[id] = element;
+        return acc;
+      }, {});
+    }
+  }]);
+
+  return StyleSheetRegistry;
+}();
+
+exports.default = StyleSheetRegistry;
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error("StyleSheetRegistry: ".concat(message, "."));
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/style.js":
+/*!******************************************!*\
+  !*** ./node_modules/styled-jsx/style.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/style */ "./node_modules/styled-jsx/dist/style.js")
+
+
+/***/ }),
+
+/***/ "./pages/election/voting_list.js":
+/*!***************************************!*\
+  !*** ./pages/election/voting_list.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/set-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/reflect/construct */ "./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/date/now */ "./node_modules/@babel/runtime-corejs2/core-js/date/now.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! semantic-ui-react */ "semantic-ui-react");
+/* harmony import */ var semantic_ui_react__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../components/Layout */ "./components/Layout.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! js-cookie */ "js-cookie");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../routes */ "./routes.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _Ethereum_election__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../Ethereum/election */ "./Ethereum/election.js");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! react-helmet */ "react-helmet");
+/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_22__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3___default.a ? _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_3___default.a : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default()(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i.return) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = _babel_runtime_corejs2_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_1___default.a; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default()(c); function f(e) { return _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default.a ? _babel_runtime_corejs2_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default()(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = _babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_2___default()(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_4___default.a; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function _callSuper(t, o, e) { return o = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_13__["default"])(o), Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_12__["default"])(t, _isNativeReflectConstruct() ? _babel_runtime_corejs2_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_5___default()(o, e || [], Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_13__["default"])(t).constructor) : o.apply(t, e)); }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(_babel_runtime_corejs2_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_5___default()(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+
+
+
+
+
+
+
+var VotingList = /*#__PURE__*/function (_Component) {
+  function VotingList() {
+    var _this;
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_10__["default"])(this, VotingList);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    _this = _callSuper(this, VotingList, [].concat(args));
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "state", {
+      election_address: js_cookie__WEBPACK_IMPORTED_MODULE_19___default.a.get('address'),
+      election_name: '',
+      election_description: '',
+      voters: [],
+      // Will store voter objects from database
+      loading: false,
+      emailError: '',
+      editingVoterId: null,
+      registerEmail: ''
+    });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "loadElectionDetails", /*#__PURE__*/Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])(/*#__PURE__*/_regenerator().m(function _callee() {
+      var election, summary, _t;
+      return _regenerator().w(function (_context) {
+        while (1) switch (_context.n) {
+          case 0:
+            _context.p = 0;
+            election = Object(_Ethereum_election__WEBPACK_IMPORTED_MODULE_21__["default"])(_this.state.election_address);
+            _context.n = 1;
+            return election.methods.getElectionDetails().call();
+          case 1:
+            summary = _context.v;
+            _this.setState({
+              election_name: summary[0],
+              election_description: summary[1]
+            });
+            _context.n = 3;
+            break;
+          case 2:
+            _context.p = 2;
+            _t = _context.v;
+            console.log("Error loading election details:", _t.message);
+          case 3:
+            return _context.a(2);
+        }
+      }, _callee, null, [[0, 2]]);
+    })));
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "loadVoters", /*#__PURE__*/Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])(/*#__PURE__*/_regenerator().m(function _callee2() {
+      var response, data, _t2;
+      return _regenerator().w(function (_context2) {
+        while (1) switch (_context2.n) {
+          case 0:
+            _this.setState({
+              loading: true
+            });
+            _context2.p = 1;
+            _context2.n = 2;
+            return fetch('/voter/', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: "election_address=".concat(_this.state.election_address)
+            });
+          case 2:
+            response = _context2.v;
+            if (!response.ok) {
+              _context2.n = 4;
+              break;
+            }
+            _context2.n = 3;
+            return response.json();
+          case 3:
+            data = _context2.v;
+            if (data.status === "success" && data.data && data.data.voters) {
+              _this.setState({
+                voters: data.data.voters
+              });
+            } else {
+              _this.setState({
+                voters: []
+              });
+            }
+            _context2.n = 5;
+            break;
+          case 4:
+            console.error('Failed to load voters');
+            _this.setState({
+              voters: []
+            });
+          case 5:
+            _context2.n = 7;
+            break;
+          case 6:
+            _context2.p = 6;
+            _t2 = _context2.v;
+            console.error('Error loading voters:', _t2);
+            _this.setState({
+              voters: []
+            });
+          case 7:
+            _context2.p = 7;
+            _this.setState({
+              loading: false
+            });
+            return _context2.f(7);
+          case 8:
+            return _context2.a(2);
+        }
+      }, _callee2, null, [[1, 6, 7, 8]]);
+    })));
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "validateEmail", function (email) {
+      var excludeVoterId = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      if (!email.includes('@')) {
+        return 'Please enter a valid email address.';
+      }
+      var emailExists = _this.state.voters.some(function (voter) {
+        if (excludeVoterId && voter.id == excludeVoterId) return false;
+        return voter.email === email;
+      });
+      if (emailExists) {
+        return 'This email is already registered to another voter.';
+      }
+      return '';
+    });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "handleRegisterInputChange", function (e) {
+      _this.setState({
+        registerEmail: e.target.value
+      });
+    });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "openEditModal", function (voter) {
+      _this.setState({
+        editingVoterId: voter.id,
+        editEmail: voter.email,
+        emailError: ''
+      });
+    });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "handleEditInputChange", function (e) {
+      var newEmail = e.target.value;
+      var error = _this.validateEmail(newEmail, _this.state.editingVoterId);
+      _this.setState({
+        editEmail: newEmail,
+        emailError: error
+      });
+    });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "registerVoter", /*#__PURE__*/Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])(/*#__PURE__*/_regenerator().m(function _callee3() {
+      var registerEmail, email, error, response, data, newVoter, _t3;
+      return _regenerator().w(function (_context3) {
+        while (1) switch (_context3.n) {
+          case 0:
+            registerEmail = _this.state.registerEmail;
+            email = registerEmail.trim();
+            if (email) {
+              _context3.n = 1;
+              break;
+            }
+            alert("Please enter an email address");
+            return _context3.a(2);
+          case 1:
+            error = _this.validateEmail(email);
+            if (!error) {
+              _context3.n = 2;
+              break;
+            }
+            alert(error);
+            return _context3.a(2);
+          case 2:
+            _this.setState({
+              loading: true
+            });
+            _context3.p = 3;
+            _context3.n = 4;
+            return fetch('/voter/register', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: "email=".concat(encodeURIComponent(email), "&election_address=").concat(encodeURIComponent(_this.state.election_address), "&election_name=").concat(encodeURIComponent(_this.state.election_name), "&election_description=").concat(encodeURIComponent(_this.state.election_description))
+            });
+          case 4:
+            response = _context3.v;
+            _context3.n = 5;
+            return response.json();
+          case 5:
+            data = _context3.v;
+            if (!(response.ok && data.status === "success")) {
+              _context3.n = 7;
+              break;
+            }
+            // Clear input immediately
+            _this.setState({
+              registerEmail: ''
+            });
+
+            // Add the new voter to the local state immediately (before reloading)
+            newVoter = {
+              id: data.data.voter_id || _babel_runtime_corejs2_core_js_date_now__WEBPACK_IMPORTED_MODULE_8___default()(),
+              // Use the ID from response or temporary ID
+              email: email
+              // Add other properties if needed
+            };
+            _this.setState(function (prevState) {
+              return {
+                voters: [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_7__["default"])(prevState.voters), [newVoter])
+              };
+            });
+            alert("Voter registered successfully!");
+
+            // Also reload from server to ensure we have the latest data
+            _context3.n = 6;
+            return _this.loadVoters();
+          case 6:
+            _context3.n = 8;
+            break;
+          case 7:
+            console.log("Registration failed:", data);
+            alert(data.message || "Registration failed");
+          case 8:
+            _context3.n = 10;
+            break;
+          case 9:
+            _context3.p = 9;
+            _t3 = _context3.v;
+            alert("Network error. Please try again.");
+            console.error('Registration error:', _t3);
+          case 10:
+            _context3.p = 10;
+            _this.setState({
+              loading: false
+            });
+            _this.setState({
+              registerEmail: ""
+            });
+            return _context3.f(10);
+          case 11:
+            return _context3.a(2);
+        }
+      }, _callee3, null, [[3, 9, 10, 11]]);
+    })));
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "updateVoter", /*#__PURE__*/Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])(/*#__PURE__*/_regenerator().m(function _callee4() {
+      var _this$state, editingVoterId, editEmail, error, response, data, _t4;
+      return _regenerator().w(function (_context4) {
+        while (1) switch (_context4.n) {
+          case 0:
+            _this$state = _this.state, editingVoterId = _this$state.editingVoterId, editEmail = _this$state.editEmail;
+            if (!(!editingVoterId || !editEmail)) {
+              _context4.n = 1;
+              break;
+            }
+            return _context4.a(2);
+          case 1:
+            error = _this.validateEmail(editEmail, editingVoterId);
+            if (!error) {
+              _context4.n = 2;
+              break;
+            }
+            console.log("Validation error:", error);
+            alert(error);
+            return _context4.a(2);
+          case 2:
+            _this.setState({
+              loading: true
+            });
+            _context4.p = 3;
+            _context4.n = 4;
+            return fetch("/voter/".concat(editingVoterId), {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+              },
+              body: "email=".concat(encodeURIComponent(editEmail), "&election_name=").concat(encodeURIComponent(_this.state.election_name), "&election_description=").concat(encodeURIComponent(_this.state.election_description))
+            });
+          case 4:
+            response = _context4.v;
+            _context4.n = 5;
+            return response.json();
+          case 5:
+            data = _context4.v;
+            if (!(response.ok && data.status === "success")) {
+              _context4.n = 7;
+              break;
+            }
+            // Update the voter in local state immediately
+            _this.setState(function (prevState) {
+              return {
+                voters: prevState.voters.map(function (voter) {
+                  return voter.id === editingVoterId ? Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_6__["default"])({}, voter, {
+                    email: editEmail
+                  }) : voter;
+                })
+              };
+            });
+            alert("Voter updated successfully!");
+
+            // Also reload from server to ensure consistency
+            _context4.n = 6;
+            return _this.loadVoters();
+          case 6:
+            _context4.n = 8;
+            break;
+          case 7:
+            alert(data.message || "Update failed");
+          case 8:
+            _context4.n = 10;
+            break;
+          case 9:
+            _context4.p = 9;
+            _t4 = _context4.v;
+            alert("Network error. Please try again.");
+            console.error('Update error:', _t4);
+          case 10:
+            _context4.p = 10;
+            _this.setState({
+              loading: false,
+              editingVoterId: null,
+              emailError: ''
+            });
+            return _context4.f(10);
+          case 11:
+            return _context4.a(2);
+        }
+      }, _callee4, null, [[3, 9, 10, 11]]);
+    })));
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "deleteVoter", /*#__PURE__*/function () {
+      var _ref5 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])(/*#__PURE__*/_regenerator().m(function _callee5(voterId) {
+        var response, data, _t5;
+        return _regenerator().w(function (_context5) {
+          while (1) switch (_context5.n) {
+            case 0:
+              if (window.confirm("Are you sure you want to delete this voter?")) {
+                _context5.n = 1;
+                break;
+              }
+              return _context5.a(2);
+            case 1:
+              _this.setState({
+                loading: true
+              });
+              _context5.p = 2;
+              _context5.n = 3;
+              return fetch("/voter/".concat(voterId), {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+                }
+              });
+            case 3:
+              response = _context5.v;
+              _context5.n = 4;
+              return response.json();
+            case 4:
+              data = _context5.v;
+              if (!(response.ok && data.status === "success")) {
+                _context5.n = 6;
+                break;
+              }
+              // Remove the voter from local state immediately
+              _this.setState(function (prevState) {
+                return {
+                  voters: prevState.voters.filter(function (voter) {
+                    return voter.id !== voterId;
+                  })
+                };
+              });
+              alert("Voter deleted successfully!");
+
+              // Also reload from server to ensure consistency
+              _context5.n = 5;
+              return _this.loadVoters();
+            case 5:
+              _context5.n = 7;
+              break;
+            case 6:
+              alert(data.message || "Delete failed");
+            case 7:
+              _context5.n = 9;
+              break;
+            case 8:
+              _context5.p = 8;
+              _t5 = _context5.v;
+              alert("Network error. Please try again.");
+              console.error('Delete error:', _t5);
+            case 9:
+              _context5.p = 9;
+              _this.setState({
+                loading: false
+              });
+              return _context5.f(9);
+            case 10:
+              return _context5.a(2);
+          }
+        }, _callee5, null, [[2, 8, 9, 10]]);
+      }));
+      return function (_x) {
+        return _ref5.apply(this, arguments);
+      };
+    }());
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "renderVoterList", function () {
+      var _this$state2 = _this.state,
+        voters = _this$state2.voters,
+        loading = _this$state2.loading;
+      if (loading && voters.length === 0) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Message"], {
+          info: true
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Icon"], {
+          name: "circle notched",
+          loading: true
+        }), "Loading voters...");
+      }
+      if (voters.length === 0) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Message"], {
+          info: true
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Icon"], {
+          name: "info circle"
+        }), "No voters registered yet. Add voters using the form on the right.");
+      }
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Card"].Group, null, voters.map(function (voter) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Card"], {
+          key: voter.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Card"].Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Card"].Header, null, voter.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Card"].Description, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("div", {
+          style: {
+            marginTop: '10px'
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Button"], {
+          basic: true,
+          color: "green",
+          onClick: function onClick() {
+            return _this.openEditModal(voter);
+          }
+        }, "Edit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Button"], {
+          negative: true,
+          basic: true,
+          style: {
+            marginLeft: '10px'
+          },
+          onClick: function onClick() {
+            return _this.deleteVoter(voter.id);
+          }
+        }, "Delete")))));
+      }));
+    });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "SidebarExampleVisible", function () {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Sidebar"].Pushable, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Sidebar"], {
+        as: semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Menu"],
+        animation: "overlay",
+        icon: "labeled",
+        inverted: true,
+        vertical: true,
+        visible: true,
+        width: "thin",
+        style: {
+          backgroundColor: 'white'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Menu"].Item, {
+        style: {
+          color: 'grey'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("h2", null, "MENU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_20__["Link"], {
+        route: "/election/".concat(_this.state.election_address, "/company_dashboard")
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Menu"].Item, {
+        style: {
+          color: 'grey'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Icon"], {
+        name: "dashboard"
+      }), "Dashboard")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_20__["Link"], {
+        route: "/election/".concat(_this.state.election_address, "/candidate_list")
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Menu"].Item, {
+        style: {
+          color: 'grey'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Icon"], {
+        name: "user outline"
+      }), "Candidate List")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_20__["Link"], {
+        route: "/election/".concat(_this.state.election_address, "/voting_list")
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Menu"].Item, {
+        style: {
+          color: 'grey'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Icon"], {
+        name: "list"
+      }), "Voter List")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Menu"].Item, {
+        style: {
+          color: 'grey'
+        },
+        onClick: _this.signOut
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Icon"], {
+        name: "sign out"
+      }), "Sign Out")));
+    });
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_15__["default"])(_this, "signOut", function () {
+      js_cookie__WEBPACK_IMPORTED_MODULE_19___default.a.remove('address');
+      js_cookie__WEBPACK_IMPORTED_MODULE_19___default.a.remove('company_email');
+      js_cookie__WEBPACK_IMPORTED_MODULE_19___default.a.remove('company_id');
+      _routes__WEBPACK_IMPORTED_MODULE_20__["Router"].pushRoute('/homepage');
+    });
+    return _this;
+  }
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_14__["default"])(VotingList, _Component);
+  return Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_11__["default"])(VotingList, [{
+    key: "componentDidMount",
+    value: function () {
+      var _componentDidMount = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_9__["default"])(/*#__PURE__*/_regenerator().m(function _callee6() {
+        return _regenerator().w(function (_context6) {
+          while (1) switch (_context6.n) {
+            case 0:
+              _context6.n = 1;
+              return this.loadElectionDetails();
+            case 1:
+              _context6.n = 2;
+              return this.loadVoters();
+            case 2:
+              return _context6.a(2);
+          }
+        }, _callee6, this);
+      }));
+      function componentDidMount() {
+        return _componentDidMount.apply(this, arguments);
+      }
+      return componentDidMount;
+    }()
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+      var _this$state3 = this.state,
+        election_name = _this$state3.election_name,
+        election_description = _this$state3.election_description,
+        registerEmail = _this$state3.registerEmail,
+        loading = _this$state3.loading,
+        editEmail = _this$state3.editEmail,
+        emailError = _this$state3.emailError,
+        editingVoterId = _this$state3.editingVoterId;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_22__["Helmet"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("title", null, "Voter List"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("link", {
+        rel: "shortcut icon",
+        type: "image/x-icon",
+        href: "../../static/logo-Block.png"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"].Row, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"].Column, {
+        width: 3
+      }, this.SidebarExampleVisible()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"].Column, {
+        width: 13
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_18__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Header"], {
+        as: "h2",
+        textAlign: "center",
+        style: {
+          marginBottom: '2rem'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Icon"], {
+        name: "address card"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Header"].Content, null, election_name, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Header"].Subheader, null, election_description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Modal"], {
+        open: !!editingVoterId,
+        onClose: function onClose() {
+          return _this2.setState({
+            editingVoterId: null,
+            emailError: ''
+          });
+        },
+        size: "small"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Modal"].Header, null, "Edit Voter Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Modal"].Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Form"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Form"].Field, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("label", null, "Email Address:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Input"], {
+        value: editEmail || '',
+        placeholder: "Enter new email",
+        onChange: this.handleEditInputChange,
+        error: !!emailError
+      }), emailError && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Message"], {
+        negative: true,
+        size: "small"
+      }, emailError)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Modal"].Actions, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Button"], {
+        onClick: function onClick() {
+          return _this2.setState({
+            editingVoterId: null,
+            emailError: ''
+          });
+        }
+      }, "Cancel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Button"], {
+        positive: true,
+        onClick: this.updateVoter,
+        disabled: !!emailError
+      }, "Update"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"].Row, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"].Column, {
+        width: 10
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Header"], {
+        as: "h3",
+        color: "black"
+      }, "Registered Voters"), this.renderVoterList()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Grid"].Column, {
+        width: 6
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Header"], {
+        as: "h3",
+        color: "black"
+      }, "Register New Voter"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Card"], {
+        fluid: true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Card"].Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Form"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Form"].Field, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement("label", null, "Email Address:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Input"], {
+        fluid: true,
+        value: registerEmail,
+        placeholder: "Enter voter email",
+        onChange: this.handleRegisterInputChange,
+        disabled: loading
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_16___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_17__["Button"], {
+        primary: true,
+        fluid: true,
+        onClick: this.registerVoter,
+        loading: loading,
+        disabled: loading || !registerEmail
+      }, "Register Voter"))))))))))));
+    }
+  }]);
+}(react__WEBPACK_IMPORTED_MODULE_16__["Component"]);
+/* harmony default export */ __webpack_exports__["default"] = (VotingList);
+
+/***/ }),
+
+/***/ "./routes.js":
+/*!*******************!*\
+  !*** ./routes.js ***!
+  \*******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var routes = __webpack_require__(/*! next-routes */ "next-routes")();
+routes.add('/homepage', '/homepage').add('/company_login', '/company_login').add('/voter_login', '/voter_login').add('/election/:address/company_dashboard', '/election/company_dashboard').add('/election/:address/voting_list', '/election/voting_list').add('/election/:address/addcand', '/election/addcand').add('/election/:address/vote', '/election/vote').add('/election/:address/candidate_list', '/election/candidate_list');
+module.exports = routes;
+
+/***/ }),
+
+/***/ 5:
+/*!*********************************************!*\
+  !*** multi ./pages/election/voting_list.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! C:\Users\Sathyajothi\Desktop\BlockChainVoting\pages\election\voting_list.js */"./pages/election/voting_list.js");
+
+
+/***/ }),
+
+/***/ "core-js/library/fn/array/from":
+/*!************************************************!*\
+  !*** external "core-js/library/fn/array/from" ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/array/from");
+
+/***/ }),
+
+/***/ "core-js/library/fn/array/is-array":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/array/is-array" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/array/is-array");
+
+/***/ }),
+
+/***/ "core-js/library/fn/date/now":
+/*!**********************************************!*\
+  !*** external "core-js/library/fn/date/now" ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/date/now");
+
+/***/ }),
+
+/***/ "core-js/library/fn/is-iterable":
+/*!*************************************************!*\
+  !*** external "core-js/library/fn/is-iterable" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/is-iterable");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/create":
+/*!***************************************************!*\
+  !*** external "core-js/library/fn/object/create" ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/create");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/define-property":
+/*!************************************************************!*\
+  !*** external "core-js/library/fn/object/define-property" ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/define-property");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/get-own-property-descriptor":
+/*!************************************************************************!*\
+  !*** external "core-js/library/fn/object/get-own-property-descriptor" ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/get-own-property-symbols":
+/*!*********************************************************************!*\
+  !*** external "core-js/library/fn/object/get-own-property-symbols" ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-own-property-symbols");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/get-prototype-of":
+/*!*************************************************************!*\
+  !*** external "core-js/library/fn/object/get-prototype-of" ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-prototype-of");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/keys":
+/*!*************************************************!*\
+  !*** external "core-js/library/fn/object/keys" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/keys");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/set-prototype-of":
+/*!*************************************************************!*\
+  !*** external "core-js/library/fn/object/set-prototype-of" ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/set-prototype-of");
+
+/***/ }),
+
+/***/ "core-js/library/fn/promise":
+/*!*********************************************!*\
+  !*** external "core-js/library/fn/promise" ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/promise");
+
+/***/ }),
+
+/***/ "core-js/library/fn/reflect/construct":
+/*!*******************************************************!*\
+  !*** external "core-js/library/fn/reflect/construct" ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/reflect/construct");
+
+/***/ }),
+
+/***/ "core-js/library/fn/symbol":
+/*!********************************************!*\
+  !*** external "core-js/library/fn/symbol" ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/symbol");
+
+/***/ }),
+
+/***/ "core-js/library/fn/symbol/iterator":
+/*!*****************************************************!*\
+  !*** external "core-js/library/fn/symbol/iterator" ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/symbol/iterator");
+
+/***/ }),
+
+/***/ "js-cookie":
+/*!****************************!*\
+  !*** external "js-cookie" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("js-cookie");
+
+/***/ }),
+
+/***/ "next-routes":
+/*!******************************!*\
+  !*** external "next-routes" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next-routes");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-helmet":
+/*!*******************************!*\
+  !*** external "react-helmet" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-helmet");
+
+/***/ }),
+
+/***/ "semantic-ui-react":
+/*!************************************!*\
+  !*** external "semantic-ui-react" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("semantic-ui-react");
+
+/***/ }),
+
+/***/ "web3":
+/*!***********************!*\
+  !*** external "web3" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("web3");
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=voting_list.js.map
