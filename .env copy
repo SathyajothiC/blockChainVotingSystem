@@ -1,0 +1,8 @@
+
+# For server-side (API routes)
+EMAIL=sathyajothisathya@gmail.com
+PASSWORD=Sj@10102001!
+
+# For client-side (React components)
+NEXT_PUBLIC_EMAIL=sathyajothisathya@gmail.com
+NEXT_PUBLIC_PASSWORD=Sj@10102001!
