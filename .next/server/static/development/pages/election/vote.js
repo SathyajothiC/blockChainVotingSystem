@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -119,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
     className: "jsx-526457433" + " " + "header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "526457433"
-  }, ".header.jsx-526457433{z-index:10;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcU2F0aHlham90aGlcXERlc2t0b3BcXEJsb2NrQ2hhaW5Wb3RpbmdcXGNvbXBvbmVudHNcXEhlYWRlci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPZSxBQUdpQixXQUNaIiwiZmlsZSI6IkM6XFxVc2Vyc1xcU2F0aHlham90aGlcXERlc2t0b3BcXEJsb2NrQ2hhaW5Wb3RpbmdcXGNvbXBvbmVudHNcXEhlYWRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IE1lbnUgfSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XHJcbmltcG9ydCBDb29raWVzIGZyb20gJ2pzLWNvb2tpZSc7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBwcm9wcyA9PiB7XHJcblx0cmV0dXJuIChcclxuXHRcdDxkaXYgY2xhc3NOYW1lPVwiaGVhZGVyXCI+XHJcblx0XHRcdDxzdHlsZSBqc3g+e2BcclxuXHRcdFx0XHQuaGVhZGVyIHtcclxuXHRcdFx0XHRcdHotaW5kZXg6IDEwO1xyXG5cdFx0XHRcdH1cclxuXHRcdFx0YH08L3N0eWxlPlxyXG5cdFx0XHQ8TWVudSBzZWNvbmRhcnkgc3R5bGU9e3sgbWF4SGVpZ2h0OiAnNTBweCcgfX0+XHJcblx0XHRcdFx0PGxpbmsgcmVsPVwic3R5bGVzaGVldFwiIGhyZWY9XCIvL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3NlbWFudGljLXVpQDIuNC4yL2Rpc3Qvc2VtYW50aWMubWluLmNzc1wiIC8+XHJcblx0XHRcdFx0PE1lbnUuSXRlbVxyXG5cdFx0XHRcdFx0bmFtZT1cIkV2ZXJ5IHZvdGUgbWF0dGVyc1wiXHJcblx0XHRcdFx0XHRzdHlsZT17eyBmb250U2l6ZTogJzQwcHgnLCBwYWRkaW5nVG9wOiAnNCUnIH19XHJcblx0XHRcdFx0Lz5cclxuXHRcdFx0XHQ8TWVudS5NZW51IHBvc2l0aW9uPVwicmlnaHRcIj5cclxuXHRcdFx0XHRcdDxNZW51Lkl0ZW0gaWNvbj1cInVzZXJcIiAvPlxyXG5cdFx0XHRcdFx0PE1lbnUuSXRlbSBzdHlsZT17eyBwYWRkaW5nUmlnaHQ6ICcxMHB4JyB9fT5cclxuXHRcdFx0XHRcdFx0e0Nvb2tpZXMuZ2V0KCdjb21wYW55X2VtYWlsJykgfHwgQ29va2llcy5nZXQoJ3ZvdGVyX2VtYWlsJyl9XHJcblx0XHRcdFx0XHQ8L01lbnUuSXRlbT5cclxuXHRcdFx0XHQ8L01lbnUuTWVudT5cclxuXHRcdFx0PC9NZW51PlxyXG5cdFx0XHQ8aHIgLz5cclxuXHRcdFx0e3Byb3BzLmNoaWxkcmVufVxyXG5cdFx0PC9kaXY+XHJcblx0KTtcclxufTtcclxuIl19 */\n/*@ sourceURL=C:\\Users\\Sathyajothi\\Desktop\\BlockChainVoting\\components\\Header.js */"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
+  }, ".header.jsx-526457433{z-index:10;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcU2F0aHlham90aGlcXERlc2t0b3BcXGJsb2NrQ2hhaW5Wb3RpbmdTeXN0ZW1cXGNvbXBvbmVudHNcXEhlYWRlci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPd0IsQUFHaUIsV0FDWiIsImZpbGUiOiJDOlxcVXNlcnNcXFNhdGh5YWpvdGhpXFxEZXNrdG9wXFxibG9ja0NoYWluVm90aW5nU3lzdGVtXFxjb21wb25lbnRzXFxIZWFkZXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgeyBNZW51IH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xyXG5pbXBvcnQgQ29va2llcyBmcm9tICdqcy1jb29raWUnO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgcHJvcHMgPT4ge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhlYWRlclwiPlxyXG4gICAgICAgICAgICA8c3R5bGUganN4PntgXHJcblx0XHRcdFx0LmhlYWRlciB7XHJcblx0XHRcdFx0XHR6LWluZGV4OiAxMDtcclxuXHRcdFx0XHR9XHJcblx0XHRcdGB9PC9zdHlsZT5cclxuICAgICAgICAgICAgPE1lbnUgc2Vjb25kYXJ5IHN0eWxlPXt7IG1heEhlaWdodDogJzUwcHgnIH19PlxyXG4gICAgICAgICAgICAgICAgPGxpbmsgcmVsPVwic3R5bGVzaGVldFwiIGhyZWY9XCIvL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3NlbWFudGljLXVpQDIuNC4yL2Rpc3Qvc2VtYW50aWMubWluLmNzc1wiIC8+XHJcbiAgICAgICAgICAgICAgICA8TWVudS5JdGVtXHJcbiAgICAgICAgICAgICAgICAgICAgbmFtZT1cIkV2ZXJ5IHZvdGUgbWF0dGVyc1wiXHJcbiAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3sgZm9udFNpemU6ICc0MHB4JywgcGFkZGluZ1RvcDogJzQlJyB9fVxyXG4gICAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgICAgIDxNZW51Lk1lbnUgcG9zaXRpb249XCJyaWdodFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxNZW51Lkl0ZW0gaWNvbj1cInVzZXJcIiAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDxNZW51Lkl0ZW0gc3R5bGU9e3sgcGFkZGluZ1JpZ2h0OiAnMTBweCcgfX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHtDb29raWVzLmdldCgnY29tcGFueV9lbWFpbCcpIHx8IENvb2tpZXMuZ2V0KCd2b3Rlcl9lbWFpbCcpfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvTWVudS5JdGVtPlxyXG4gICAgICAgICAgICAgICAgPC9NZW51Lk1lbnU+XHJcbiAgICAgICAgICAgIDwvTWVudT5cclxuICAgICAgICAgICAgPGhyIC8+XHJcbiAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICk7XHJcbn07XHJcbiJdfQ== */\n/*@ sourceURL=C:\\Users\\Sathyajothi\\Desktop\\blockChainVotingSystem\\components\\Header.js */"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(semantic_ui_react__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
     secondary: true,
     style: {
       maxHeight: '50px'
@@ -178,10 +178,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./components/sharedElectionData .js":
-/*!*******************************************!*\
-  !*** ./components/sharedElectionData .js ***!
-  \*******************************************/
+/***/ "./components/sharedElectionData.js":
+/*!******************************************!*\
+  !*** ./components/sharedElectionData.js ***!
+  \******************************************/
 /*! exports provided: getSharedElectionData, updateSharedElectionData, addCandidateToSharedData, resetSharedElectionData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1607,7 +1607,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-helmet */ "react-helmet");
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_sharedElectionData___WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/sharedElectionData  */ "./components/sharedElectionData .js");
+/* harmony import */ var _components_sharedElectionData__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/sharedElectionData */ "./components/sharedElectionData.js");
 
 
 
@@ -1654,7 +1654,7 @@ var VotingList = /*#__PURE__*/function (_Component) {
         }
 
         // Use the shared election data
-        var electionData = Object(_components_sharedElectionData___WEBPACK_IMPORTED_MODULE_16__["getSharedElectionData"])();
+        var electionData = Object(_components_sharedElectionData__WEBPACK_IMPORTED_MODULE_16__["getSharedElectionData"])();
 
         // Check if voter has already voted (you might need to implement this in your shared data)
         // For now, we'll use a simple approach with localStorage
@@ -1817,7 +1817,7 @@ var VotingList = /*#__PURE__*/function (_Component) {
         }
 
         // Get current shared data
-        var currentData = Object(_components_sharedElectionData___WEBPACK_IMPORTED_MODULE_16__["getSharedElectionData"])();
+        var currentData = Object(_components_sharedElectionData__WEBPACK_IMPORTED_MODULE_16__["getSharedElectionData"])();
 
         // Create updated candidate data
         var updatedCandidateData = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(currentData.candidateData);
@@ -1830,7 +1830,7 @@ var VotingList = /*#__PURE__*/function (_Component) {
           candidateData: updatedCandidateData,
           totalVotes: currentData.totalVotes + 1
         });
-        Object(_components_sharedElectionData___WEBPACK_IMPORTED_MODULE_16__["updateSharedElectionData"])(updatedElectionData);
+        Object(_components_sharedElectionData__WEBPACK_IMPORTED_MODULE_16__["updateSharedElectionData"])(updatedElectionData);
 
         // Mark voter as having voted in localStorage
         localStorage.setItem("voted_".concat(voterEmail, "_").concat(currentData.address), 'true');
@@ -1904,14 +1904,14 @@ module.exports = routes;
 
 /***/ }),
 
-/***/ 8:
+/***/ 3:
 /*!**************************************!*\
   !*** multi ./pages/election/vote.js ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Sathyajothi\Desktop\BlockChainVoting\pages\election\vote.js */"./pages/election/vote.js");
+module.exports = __webpack_require__(/*! C:\Users\Sathyajothi\Desktop\blockChainVotingSystem\pages\election\vote.js */"./pages/election/vote.js");
 
 
 /***/ }),

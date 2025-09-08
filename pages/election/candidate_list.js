@@ -6,7 +6,7 @@ import Cookies from 'js-cookie';
 import { Link, Router } from '../../routes';
 import Election from '../../Ethereum/election';
 import { Helmet } from 'react-helmet';
-import { addCandidateToSharedData, getSharedElectionData } from '../../components/sharedElectionData ';
+import { addCandidateToSharedData, getSharedElectionData } from '../../components/sharedElectionData';
 
 class VotingList extends Component {
     state = {

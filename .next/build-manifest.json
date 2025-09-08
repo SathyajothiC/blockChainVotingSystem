@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/election/vote": [
+    "/election/company_dashboard": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/election/voting_list": [
+    "/election/vote": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

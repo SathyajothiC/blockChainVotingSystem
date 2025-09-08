@@ -5,7 +5,7 @@ import { Bar, Pie } from 'react-chartjs-2';
 import Cookies from 'js-cookie';
 import { Link, Router } from '../../routes';
 import { Helmet } from 'react-helmet';
-import { getSharedElectionData } from '../../components/sharedElectionData ';
+import { getSharedElectionData } from '../../components/sharedElectionData';
 
 class CompanyDashboard extends Component {
     state = {

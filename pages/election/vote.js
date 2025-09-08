@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet';
 import {
     getSharedElectionData,
     updateSharedElectionData
-} from '../../components/sharedElectionData ';
+} from '../../components/sharedElectionData';
 class VotingList extends Component {
     state = {
         election_address: Cookies.get('address'),
