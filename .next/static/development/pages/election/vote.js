@@ -56915,7 +56915,7 @@ module.exports = routes;
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!**************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Felection%2Fvote&absolutePagePath=C%3A%5CUsers%5CSathyajothi%5CDesktop%5CblockChainVotingSystem%5Cpages%5Celection%5Cvote.js ***!
   \**************************************************************************************************************************************************************************/
@@ -56938,5 +56938,5 @@ module.exports = dll_6b27229dcf0f0fec5747;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=vote.js.map
